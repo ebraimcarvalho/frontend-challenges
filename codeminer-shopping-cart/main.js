@@ -16,6 +16,7 @@ import data from './data.js';
   var $totalDiscount = doc.querySelector('[data-js="totalDiscount"]');
   var $benefitDiscount = doc.querySelector('[data-js="benefitDiscount"]');
   var $receiveNameCoupon = doc.querySelector('[data-js="receiveNameCoupon"]');
+  var $removeCoupon = doc.querySelector('[data-js="removeCoupon"]');
 
   var $subtotal = doc.querySelector('[data-js="subtotal"]');
   var $shipping = doc.querySelector('[data-js="shipping"]');
@@ -25,6 +26,7 @@ import data from './data.js';
   $qtdBanana.addEventListener('change', handleBanana, false);
   $qtdOrange.addEventListener('change', handleOrange, false);
   $submitCoupon.addEventListener('click', updateCart, false);
+  $removeCoupon.addEventListener('click', removeCoupon, false);
 
   function handleApple() {
     data.apple.qtd = Number(this.value);
@@ -70,11 +72,7 @@ import data from './data.js';
         data.couponName = 'C';
         data.couponBenefit = ' (free shipping for purchase over $300.50)';
       } else {
-        data.discount = 0;
-        $totalDiscount.textContent = '';
-        data.couponName = '';
-        data.couponBenefit = '';
-        handleShipping();
+        removeCoupon();
       }
     $shipping.textContent = data.shipping;
     data.total = data.parcial + data.shipping - data.discount;
@@ -96,6 +94,18 @@ import data from './data.js';
       var increase = Math.floor(data.weight/5);
       return data.shipping = 30 + ((increase-2)*7);
     }
+  }
+
+  function removeCoupon() {
+    data.discount = 0;
+    $totalDiscount.textContent = '';
+    data.couponName = '';
+    data.couponBenefit = '';
+    $receiveNameCoupon.textContent = data.couponName;
+    $benefitDiscount.textContent = data.couponBenefit;
+    handleShipping();
+    data.total = data.parcial + data.shipping - data.discount;
+    $total.textContent = data.total;
   }
 
 })(window, document);
