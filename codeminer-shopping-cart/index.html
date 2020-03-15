@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Codeminer - Shopping Cart with VanillaJS</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <div class="app">
+    <div class="main">
+      <div class="handleChange">
+        <div class="item">
+          <span class="itemName">Apple</span>
+          <input type="number" data-js="qtdApple" min="0" value="0"> kg
+          <span>$ </span><span data-js="totalApple"></span>
+        </div>
+        <div class="item">
+          <span class="itemName">Banana</span>
+          <input type="number" data-js="qtdBanana" min="0" value="0"> kg
+          <span>$ </span><span data-js="totalBanana"></span>
+        </div>
+        <div class="item">
+          <span class="itemName">Orange</span>
+          <input type="number" data-js="qtdOrange" min="0" value="0"> kg
+          <span>$ </span><span data-js="totalOrange"></span>
+        </div>
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="infoPrice">
+        <div class="item">
+          <span class="itemName">Subtotal</span>
+          <span>$ </span><span data-js="subtotal"></span>
+        </div>
+
+        <div class="item">
+          <span class="itemName">Shipping</span>
+          <span>$ </span><span data-js="shipping"></span>
+        </div>
+
+        <div class="item">
+          <span class="itemName">Coupon <span data-js="receiveNameCoupon"></span></span>
+          <input type="button" value="Remove" data-js="removeCoupon">
+          <span>- $ </span><span data-js="totalDiscount"></span><span data-js="benefitDiscount"></span>
+        </div>
+
+        <div class="item">
+          <span class="itemName">Total</span>
+          <span>$ </span><span data-js="total"></span>
+        </div>
+        
+      </div>
+
+      <div class="separator"></div>
+
+      <div class="insertCoupon">
+        <input type="text" data-js="inputCoupon" placeholder="Coupon code">
+        <input type="button" value="Apply" data-js="submitCoupon">
+      </div>
+    </div>
+
+    <div class="purchase">
+      <button data-js="purchaseButton">Purchase</button>
+    </div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>

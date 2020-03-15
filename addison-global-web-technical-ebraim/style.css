@@ -1,0 +1,18 @@
+body {
+  background-color: whitesmoke;
+}
+
+#controllers {
+  position: fixed;
+  top: 0;
+  padding: 10px 0;
+  width: 100%;
+}
+
+#render {
+  margin-top: 50px;
+}
+
+button {
+  cursor: pointer;
+}
