@@ -1,6 +1,6 @@
 import data from './data.js';
 
-(function(win, doc) {
+(function(doc) {
   'use strict';
 
   var $qtdFruit = doc.querySelectorAll('[data-js="qtdFruit"]');
@@ -99,4 +99,4 @@ import data from './data.js';
     $total.textContent = data.total;
   }
 
-})(window, document);
+})(document);
