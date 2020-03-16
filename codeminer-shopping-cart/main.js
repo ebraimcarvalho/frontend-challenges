@@ -3,9 +3,7 @@ import data from './data.js';
 (function(win, doc) {
   'use strict';
 
-  var $qtdApple = doc.querySelector('[data-js="qtdApple"]');
-  var $qtdBanana = doc.querySelector('[data-js="qtdBanana"]');
-  var $qtdOrange = doc.querySelector('[data-js="qtdOrange"]');
+  var $qtdFruit = doc.querySelectorAll('[data-js="qtdFruit"]');
  
   var $totalApple = doc.querySelector('[data-js="totalApple"]');
   var $totalBanana = doc.querySelector('[data-js="totalBanana"]');
@@ -22,31 +20,17 @@ import data from './data.js';
   var $shipping = doc.querySelector('[data-js="shipping"]');
   var $total = doc.querySelector('[data-js="total"]');
 
-  $qtdApple.addEventListener('change', handleApple, false);
-  $qtdBanana.addEventListener('change', handleBanana, false);
-  $qtdOrange.addEventListener('change', handleOrange, false);
+  Array.prototype.forEach.call($qtdFruit, function(button) {
+    button.addEventListener('change', handleFruit, false);
+  });
+
   $submitCoupon.addEventListener('click', updateCart, false);
   $removeCoupon.addEventListener('click', removeCoupon, false);
 
-  function handleApple() {
-    data.apple.qtd = Number(this.value);
-    data.apple.subtotal = data.apple.price * data.apple.qtd;
+  function handleFruit() {
+    data[this.name].qtd = Number(this.value);
+    data[this.name].subtotal = data[this.name].price * data[this.name].qtd;
     updateCart();
-    $totalApple.textContent = data.apple.subtotal;
-  }
-
-  function handleBanana() {
-    data.banana.qtd = Number(this.value);
-    data.banana.subtotal = data.banana.price * data.banana.qtd;
-    updateCart();
-    $totalBanana.textContent = data.banana.subtotal;
-  }
-
-  function handleOrange() {
-    data.orange.qtd = Number(this.value);
-    data.orange.subtotal = data.orange.price * data.orange.qtd;
-    updateCart();
-    $totalOrange.textContent = data.orange.subtotal;
   }
 
   function updateCart() {
@@ -80,6 +64,9 @@ import data from './data.js';
     $total.textContent = data.total;
     $receiveNameCoupon.textContent = data.couponName;
     $benefitDiscount.textContent = data.couponBenefit;
+    $totalApple.textContent = data.apple.subtotal;
+    $totalBanana.textContent = data.banana.subtotal;
+    $totalOrange.textContent = data.orange.subtotal;
     console.log(data);
   }
 
@@ -91,8 +78,9 @@ import data from './data.js';
       return data.shipping = 30;
     }
     if(data.weight >= 15) {
-      var increase = Math.floor(data.weight/5);
-      return data.shipping = 30 + ((increase-2)*7);
+      var increaseTimes = Math.floor(data.weight/5) - 2;
+      var custOfIncrease = 7;
+      return data.shipping = 30 + ((increaseTimes) * custOfIncrease);
     }
   }
 
@@ -104,6 +92,7 @@ import data from './data.js';
     $receiveNameCoupon.textContent = data.couponName;
     $benefitDiscount.textContent = data.couponBenefit;
     handleShipping();
+    $shipping.textContent = data.shipping;
     data.total = data.parcial + data.shipping - data.discount;
     $total.textContent = data.total;
   }
