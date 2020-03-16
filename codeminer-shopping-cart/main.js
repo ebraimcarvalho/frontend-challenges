@@ -37,36 +37,8 @@ import data from './data.js';
     data.parcial = data.apple.subtotal + data.banana.subtotal + data.orange.subtotal;
     data.weight = data.apple.qtd + data.banana.qtd + data.orange.qtd;
     handleShipping();
-
-      data.couponName = $inputCoupon.value;
-      if (data.couponName === 'A') {
-        data.discount = data.parcial * 0.3;
-        $totalDiscount.textContent = data.discount;
-        data.couponName = 'A';
-        data.couponBenefit = ' (30% over subtotal)';
-      } else if (data.couponName === 'FOO' && data.parcial > 100) {
-        data.discount = 100;
-        $totalDiscount.textContent = data.discount;
-        data.couponName = 'FOO';
-        data.couponBenefit = ' (save $100 over total)';
-      } else if (data.couponName === 'C' && data.parcial >= 300.50) {
-        data.shipping = 0;
-        data.discount = 0;
-        $totalDiscount.textContent = data.discount;
-        data.couponName = 'C';
-        data.couponBenefit = ' (free shipping for purchase over $300.50)';
-      } else {
-        removeCoupon();
-      }
-    $shipping.textContent = data.shipping;
-    data.total = data.parcial + data.shipping - data.discount;
-    $subtotal.textContent = data.parcial;
-    $total.textContent = data.total;
-    $receiveNameCoupon.textContent = data.couponName;
-    $benefitDiscount.textContent = data.couponBenefit;
-    $totalApple.textContent = data.apple.subtotal;
-    $totalBanana.textContent = data.banana.subtotal;
-    $totalOrange.textContent = data.orange.subtotal;
+    handleDiscount();
+    updateTextContent();
     console.log(data);
   }
 
@@ -84,16 +56,46 @@ import data from './data.js';
     }
   }
 
+  function handleDiscount() {
+    data.couponName = $inputCoupon.value;
+      if (data.couponName === 'A') {
+        data.discount = data.parcial * 0.3;
+        data.couponName = 'A';
+        data.couponBenefit = ' (30% over subtotal)';
+      } else if (data.couponName === 'FOO' && data.parcial > 100) {
+        data.discount = 100;
+        data.couponName = 'FOO';
+        data.couponBenefit = ' (save $100 over total)';
+      } else if (data.couponName === 'C' && data.parcial >= 300.50) {
+        data.shipping = 0;
+        data.discount = 0;
+        data.couponName = 'C';
+        data.couponBenefit = ' (free shipping for purchase over $300.50)';
+      } else {
+        removeCoupon();
+      }
+    updateTextContent();
+  }
+
   function removeCoupon() {
     data.discount = 0;
     $totalDiscount.textContent = '';
     data.couponName = '';
     data.couponBenefit = '';
+    handleShipping();
+    data.total = data.parcial + data.shipping - data.discount;
+    updateTextContent();
+  }
+
+  function updateTextContent() {
+    data.total = data.parcial + data.shipping - data.discount;
+    $totalApple.textContent = data.apple.subtotal;
+    $totalBanana.textContent = data.banana.subtotal;
+    $totalOrange.textContent = data.orange.subtotal;
+    $shipping.textContent = data.shipping;
+    $subtotal.textContent = data.parcial;
     $receiveNameCoupon.textContent = data.couponName;
     $benefitDiscount.textContent = data.couponBenefit;
-    handleShipping();
-    $shipping.textContent = data.shipping;
-    data.total = data.parcial + data.shipping - data.discount;
     $total.textContent = data.total;
   }
 
