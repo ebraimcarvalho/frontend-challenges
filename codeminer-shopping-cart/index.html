@@ -11,19 +11,25 @@
     <div class="main">
       <div class="handleChange">
         <div class="item">
-          <span class="itemName">Apple</span>
-          <input name="apple" type="number" data-js="qtdFruit" min="0" value="0"> kg
-          <span>$ </span><span data-js="totalApple"></span>
+          <div class="itemFruit">
+            <span class="itemName">Apple</span>
+            <input name="apple" type="number" data-js="qtdFruit" min="0" value="0"> kg
+          </div>          
+          <span>$ <span data-js="totalApple"></span></span>
         </div>
         <div class="item">
-          <span class="itemName">Banana</span>
-          <input name="banana" type="number" data-js="qtdFruit" min="0" value="0"> kg
-          <span>$ </span><span data-js="totalBanana"></span>
+          <div class="itemFruit">
+            <span class="itemName">Banana</span>
+            <input name="banana" type="number" data-js="qtdFruit" min="0" value="0"> kg
+          </div>          
+          <span>$ <span data-js="totalBanana"></span></span>
         </div>
         <div class="item">
-          <span class="itemName">Orange</span>
-          <input name="orange" type="number" data-js="qtdFruit" min="0" value="0"> kg
-          <span>$ </span><span data-js="totalOrange"></span>
+          <div class="itemFruit">
+            <span class="itemName">Orange</span>
+            <input name="orange" type="number" data-js="qtdFruit" min="0" value="0"> kg
+          </div>          
+          <span>$ <span data-js="totalOrange"></span></span>
         </div>
       </div>
 
@@ -32,23 +38,25 @@
       <div class="infoPrice">
         <div class="item">
           <span class="itemName">Subtotal</span>
-          <span>$ </span><span data-js="subtotal"></span>
+          <span>$ <span data-js="subtotal"></span></span>
         </div>
 
         <div class="item">
           <span class="itemName">Shipping</span>
-          <span>$ </span><span data-js="shipping"></span>
+          <span>$ <span data-js="shipping"></span></span>
         </div>
 
         <div class="item">
-          <span class="itemName">Coupon <span data-js="receiveNameCoupon"></span></span>
-          <input type="button" value="Remove" data-js="removeCoupon">
-          <span>- $ </span><span data-js="totalDiscount"></span><span data-js="benefitDiscount"></span>
+          <!-- <div class="itemFruit"> -->
+            <span class="itemName">Coupon <span data-js="receiveNameCoupon"></span></span>
+            <input type="button" value="Remove" data-js="removeCoupon">
+          <!-- </div>           -->
+          <span class="couponInfo">- $ <span data-js="totalDiscount"></span> <span data-js="benefitDiscount"></span></span>
         </div>
 
-        <div class="item">
+        <div class="item itemTotal">
           <span class="itemName">Total</span>
-          <span>$ </span><span data-js="total"></span>
+          <span>$ <span data-js="total"></span></span>
         </div>
         
       </div>

@@ -64,12 +64,12 @@ import data from './data.js';
       } else if (data.couponName === 'FOO' && data.parcial > 100) {
         data.discount = 100;
         data.couponName = 'FOO';
-        data.couponBenefit = ' (save $100 over total)';
+        data.couponBenefit = ' (over total)';
       } else if (data.couponName === 'C' && data.parcial >= 300.50) {
         data.shipping = 0;
-        data.discount = 0;
+        data.discount = '';
         data.couponName = 'C';
-        data.couponBenefit = ' (free shipping for purchase over $300.50)';
+        data.couponBenefit = ' (free shipping)';
       } else {
         removeCoupon();
       }
@@ -94,6 +94,7 @@ import data from './data.js';
     $shipping.textContent = data.shipping;
     $subtotal.textContent = data.parcial;
     $receiveNameCoupon.textContent = data.couponName;
+    $totalDiscount.textContent = data.discount;
     $benefitDiscount.textContent = data.couponBenefit;
     $total.textContent = data.total;
   }
