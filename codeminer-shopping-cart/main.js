@@ -39,7 +39,6 @@ import data from './data.js';
     handleShipping();
     handleDiscount();
     updateTextContent();
-    console.log(data);
   }
 
   function handleShipping() {
