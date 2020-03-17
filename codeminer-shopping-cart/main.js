@@ -60,7 +60,7 @@ import data from './data.js';
       if (data.couponName === 'A') {
         data.discount = data.parcial * 0.3;
         data.couponName = 'A';
-        data.couponBenefit = ' (30% over subtotal)';
+        data.couponBenefit = ' (30%)';
       } else if (data.couponName === 'FOO' && data.parcial > 100) {
         data.discount = 100;
         data.couponName = 'FOO';
