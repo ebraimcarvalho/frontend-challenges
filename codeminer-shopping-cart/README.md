@@ -1,3 +1,7 @@
+RESULT:
+
+![](https://github.com/ebraimcarvalho/frontend-challenges/blob/master/codeminer-shopping-cart/img/result.png?raw=true)
+
 ### Test CodeminerJP
 
 We need to create a solution for the online shop cart.
