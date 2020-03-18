@@ -1,3 +1,5 @@
+'use strict';
+
 var data = {
   apple: {
     price: 20,
