@@ -29,7 +29,7 @@ header p {
 }
 
 .container {
-  margin-top: 40px;
+  margin-top: 30px;
   padding: 0 30px;
   display: flex;
   flex-wrap: wrap;
@@ -38,12 +38,12 @@ header p {
 
 a, a:visited, a:focus, a:active {
   text-decoration: none;
-  color: hsl(212, 86%, 64%);
+  color: hsl(209, 94%, 55%);
 }
 
 a:hover {
-  text-decoration: underline;
-  color: steelblue;
+  color: tomato;
+  
 }
 
 .card-project {
