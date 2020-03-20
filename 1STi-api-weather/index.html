@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1STi Challenge - Api Weather</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./node_modules/jquery/dist/jquery.js"></script>
+  <script src="./node_modules/crypto-js/core.js"></script>
+  <script src="./node_modules/crypto-js/crypto-js.js"></script>
+
+</head>
+<body>
+  <div class="app">
+    <div class="top">
+      <h1>Previsão do Tempo</h1>
+      <div data-js="previsionCard" class="card"></div>
+      <input data-js="inputCity" type="text" placeholder="Insira aqui o nome da cidade">
+    </div>
+
+    <div class="citys">
+      <h3>Capitais</h3>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Min</th>
+            <th>Máx</th>
+            <th>City</th>
+          </tr>
+        </thead>
+        <tbody data-js="tbody">
+          
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>

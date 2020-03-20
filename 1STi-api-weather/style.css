@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(0deg, rgba(251,215,31,1) 13%, rgba(246,139,31,1) 100%);
+  width: 100%;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.top {
+  text-align: center;
+  color: white;
+  padding: 30px 20px;
+  border-bottom: 1px solid white;
+  width: 100%;
+}
+
+.top h1 {
+  margin-bottom: 25px;
+  font-size: 3rem;
+}
+
+.divShow {
+  border-radius: 5px;
+  width: 400px;
+  background-color: white;
+  color: gray;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-align: center;
+}
+
+.divShow p {
+  text-align: left;
+  padding-left: 40px;
+}
+
+.divShow p:first-of-type {
+  color: rgba(0,0,0, 0.6);
+  font-weight: 500;
+}
+
+.divShow p:last-of-type {
+  margin: 5px 0;
+}
+
+.divShow h3 {
+  text-align: left;
+  padding-left: 40px;
+  margin: 10px 0 5px;
+  font-size: 2rem;
+  font-weight: 600;
+  color: rgba(0,0,0, 0.6);
+}
+
+.divShow p span {
+  margin-right: 10px;
+}
+
+.divShow hr {
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid rgba(256,200,0, 0.6);
+  margin-top: 10px;
+}
+
+.divDays {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 15px;
+}
+
+.divDays div {
+  margin: 0 5px;
+}
+
+.top input {
+  width: 400px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  border: 1px solid darkgrey;
+  outline: none;
+  font-weight: 100;
+}
+
+.citys {
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.citys h3 {
+  color: white;
+  font-size: 1.8rem;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+}
+
+.table th {
+  font-weight: 300;
+}
+
+.table td {
+  font-weight: 500;
+}
+
+th, td {
+  min-width: 60px;
+}
+
+.table tr {
+  height: 30px;
+}
