@@ -129,3 +129,27 @@ span.itemName {
   justify-content: space-between;
   align-items: center;
 }
+
+footer {
+  width: 100%;
+  padding: 20px 0 10px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: darkslateblue;
+  font-weight: 500;
+}
+
+a:hover {
+  color: darkblue;
+}
