@@ -20,7 +20,6 @@ body {
 .top {
   text-align: center;
   color: white;
-  padding: 30px 20px;
   border-bottom: 1px solid white;
   width: 100%;
 }
@@ -32,12 +31,22 @@ body {
 
 .divShow {
   border-radius: 5px;
-  width: 400px;
+  width: 100%;
   background-color: white;
   color: gray;
   margin: 0 auto;
   padding-top: 10px;
   text-align: center;
+}
+
+@media (min-width: 500px) {
+  .top {
+    padding: 30px 20px;
+  }
+
+  .divShow {
+    width: 400px;
+  }
 }
 
 .divShow p {
