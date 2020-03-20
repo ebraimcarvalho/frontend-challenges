@@ -9,7 +9,18 @@
 body {
   font-family: 'Poppins', sans-serif;
   background: linear-gradient(0deg, rgba(251,215,31,1) 13%, rgba(246,139,31,1) 100%);
+  background-repeat: no-repeat;
   width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: darkslateblue;
+  font-weight: 500;
+}
+
+a:hover {
+  color: darkblue;
 }
 
 .app {
@@ -22,10 +33,10 @@ body {
   color: white;
   border-bottom: 1px solid white;
   width: 100%;
+  padding-bottom: 15px;
 }
 
 .top h1 {
-  margin-bottom: 25px;
   font-size: 3rem;
 }
 
@@ -37,16 +48,6 @@ body {
   margin: 0 auto;
   padding-top: 10px;
   text-align: center;
-}
-
-@media (min-width: 500px) {
-  .top {
-    padding: 30px 20px;
-  }
-
-  .divShow {
-    width: 400px;
-  }
 }
 
 .divShow p {
@@ -95,17 +96,18 @@ body {
 }
 
 .top input {
-  width: 400px;
+  width: 300px;
   padding: 10px;
   margin-top: 20px;
   font-size: 1.2rem;
   border: 1px solid darkgrey;
   outline: none;
   font-weight: 100;
+  border-radius: 5px;
 }
 
 .citys {
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -141,4 +143,32 @@ th, td {
 
 .table tr {
   height: 30px;
+}
+
+footer {
+  width: 100%;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer img {
+  width: 45px;
+  height: 45px;
+  margin-right: 10px;
+}
+
+@media (min-width: 500px) {
+  .top {
+    padding: 30px 20px;
+  }
+
+  .divShow {
+    width: 400px;
+  }
+
+  .top input {
+    width: 400px;
+  }
 }
