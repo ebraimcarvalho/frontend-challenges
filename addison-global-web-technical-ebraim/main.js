@@ -45,25 +45,28 @@ function renderNew() {
 }
 
 function createElements(item) {
+  const $divCard = document.createElement('div');
   const $img = document.createElement('img');
   const $h3 = document.createElement('h3');
   const $p = document.createElement('p');
+  const $divButton = document.createElement('div');
   const $button1 = document.createElement('button');
   const $button2 = document.createElement('button');
-  const $divisor = document.createElement('hr');
 
+  $divCard.setAttribute('class', 'card');
   $img.setAttribute('src', item.heroImageUrl);
   $h3.textContent = item.name;
   $p.textContent = item.description;
   $button1.textContent = item.termsAndConditionsButtonText;
   $button2.textContent = item.joinNowButtonText;
 
-  $div.appendChild($img);
-  $div.appendChild($h3);
-  $div.appendChild($p);
-  $div.appendChild($button1);
-  $div.appendChild($button2);
-  $div.appendChild($divisor);
+  $divCard.appendChild($img);
+  $divCard.appendChild($h3);
+  $divCard.appendChild($p);
+  $divButton.appendChild($button1);
+  $divButton.appendChild($button2);
+  $divCard.appendChild($divButton);
+  $div.appendChild($divCard);
 }
 
 initEvents();
