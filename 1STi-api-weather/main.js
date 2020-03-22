@@ -1,3 +1,7 @@
+const $ = require('jquery');
+const CryptoJS = require('crypto-js');
+const axios = require('axios');
+
 (function(win, doc) {
   'use strict';
 
@@ -8,40 +12,44 @@
   $inputCity.addEventListener('change', getCityData, true);
 
   function getCapitals() {
-    getApi('Rio de Janeiro');
-    getApi('São Paulo');
-    getApi('Belo Horizonte');
-    getApi('Brasília');
-    getApi('Belém');
-    getApi('Salvador');
-    getApi('Curitiba');
-    getApi('Fortaleza');
-    getApi('Manaus');
-    getApi('João Pessoa');
+    const capitals = ['Rio de Janeiro', 'São Paulo', 'Belo Horizonte', 'Brasília', 'Belém', 
+      'Salvador', 'Curitiba', 'Fortaleza', 'Manaus', 'João Pessoa'
+    ];
+
+    capitals.forEach(capital => getApi(capital));
   }
 
   function getApi(city) {
+    var query = {'location': city, 'format': 'json', 'u': 'c'};
+
+    // "https://weather-ydn-yql.media.yahoo.com/forecastrss?location=Rio%20de%20Janeiro&format=json&u=c"
+    // "OAuth oauth_consumer_key="dj0yJmk9b2dPcHR5ZFhtdXlxJmQ9WVdrOU16ZHlaSGQwTXpJbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTI4",oauth_nonce="fvw2utewxi",oauth_signature_method="HMAC-SHA1",oauth_timestamp="1584844026",oauth_version="1.0",oauth_signature="eBIc9jxQxyxl6K/7mVB5xdVBqOU=""
+    // 37rdwt32
+
     var url = 'https://weather-ydn-yql.media.yahoo.com/forecastrss';
-    var method = 'GET';
     var app_id = '37rdwt32';
+    var method = 'GET';
     var consumer_key = 'dj0yJmk9b2dPcHR5ZFhtdXlxJmQ9WVdrOU16ZHlaSGQwTXpJbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PTI4';
     var consumer_secret = 'ab49497e6e7861b5e38cb22bed2acd1d44fb3735';
     var concat = '&';
-    var query = {'location': city, 'format': 'json', 'u': 'c'};
     var oauth = {
-        'oauth_consumer_key': consumer_key,
-        'oauth_nonce': Math.random().toString(36).substring(2),
-        'oauth_signature_method': 'HMAC-SHA1',
-        'oauth_timestamp': parseInt(new Date().getTime() / 1000).toString(),
-        'oauth_version': '1.0'
+      'oauth_consumer_key': consumer_key,
+      'oauth_nonce': Math.random().toString(36).substring(2),
+      'oauth_signature_method': 'HMAC-SHA1',
+      'oauth_timestamp': parseInt(new Date().getTime() / 1000).toString(),
+      'oauth_version': '1.0'
     };
 
-    var merged = {}; 
-    $.extend(merged, query, oauth);
+    var merged = {
+      ...query,
+      ...oauth
+    }
+
     // Note the sorting here is required
     var merged_arr = Object.keys(merged).sort().map(function(k) {
       return [k + '=' + encodeURIComponent(merged[k])];
     });
+
     var signature_base_str = method
       + concat + encodeURIComponent(url)
       + concat + encodeURIComponent(merged_arr.join(concat));
@@ -51,20 +59,22 @@
     var signature = hash.toString(CryptoJS.enc.Base64);
 
     oauth['oauth_signature'] = signature;
+
     var auth_header = 'OAuth ' + Object.keys(oauth).map(function(k) {
       return [k + '="' + oauth[k] + '"'];
     }).join(',');
-
-    $.ajax({
-      url: url + '?' + $.param(query),
+        
+    const instance = axios.create({
+      baseURL: 'https://weather-ydn-yql.media.yahoo.com/forecastrss',
+      timeout: 3000,
       headers: {
         'Authorization': auth_header,
         'X-Yahoo-App-Id': app_id 
-      },
-      method: 'GET',
-      success: function(data){
-        createItem(data);
       }
+    });
+
+    instance.get(`${url}?${$.param(query)}`).then(function ({ data }) {
+      createItem(data);
     });
 
     function createItem(data) {
@@ -103,8 +113,11 @@
         'oauth_version': '1.0'
     };
 
-    var merged = {}; 
-    $.extend(merged, query, oauth);
+    var merged = {
+      ...query,
+      ...oauth
+    }
+
     // Note the sorting here is required
     var merged_arr = Object.keys(merged).sort().map(function(k) {
       return [k + '=' + encodeURIComponent(merged[k])];
@@ -122,17 +135,18 @@
       return [k + '="' + oauth[k] + '"'];
     }).join(',');
 
-    $.ajax({
-      url: url + '?' + $.param(query),
+    const instance = axios.create({
+      baseURL: 'https://weather-ydn-yql.media.yahoo.com/forecastrss',
+      timeout: 3000,
       headers: {
         'Authorization': auth_header,
         'X-Yahoo-App-Id': app_id 
-      },
-      method: 'GET',
-      success: function(data){
-        createCardItem(data);
-        $inputCity.value = '';
       }
+    });
+
+    instance.get(`${url}?${$.param(query)}`).then(function ({data}) {
+      createCardItem(data);
+      $inputCity.value = '';
     });
 
     function createCardItem(data) {

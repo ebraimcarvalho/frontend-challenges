@@ -58,20 +58,19 @@ a:hover {
 .divShow p:first-of-type {
   color: rgba(0,0,0, 0.6);
   font-weight: 500;
-}
-
-.divShow p:last-of-type {
-  margin: 5px 0;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .divShow h3 {
-  text-align: left;
-  padding-left: 40px;
-  margin: 10px 0 5px;
+  color: rgba(0,0,0, 0.6);
   font-size: 2rem;
   font-weight: 600;
-  color: rgba(0,0,0, 0.6);
+  margin: 10px 0 5px 0;
+  padding-left: 40px;
+  text-align: left;
 }
+
 
 .divShow p span {
   margin-right: 10px;
