@@ -8,14 +8,14 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(0deg, rgba(251,215,31,1) 13%, rgba(246,139,31,1) 100%);
+  background: linear-gradient(0deg, rgb(132, 165, 255) 13%, rgb(86, 126, 255) 100%);
   background-repeat: no-repeat;
   width: 100%;
 }
 
 a {
   text-decoration: none;
-  color: darkslateblue;
+  color: white;
   font-weight: 500;
 }
 
@@ -80,7 +80,7 @@ a:hover {
 .divShow hr {
   width: 90%;
   margin: 0 auto;
-  border: 1px solid rgba(256,200,0, 0.6);
+  border: 1px solid rgba(25, 0, 255, 0.596);
   margin-top: 10px;
 }
 
