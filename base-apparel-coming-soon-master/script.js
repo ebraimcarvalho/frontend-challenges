@@ -12,13 +12,14 @@
     let emailValue = $email.value;
 
     if(!isValidEmail(emailValue))
-       return $form.classList.add('form--error');
+      return $form.classList.add('form--error');
       
     $form.classList.remove('form--error');
     let textSuccess = doc.createElement('p');
     textSuccess.textContent = 'Email OK!';
     textSuccess.classList.add('form--success');
     $form.appendChild(textSuccess);
+    $email.value = '';
   }
 
   function isValidEmail(email) {
