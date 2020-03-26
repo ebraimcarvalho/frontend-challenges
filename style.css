@@ -101,7 +101,8 @@ a:hover {
   padding: 20px 15px;
   border-radius: 5px;
   border-bottom: 5px solid darkslategray;
-  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  
 }
 
 .card-project p {
