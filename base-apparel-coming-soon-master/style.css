@@ -111,7 +111,8 @@ body {
   box-shadow: 5px 10px 20px 0px hsl(0, 36%, 70%);
 }
 
-.form--error-description {
+.form--error-description,
+.form--success-description {
   display: none;
 }
 
@@ -123,7 +124,8 @@ body {
   padding-left: 55px;
 }
 
-.form--success {
+.form--success .form--success-description {
+  display: block;
   text-align: left;
   padding-top: 10px;
   padding-left: 50px;
@@ -199,11 +201,8 @@ body {
     right: 30px;
   }
 
-  .form--error .form--error-description {
-    padding-left: 30px;
-  }
-
-  .form--success {
+  .form--error .form--error-description, 
+  .form--success .form--success-description {
     padding-left: 30px;
   }
 

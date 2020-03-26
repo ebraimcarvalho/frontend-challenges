@@ -8,18 +8,16 @@
 
   function checkEmail(e) {
     e.preventDefault();
-
     let emailValue = $email.value;
 
-    if(!isValidEmail(emailValue))
-      return $form.classList.add('form--error');
-      
-    $form.classList.remove('form--error');
-    let textSuccess = doc.createElement('p');
-    textSuccess.textContent = 'Email OK!';
-    textSuccess.classList.add('form--success');
-    $form.appendChild(textSuccess);
-    $email.value = '';
+    if(!isValidEmail(emailValue)) {
+      $form.classList.remove('form--success');
+      $form.classList.add('form--error');
+    } else {      
+      $form.classList.remove('form--error');
+      $form.classList.add('form--success');
+      $email.value = '';
+    }
   }
 
   function isValidEmail(email) {
