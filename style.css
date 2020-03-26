@@ -27,7 +27,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 40px;
 }
 
 nav h1 img {
@@ -35,7 +35,7 @@ nav h1 img {
 }
 
 nav h1 img:hover {
-  transform: scale(1.1);
+  box-shadow: 0px 0px 10px 0px rgb(126, 135, 255);
 }
 
 ul {
@@ -52,7 +52,7 @@ header nav ul li a {
 }
 
 a {
-  color: hsl(209, 94%, 55%);
+  color: hsl(220, 100%, 15%);
 }
 
 .hero {
@@ -65,7 +65,7 @@ a {
 }
 
 .hero h2 {
-  font-weight: 500;
+  font-weight: 300;
 }
 
 .hero h2 span {
@@ -74,11 +74,11 @@ a {
 
 .hero p {
   margin-top: 10px;
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .container {
-  margin-top: 30px;
+  margin-top: 25px;
   padding: 0 30px;
   display: flex;
   flex-wrap: wrap;
@@ -90,22 +90,18 @@ a, a:visited, a:focus, a:active {
 }
 
 a:hover {
-  color: darksalmon;  
+  color: rgb(223, 132, 132);  
 }
 
 .card-project {
-  width: 300px;
-  height: 180px;
+  width: 340px;
+  height: 200px;
   background-color: white;
-  margin: 10px 15px;
-  padding: 15px;
+  margin: 10px 10px;
+  padding: 20px 15px;
   border-radius: 5px;
   border-bottom: 5px solid darkslategray;
   box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.15);
-}
-
-.card-project h3 {
-  height: 20%;
 }
 
 .card-project p {
