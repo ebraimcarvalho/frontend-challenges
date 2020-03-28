@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #eee;
+  background-color: #fff;
 }
 
 .header {
@@ -14,4 +14,41 @@ body {
   padding-top: 6px;
   padding-right: 10px;
   border-bottom: 2px solid #777;
+}
+
+.header__icon-menu {
+  opacity: 0.6;
+}
+
+.app {
+  margin: 15px 10px auto 10px;
+}
+
+.event {
+  display: flex;
+  flex-direction: column;
+}
+
+.event__option {
+  border: 2px solid #999;
+  padding: 10px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.event__market {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.event__market:not(:last-child)::after {
+  content: ' ';
+  display: block;
+  height: 2px;
+  width: 110%;
+  background-color: #999;
+
+  position: absolute;
+  bottom: -8px;
+  left: -10px;
 }
