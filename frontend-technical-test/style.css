@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+.header {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 6px;
+  padding-right: 10px;
+  border-bottom: 2px solid #777;
+}
