@@ -1,4 +1,4 @@
-(function (doc, win) {
+(function (doc) {
   'use strict';
 
   let eventDiv = doc.querySelector('[data-js="event"]');
@@ -39,15 +39,19 @@
           divEventMarket.innerHTML += `
           <div class="event__market-${j+1}">
             <h3 class="event__market-type">${data[i].markets[j].name}</h3>`;
+
+            var buttonsDiv = doc.createElement('div');
+            buttonsDiv.setAttribute('class', 'event__buttons');
+
             for (let k = 0, selectionsLength = data[i].markets[j].selections.length; k < selectionsLength; k++) {  //Percorre as opções para selecionar
-              divEventMarket.innerHTML += `
-                <button class="market__select-${j}" name="${data[i].markets[j].selections[k].name}" price="${data[i].markets[j].selections[k].price}" eventType="${data[i].markets[j].name}">
+              buttonsDiv.innerHTML += `
+                <button class="market__select-${k+1}" name="${data[i].markets[j].selections[k].name}" price="${data[i].markets[j].selections[k].price}" eventType="${data[i].markets[j].name}">
                   ${data[i].markets[j].selections[k].name} <br/>
                   ${data[i].markets[j].selections[k].price}
                 </button>
-              </div>
           `;
           }
+          divEventMarket.appendChild(buttonsDiv);
           divRender.appendChild(divEventMarket);         
         }        
         docFragm.appendChild(divRender);
@@ -112,4 +116,4 @@
 
   getApi();
 
-})(document, window);
+})(document);
