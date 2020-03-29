@@ -3,8 +3,6 @@
 
   let eventDiv = doc.querySelector('[data-js="event"]');
 
-  // buttonMenu.addEventListener('click', showCart, false);
-
   function getApi() {
     let api = `http://www.mocky.io/v2/59f08692310000b4130e9f71`;
 
@@ -66,21 +64,41 @@
     let buttons = doc.querySelectorAll('button');
     console.log(containerPrincipal, showCart, buttonMenu);
 
-    buttonMenu.addEventListener('click', function() {
+    buttonMenu.addEventListener('click', showCartAndOpacity, false);
+
+    function showCartAndOpacity() {
       showCart.style.display = 'block';
       containerPrincipal.classList.add('bg-opacity');
-    }, false);
-
-    showCartIconX.addEventListener('click', function() {
-      showCart.style.display = 'none';
-      containerPrincipal.classList.remove('bg-opacity');
-    }, false)
+    };
 
     Array.prototype.forEach.call(buttons, function(button) {
       button.addEventListener('click', function() {
         console.log(button);
-      }, false)
-    })
+        let eventType = button.getAttribute('eventType');
+        let price = button.getAttribute('price');
+        showCartAndOpacity();
+        showCart.innerHTML += `
+          <h4>${button.name} ${eventType}</h4>
+          <h3>${price}</h3>
+          <button>Delete</button>
+          <hr/>
+        `;
+        let showCartIconX = doc.querySelector('[data-js="show-cart__icon-x"]');
+        showCartIconX.addEventListener('click', showContainerPrincipal, false);
+
+        function showContainerPrincipal() {
+          showCart.style.display = 'none';
+          containerPrincipal.classList.remove('bg-opacity');
+        };
+      }, false);
+    });
+
+    showCartIconX.addEventListener('click', showContainerPrincipal, false);
+
+    function showContainerPrincipal() {
+      showCart.style.display = 'none';
+      containerPrincipal.classList.remove('bg-opacity');
+    };
   }
 
   getApi();
