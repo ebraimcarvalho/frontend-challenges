@@ -4,7 +4,7 @@
   let eventDiv = doc.querySelector('[data-js="event"]');
 
   function getApi() {
-    let api = `http://www.mocky.io/v2/59f08692310000b4130e9f71`;
+    let api = `https://www.mocky.io/v2/59f08692310000b4130e9f71`;
 
     fetch(api)
       .then(function (response) {
