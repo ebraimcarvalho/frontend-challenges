@@ -2,6 +2,7 @@
   'use strict';
 
   let eventDiv = doc.querySelector('[data-js="event"]');
+  let buttonMenu = doc.querySelector('.header__icon-menu');
 
   function getApi() {
     let api = `http://www.mocky.io/v2/59f08692310000b4130e9f71`;
