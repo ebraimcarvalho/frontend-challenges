@@ -9,14 +9,22 @@
 </head>
 
 <body>
-  <header class="header">
-    <nav class="header__nav">
-      <a href="#"><img class="header__icon-menu" src="./icon/menu.svg" alt="Menu" width=25 data-js="buttonMenu"></a>
-    </nav>
-  </header>
+  <div class="show-cart" data-js="show-cart">
+    <p class="show-cart__header" data-js="show-cart__header">
+      <a class="show-cart__icon-x" data-js="show-cart__icon-x" href="#">X</a>
+    </p>
+  </div>
 
-  <div class="app">
-    <div class="event" data-js="event"></div>
+  <div class="container-principal" data-js="container-principal">
+    <header class="header">
+      <nav class="header__nav">
+        <a href="#"><img class="header__icon-menu" src="./icon/menu.svg" alt="Menu" width=25 data-js="buttonMenu"></a>
+      </nav>
+    </header>
+
+    <div class="app">
+      <div class="event" data-js="event"></div>
+    </div>
   </div>
 
   <script src="./script.js"></script>

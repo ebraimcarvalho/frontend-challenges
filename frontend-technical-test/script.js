@@ -2,7 +2,8 @@
   'use strict';
 
   let eventDiv = doc.querySelector('[data-js="event"]');
-  let buttonMenu = doc.querySelector('.header__icon-menu');
+
+  // buttonMenu.addEventListener('click', showCart, false);
 
   function getApi() {
     let api = `http://www.mocky.io/v2/59f08692310000b4130e9f71`;
@@ -14,6 +15,7 @@
       })
       .then(function (data) {
         initApp(data);
+        initEvents();
       })
   }
 
@@ -39,9 +41,9 @@
           divEventMarket.innerHTML += `
           <div class="event__market-${j+1}">
             <h3 class="event__market-type">${data[i].markets[j].name}</h3>`;
-            for (let k = 0, selectionsLength = data[i].markets[j].selections.length; k < selectionsLength; k++) {
+            for (let k = 0, selectionsLength = data[i].markets[j].selections.length; k < selectionsLength; k++) {  //Percorre as opções para selecionar
               divEventMarket.innerHTML += `
-                <button class="market__select-${j}">
+                <button class="market__select-${j}" name="${data[i].markets[j].selections[k].name}" price="${data[i].markets[j].selections[k].price}" eventType="${data[i].markets[j].name}">
                   ${data[i].markets[j].selections[k].name} <br/>
                   ${data[i].markets[j].selections[k].price}
                 </button>
@@ -53,8 +55,32 @@
         docFragm.appendChild(divRender);
         eventDiv.appendChild(docFragm);
       }      
-    }
-    
+    }    
+  }
+
+  function initEvents() {
+    let containerPrincipal = doc.querySelector('[data-js="container-principal"]');
+    let showCart = doc.querySelector('[data-js="show-cart"]');
+    let showCartIconX = doc.querySelector('[data-js="show-cart__icon-x"]');
+    let buttonMenu = doc.querySelector('.header__icon-menu');
+    let buttons = doc.querySelectorAll('button');
+    console.log(containerPrincipal, showCart, buttonMenu);
+
+    buttonMenu.addEventListener('click', function() {
+      showCart.style.display = 'block';
+      containerPrincipal.classList.add('bg-opacity');
+    }, false);
+
+    showCartIconX.addEventListener('click', function() {
+      showCart.style.display = 'none';
+      containerPrincipal.classList.remove('bg-opacity');
+    }, false)
+
+    Array.prototype.forEach.call(buttons, function(button) {
+      button.addEventListener('click', function() {
+        console.log(button);
+      }, false)
+    })
   }
 
   getApi();

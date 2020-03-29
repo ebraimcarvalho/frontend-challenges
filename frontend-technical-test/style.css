@@ -6,6 +6,41 @@
 
 body {
   background-color: #fff;
+  position: relative;
+}
+
+.show-cart {
+  display: none;
+  width: 80%;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.show-cart__header {
+  text-align: right;
+  font-weight: bold;
+  padding-top: 8px;
+  padding-right: 17px;
+}
+
+.show-cart__icon-x {
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.container-principal {
+  display: block;
+}
+
+.bg-opacity {
+  background: rgb(60, 62, 71);
+  background: linear-gradient(90deg, rgb(30, 32, 44) 13%, rgb(27, 27, 43) 100%);
+  opacity: 0.8;
 }
 
 .header {
