@@ -27,7 +27,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
+  padding: 10px 10px;
 }
 
 nav h1 img {
@@ -109,4 +109,10 @@ a:hover {
   margin: 15px 0 20px;
   font-size: 15px;
   font-weight: 300;
+}
+
+@media screen and (min-width: 600px) {
+  nav {
+    padding: 10px 40px;
+  }
 }
