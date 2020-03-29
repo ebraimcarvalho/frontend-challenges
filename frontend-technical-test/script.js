@@ -78,10 +78,12 @@
         let price = button.getAttribute('price');
         showCartAndOpacity();
         showCart.innerHTML += `
-          <h4>${button.name} ${eventType}</h4>
-          <h3>${price}</h3>
-          <button>Delete</button>
-          <hr/>
+          <div>
+            <h4>${button.name} ${eventType}</h4>
+            <h3>${price}</h3>
+            <button class="delete">Delete</button>
+            <hr/>
+          </div>
         `;
         let showCartIconX = doc.querySelector('[data-js="show-cart__icon-x"]');
         showCartIconX.addEventListener('click', showContainerPrincipal, false);
@@ -90,6 +92,13 @@
           showCart.style.display = 'none';
           containerPrincipal.classList.remove('bg-opacity');
         };
+
+        let deleteButton = doc.querySelectorAll('.delete');
+        Array.prototype.forEach.call(deleteButton, function(deleteButton) {
+          deleteButton.addEventListener('click', function() {
+            deleteButton.parentNode.remove();
+          })
+        })
       }, false);
     });
 
