@@ -45,7 +45,7 @@
 
             for (let k = 0, selectionsLength = data[i].markets[j].selections.length; k < selectionsLength; k++) {  //Percorre as opções para selecionar
               buttonsDiv.innerHTML += `
-                <button class="market__select-${k+1}" name="${data[i].markets[j].selections[k].name}" price="${data[i].markets[j].selections[k].price}" eventType="${data[i].markets[j].name}">
+                <button class="market__select" name="${data[i].markets[j].selections[k].name}" price="${data[i].markets[j].selections[k].price}" eventType="${data[i].markets[j].name}">
                   ${data[i].markets[j].selections[k].name} <br/>
                   ${data[i].markets[j].selections[k].price}
                 </button>

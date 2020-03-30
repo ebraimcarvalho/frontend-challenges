@@ -39,9 +39,9 @@ body {
 }
 
 .bg-opacity {
-  background: rgb(60, 62, 71);
-  background: linear-gradient(90deg, rgb(30, 32, 44) 13%, rgb(27, 27, 43) 100%);
-  opacity: 0.8;
+  background: rgba(5, 3, 15, 0.568);
+  /* background: linear-gradient(90deg, rgb(52, 53, 54) 13%, rgb(48, 48, 61) 100%);
+  opacity: 0.8; */
 }
 
 .header {
@@ -120,4 +120,19 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.market__select {
+  background-color: white;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  padding: 8px 10px;
+  min-width: 30%;
+  outline: none;
+  cursor: pointer;
+}
+
+.market__select:hover {
+  background-color: green;
+  color: white;
 }
