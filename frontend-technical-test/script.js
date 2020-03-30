@@ -1,6 +1,6 @@
 (function (doc) {
   'use strict';
-  // teste
+
   let eventDiv = doc.querySelector('[data-js="event"]');
 
   function getApi() {
@@ -18,12 +18,12 @@
   }
 
   function initApp(data) {
-    renderEvents(data);
+    console.log('loaded', data);
+    runDataAndRender(data);
   }
 
-  function renderEvents(data) {
+  function runDataAndRender(data) {
     var docFragm = doc.createDocumentFragment();
-    console.log('loaded', data);
     for (let i = 0, dataLength = data.length; i < dataLength; i++) { //Percorre todo array
       if (data[i].markets.length > 0) { //Entra apenas no array que tem markets
         var divRender = doc.createElement('div');
@@ -37,14 +37,14 @@
           var divEventMarket = doc.createElement('div');
           divEventMarket.setAttribute('class', 'event__market');
           divEventMarket.innerHTML += `
-          <div class="event__market-${j+1}">
+          <div class="event__market-${j + 1}">
             <h3 class="event__market-type">${data[i].markets[j].name}</h3>`;
 
-            var buttonsDiv = doc.createElement('div');
-            buttonsDiv.setAttribute('class', 'event__buttons');
+          var buttonsDiv = doc.createElement('div');
+          buttonsDiv.setAttribute('class', 'event__buttons');
 
-            for (let k = 0, selectionsLength = data[i].markets[j].selections.length; k < selectionsLength; k++) {  //Percorre as opções para selecionar
-              buttonsDiv.innerHTML += `
+          for (let k = 0, selectionsLength = data[i].markets[j].selections.length; k < selectionsLength; k++) {  //Percorre as opções para selecionar
+            buttonsDiv.innerHTML += `
                 <button class="market__select" name="${data[i].markets[j].selections[k].name}" price="${data[i].markets[j].selections[k].price}" eventType="${data[i].markets[j].name}">
                   ${data[i].markets[j].selections[k].name} <br/>
                   ${data[i].markets[j].selections[k].price}
@@ -52,12 +52,12 @@
           `;
           }
           divEventMarket.appendChild(buttonsDiv);
-          divRender.appendChild(divEventMarket);         
-        }        
+          divRender.appendChild(divEventMarket);
+        }
         docFragm.appendChild(divRender);
         eventDiv.appendChild(docFragm);
-      }      
-    }    
+      }
+    }
   }
 
   function initEvents() {
@@ -66,7 +66,6 @@
     let showCartIconX = doc.querySelector('[data-js="show-cart__icon-x"]');
     let buttonMenu = doc.querySelector('.header__icon-menu');
     let buttons = doc.querySelectorAll('button');
-    console.log(containerPrincipal, showCart, buttonMenu);
 
     buttonMenu.addEventListener('click', showCartAndOpacity, false);
 
@@ -75,9 +74,8 @@
       containerPrincipal.classList.add('bg-opacity');
     };
 
-    Array.prototype.forEach.call(buttons, function(button) {
-      button.addEventListener('click', function() {
-        console.log(button);
+    Array.prototype.forEach.call(buttons, function (button) {
+      button.addEventListener('click', function () {
         let eventType = button.getAttribute('eventType');
         let price = button.getAttribute('price');
         showCartAndOpacity();
@@ -97,8 +95,8 @@
         };
 
         let deleteButton = doc.querySelectorAll('.delete');
-        Array.prototype.forEach.call(deleteButton, function(deleteButton) {
-          deleteButton.addEventListener('click', function() {
+        Array.prototype.forEach.call(deleteButton, function (deleteButton) {
+          deleteButton.addEventListener('click', function () {
             deleteButton.parentNode.remove();
           })
         })
