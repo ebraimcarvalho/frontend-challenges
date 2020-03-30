@@ -82,11 +82,10 @@
         let price = button.getAttribute('price');
         showCartAndOpacity();
         showCart.innerHTML += `
-          <div>
-            <h4>${button.name} ${eventType}</h4>
-            <h3>${price}</h3>
+          <div class="show-cart__select">
+            <h4 class="select__name">${button.name} ${eventType}</h4>
+            <h3 class="select__price">${price}</h3>
             <button class="delete">Delete</button>
-            <hr/>
           </div>
         `;
         let showCartIconX = doc.querySelector('[data-js="show-cart__icon-x"]');
