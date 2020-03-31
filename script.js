@@ -36,7 +36,7 @@
 
     cardProject.innerHTML = `
       <a href="./${name}/index.html" target="_blank">
-        <h4>${i + 1}. ${formatName(name)}</h4>
+        <h4>${i + 2}. ${formatName(name)}</h4>
       </a>
       <p>This is a challenge to improve my frontend skills! Technical details and more informations, you can access on page: 
         <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
