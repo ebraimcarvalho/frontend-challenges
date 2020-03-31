@@ -232,5 +232,68 @@ function periodIsLate(last, today, cycleLength) {
 // Other solution
 const periodIsLate=(last, today, cycleLength)=> 86400000 * cycleLength < today - last;
 
+```
+
+### 6 - Converting Binary to text
+<a href="https://stackoverflow.com/questions/21354235/converting-binary-to-text-using-javascript/21354328" target="_blank">Link of problem</a>
+
+``` js
+function binaryAgent3(str) {
+  return str.split(" ").map(function(elem) {
+    return String.fromCharCode(parseInt(elem, 2));
+  }).join("")
+}
+
+// other solution
+function binaryToHuman(str) {
+  // split string into an array so we can loop through it
+  var newStr=str.split(" ");
+  // declare a new array to later push "translated" values into
+  var sArr=[];
+  // loop through binary array, translate and push translated values into the new array
+  newStr.forEach(function(item){
+  sArr.push(String.fromCharCode(parseInt(item,2)));
+  });
+  // join the array back into a string
+  return sArr.join("");
+}
+console.log(binaryToHuman("01001001 00100000 01101100 01101111 01110110 01100101 00100001"));
+// returns:
+// I love!
+
+```
+
+### 7 - Is it a number?
+<a href="https://www.codewars.com/kata/57126304cdbf63c6770012bd/train/javascript" target="_blank">Link of problem</a>
+
+Given a string s, write a method (function) that will return true if its a valid single integer or floating number or false if its not.
+
+Valid examples, should return true:
+
+isDigit("3")
+isDigit("  3  ")
+isDigit("-3.23")
+should return false:
+
+isDigit("3-4")
+isDigit("  3   5")
+isDigit("3 5")
+isDigit("zero")
+
+``` js
+// My first Solution
+function isDigit(s) {
+  return !isNaN(parseFloat(s)) && isFinite(s);
+}
+
+// Best Practices
+function isDigit(s) {
+ return s==parseFloat(s);
+}
+
+// other solution
+function isDigit(s) {
+  return parseFloat(s) === Number(s)
+}
 
 ```
