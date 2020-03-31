@@ -2,6 +2,9 @@
 
 CodeWars training and challenges in javascript. In order to explore new ways to solve the same problem, I will use my solutions and others that I find most interesting to explore!
 
+![Design preview for the Base Apparel coming soon page coding challenge](https://www.codewars.com/users/ebraimcarvalho/badges/large)
+
+
 ## Problems
 
 ### 1 - Methods of Number object--toFixed(), toExponential() and toPrecision().
