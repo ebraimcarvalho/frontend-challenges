@@ -200,3 +200,34 @@ const find = (a, x) => (x = a.indexOf(x)) < 0 ? 'Not found' : x;
 // or
 var find = (a, e) => a.includes(e) ? a.indexOf(e) : "Not found";
 ```
+
+### 5 - Is your period late?
+<a href="https://www.codewars.com/kata/578a8a01e9fd1549e50001f1/train/javascript" target="_blank">Link of problem</a>
+
+In this kata, we will make a function to test whether a period is late.
+
+Our function will take three parameters:
+
+last - The Date object with the date of the last period
+
+today - The Date object with the date of the check
+
+cycleLength - Integer representing the length of the cycle in days
+
+If the today is later from last than the cycleLength, the function should return true. We consider it to be late if the number of passed days is larger than the cycleLength. Otherwise return false.
+
+``` js
+Test.assertEquals(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 35), false);
+Test.assertEquals(periodIsLate(new Date(2016, 6, 13), new Date(2016, 7, 16), 28), true);
+
+// My first Solution
+function periodIsLate(last, today, cycleLength) {
+  const dayHasMilisecond = 8.64e+7;
+  return ((today - last) / dayHasMilisecond) > cycleLength;
+}
+
+// Other solution
+const periodIsLate=(last, today, cycleLength)=> 86400000 * cycleLength < today - last;
+
+
+```
