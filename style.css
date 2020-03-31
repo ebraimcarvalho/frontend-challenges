@@ -77,8 +77,14 @@ a {
   font-weight: 300;
 }
 
+.hero__badge-codewar {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+
 .container {
-  margin-top: 25px;
+  margin-top: 10px;
   padding: 0 30px;
   display: flex;
   flex-wrap: wrap;
