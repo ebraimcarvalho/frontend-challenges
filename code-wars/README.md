@@ -4,7 +4,7 @@ CodeWars training and challenges in javascript. In order to explore new ways to 
 
 ## Problems
 
-1 - Methods of Number object--toFixed(), toExponential() and toPrecision().
+### 1 - Methods of Number object--toFixed(), toExponential() and toPrecision().
 <a href="https://www.codewars.com/kata/57256064856584bc47000611/train/javascript" target="_blank">Link of Problem</a> 
 
 Coding in function ```howManySmaller```, function accept 2 parameter:```arr``` and ```n```. ```arr``` is a decimal array. ```n``` is a decimal. 
@@ -58,7 +58,7 @@ function howManySmaller(arr,n){
 
 ```
 
-2 - Coding 3min : Jumping Dutch act.
+### 2 - Coding 3min : Jumping Dutch act.
 <a href="https://www.codewars.com/kata/570bcd9715944a2c8e000009/train/javascript" target="_blank">Link of problem</a>
 
 Mr. despair wants to jump off Dutch act, So he came to the top of a building.
@@ -127,7 +127,7 @@ const otherSc=(floor)=>floor>1?Array.from({length:floor-1}).map(a=>'Aa~ ').join(
 
 ```
 
-3 - Convert to Binary.
+### 3 - Convert to Binary.
 <a href="https://www.codewars.com/kata/59fca81a5712f9fa4700159a/javascript" target="_blank">Link of problem</a>
 
 Task Overview
@@ -176,7 +176,7 @@ function toBinary(n){
 
 ```
 
-4 - Be Concise IV - Index of an element in an array.
+### 4 - Be Concise IV - Index of an element in an array.
 <a href="https://www.codewars.com/kata/5703c093022cd1aae90012c9/train/javascript" target="_blank">Link of problem</a>
 
 Task
