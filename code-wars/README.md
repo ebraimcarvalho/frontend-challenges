@@ -175,3 +175,28 @@ function toBinary(n){
   return parseInt(binary);
 
 ```
+
+4 - Be Concise IV - Index of an element in an array.
+<a href="https://www.codewars.com/kata/5703c093022cd1aae90012c9/train/javascript" target="_blank">Link of problem</a>
+
+Task
+Provided is a function find which accepts two parameters in the following order: array, element and returns the index of the element if found and "Not found" otherwise. Your task is to shorten the code as much as possible in order to meet the strict character count requirements of the Kata. You may assume that all array elements are unique and should contain no more than 85 characters.
+
+```js
+// First Solution to refactoring
+function find(array, element) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === element) return i;
+  }
+  return "Not found";
+}
+
+// My Solution
+const find = (arr, elem) => arr.indexOf(elem) > -1 ? arr.indexOf(elem) : 'Not found';
+
+// Other Solution
+const find = (a, x) => (x = a.indexOf(x)) < 0 ? 'Not found' : x;
+
+// or
+var find = (a, e) => a.includes(e) ? a.indexOf(e) : "Not found";
+```
