@@ -238,6 +238,7 @@ const periodIsLate=(last, today, cycleLength)=> 86400000 * cycleLength < today -
 <a href="https://stackoverflow.com/questions/21354235/converting-binary-to-text-using-javascript/21354328" target="_blank">Link of problem</a>
 
 ``` js
+// My first solution
 function binaryAgent3(str) {
   return str.split(" ").map(function(elem) {
     return String.fromCharCode(parseInt(elem, 2));
