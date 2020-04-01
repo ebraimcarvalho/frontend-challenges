@@ -3,6 +3,10 @@
 
   const projects = [
     {
+      name: 'intro-component-with-signup-form-master',
+      linkChallenge: 'https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1'
+    },
+    {
       name: 'frontend-technical-test',
       linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/blob/master/frontend-technical-test/README.md'
     },
