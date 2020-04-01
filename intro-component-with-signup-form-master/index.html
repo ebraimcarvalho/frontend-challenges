@@ -25,13 +25,33 @@
       <button class="container__button"><strong class="container__button--strong">Try it free 7 days</strong> then <br> $20/mo. thereafter</button>
 
       <form class="form">
-        <input class="form__first-name" type="text" placeholder="First Name">
-        <input class="form__last-name" type="text" placeholder="Last Name">
-        <input class="form__email" type="email" placeholder="Email Address">
-        <input class="form__password" type="password" placeholder="Password">
+        <div class="form__control">
+          <input class="form__input" id="first-name" type="text" placeholder="First Name">
+          <img class="form__error-icon" src="./images/icon-error.svg" alt="error input">
+          <small class="form__error-advice">First Name cannot be empty</small>
+        </div>
+
+        <div class="form__control">
+          <input class="form__input" id="last-name" type="text" placeholder="Last Name">
+          <img class="form__error-icon" src="./images/icon-error.svg" alt="error input">
+          <small class="form__error-advice">Last Name cannot be empty</small>
+        </div>
+
+        <div class="form__control">
+          <input class="form__input" id="email" type="email" placeholder="Email Address">
+          <img class="form__error-icon" src="./images/icon-error.svg" alt="error input">
+          <small class="form__error-advice">Looks like this is not an email</small>
+        </div>
+
+        <div class="form__control">
+          <input class="form__input" id="password" type="password" placeholder="Password">
+          <img class="form__error-icon" src="./images/icon-error.svg" alt="error input">
+          <small class="form__error-advice">Password cannot be empty</small>
+        </div>        
+        
         <button class="form__button">Claim your free trial</button>
-        <p class="form__advice">By clicking the button, you are agreeing to our <a href="#" class="form__advice--terms">Terms
-            and Services</a></p>
+        <p class="form__advice"><small>By clicking the button, you are agreeing to our <a href="#" class="form__advice--terms">Terms
+            and Services</a></small></p>
       </form>
     </div>
   </div>
