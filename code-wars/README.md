@@ -298,3 +298,90 @@ function isDigit(s) {
 }
 
 ```
+
+### 8 - Friend or Foe?
+<a href="https://www.codewars.com/kata/55b42574ff091733d900002f/solutions/javascript" target="_blank">Link of problem</a>
+
+Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
+
+Ex: Input = ["Ryan", "Kieran", "Jason", "Yous"], Output = ["Ryan", "Yous"]
+
+i.e.
+
+``` js
+ friend ["Ryan", "Kieran", "Mark"] shouldBe ["Ryan", "Mark"]
+
+```
+Note: keep the original order of the names in the output.
+
+``` js
+// My first Solution
+function friend(friends){
+  return friends.filter(item => item.length == 4 && item.match(/\D/gmi));
+}
+
+// other solution
+function friend(friends){
+  return friends.filter(name => {
+    return /^[A-Za-z]{4}$/.test(name)
+  })
+}
+
+// or
+function friend(friends){
+  return friends.filter(item => item.length == 4 && !Number(item));
+}
+
+```
+
+### 9 - IP Validation
+<a href="https://www.codewars.com/kata/515decfd9dcfc23bb6000006/javascript" target="_blank">Link of problem</a>
+
+Write an algorithm that will identify valid IPv4 addresses in dot-decimal format. IPs should be considered valid if they consist of four octets, with values between 0 and 255, inclusive.
+
+Input to the function is guaranteed to be a single string.
+
+Examples
+Valid inputs:
+
+1.2.3.4
+123.45.67.89
+Invalid inputs:
+
+1.2.3
+1.2.3.4.5
+123.456.78.90
+123.045.067.089
+Note that leading zeros (e.g. 01.02.03.04) are considered invalid.
+
+``` js
+// My first solution
+function isValidIP(str) {
+  return /^(?=\d+\.\d+\.\d+\.\d+$)(?:(?:25[0-5]|2[0-4][0-9]|1[0-9]{2}|[1-9][0-9]|[0-9])\.?){4}$/.test(str);
+}
+
+// other solution
+function isValidIP(str) {
+  return /^(([1-9]?\d|1\d\d|2[0-4]\d|25[0-5])(\.(?!$)|$)){4}$/.test(str);
+}
+
+//  or
+function isValidIP(str) {
+  return str.split('.').filter(function(v){return v==Number(v).toString() && Number(v)<256}).length==4;
+}
+
+// using require net
+const net = require('net');
+const isValidIP = (s) => net.isIP(s);
+
+// using every
+function isValidIP(str) {
+  var p = str.split('.');
+  return p.length == 4 && p.every(function(s) {
+    return /^\d+$/.test(s) && s >= 0 && s <= 255;
+  });
+}
+
+```
