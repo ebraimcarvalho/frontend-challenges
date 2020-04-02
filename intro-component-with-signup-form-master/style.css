@@ -98,6 +98,10 @@ body {
           font-weight: 700;
         }
 
+          .form__control--error input:focus {
+            border: 2px solid hsl(0, 100%, 74%);
+          }
+
         .form__error-icon {
           display: none;
           position: absolute;
