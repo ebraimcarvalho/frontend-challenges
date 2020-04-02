@@ -1,7 +1,6 @@
 (function(doc) {
   'use strict';
 
-  console.log('hello world!');
   let inputs = doc.querySelectorAll('.form__input');
   let form = doc.querySelector('form');
 
@@ -16,15 +15,14 @@
         input.parentNode.classList.remove('form__control--error');
       }
     });
-    console.log(inputs[2])
+    if (!checkEmail(inputs[2].value)) {
+      inputs[2].parentNode.classList.add('form__control--error');
+    };
   }
 
-  Array.prototype.forEach.call(inputs, function(input) {
-    input.addEventListener('', validateInput, false);
-  });
-
-  function validateInput(e) {
-    e.preventDefault();
-    console.log('input click!');
+  function checkEmail(email) {
+    var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    return re.test(String(email).toLowerCase());
   }
+
 })(document);
