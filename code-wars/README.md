@@ -436,7 +436,176 @@ function colorOf(r,g,b){
   
   return '#' + r + g + b;
 }
+```
 
+### 11 - Compare within margin
+<a href="https://www.codewars.com/kata/56453a12fcee9a6c4700009c/javascript" target="_blank">Link of problem</a>
 
+Create a function close_compare that accepts 3 parameters: a, b, and an optional margin. The function should return whether a is lower than, close to, or higher than b. a is "close to" b if margin is higher than or equal to the difference between a and b.
+
+When a is lower than b, return -1.
+
+When a is higher than b, return 1.
+
+When a is close to b, return 0.
+
+If margin is not given, treat it as zero.
+
+Example: if a = 3, b = 5 and the margin = 3, since a and b are no more than 3 apart, close_compare should return 0. Otherwise, if instead margin = 0, a is lower than b and close_compare should return -1.
+
+Assume: margin >= 0
+
+Tip: Some languages have a way to make arguments optional.
+
+``` js 
+// My first Solution
+function closeCompare(a, b, margin){
+  if (!margin) 
+    margin = 0;
+  console.log(a,b,margin);
+  if (a + margin < b)
+    return -1
+  if (margin >= a - b)
+    return 0
+  if (a + margin > b)
+    return 1
+}
+
+// or
+function closeCompare(a, b, margin = 0) {
+  if (a < b - margin) return -1;
+  if (a - margin > b) return 1;
+  return 0;
+}
+
+// Best Practices
+function closeCompare(a, b, m = 0){
+  return Math.abs(a - b) <= m? 0: Math.sign(a - b);
+}
+
+// other
+function closeCompare(a, b, margin = 0) {
+  return Math.abs(a - b) <= margin ? 0 : a < b ? -1 : 1;
+}
+
+```
+
+### 12 - Generate range of integers
+<a href="https://www.codewars.com/kata/56453a12fcee9a6c4700009c/javascript" target="_blank">Link of problem</a>
+
+Implement a function named generateRange(min, max, step), which takes three arguments and generates a range of integers from min to max, with the step. The first integer is the minimum value, the second is the maximum of the range and the third is the step. (min < max)
+
+Task
+Implement a function named
+
+generateRange(2, 10, 2) // should return array of [2,4,6,8,10]
+generateRange(1, 10, 3) // should return array of [1,4,7,10]
+Note
+min < max
+step > 0
+the range does not HAVE to include max (depending on the step)
+
+``` js
+// My first Solution
+function generateRange(min, max, step){
+  let arr = [];
+  for (let i = min; i <= max; i += step) {
+    arr.push(i);
+  }
+  return arr;
+}
+
+// interesting
+function generateRange(min, max, step){
+  return min > max ? [] : [min, ...generateRange(min + step, max, step)];
+}
+
+```
+
+### 13 - Bit Counting
+<a href="https://www.codewars.com/kata/526571aae218b8ee490006f4/train/javascript" target="_blank">Link of problem</a>
+
+Write a function that takes an integer as input, and returns the number of bits that are equal to one in the binary representation of that number. You can guarantee that input is non-negative.
+
+Example: The binary representation of 1234 is 10011010010, so the function should return 5 in this case
+
+``` js
+// My first Solution
+var countBits = function(n) {
+  return n.toString(2).split('').reduce((acc, att) => acc + (att == '1'), 0);
+}
+
+// interesting
+countBits = n => n.toString(2).split('0').join('').length;
+
+// or
+var countBits = function(n) {
+  return n.toString(2).replace(/0/g,'').length;
+}
+
+// other
+var countBits = function(n) {
+  a = n.toString(2).match(/1/g);
+  return a == null ? 0 : a.length;
+}
+
+```
+
+### 14 - Validate code with simple regex
+<a href="https://www.codewars.com/kata/56a25ba95df27b7743000016/train/javascript" target="_blank">Link of problem</a>
+
+Basic regex tasks. Write a function that takes in a numeric code of any length. The function should check if the code begins with 1, 2, or 3 and return true if so. Return false otherwise.
+
+You can assume the input will always be a number.
+
+``` js 
+// My first solution
+function validateCode (code) {
+  return /^[123]/.test(code);
+}
+```
+
+### 15 - Logical calculator
+<a href="https://www.codewars.com/kata/57096af70dad013aa200007b/train/javascript" target="_blank">Link of problem</a>
+
+Your task is to calculate logical value of boolean array. Test arrays are one-dimensional and their size is in the range 1-50.
+
+Links referring to logical operations: AND, OR and XOR.
+
+You should begin at the first value, and repeatedly apply the logical operation across the remaining elements in the array sequentially.
+
+First Example:
+Input: true, true, false, operator: AND
+Steps: true AND true -> true, true AND false -> false
+Output: false
+
+Second Example:
+Input: true, true, false, operator: OR
+Steps: true OR true -> true, true OR false -> true
+Output: true
+
+Third Example:
+Input: true, true, false, operator: XOR
+Steps: true XOR true -> false, false XOR false -> false
+Output: false
+
+``` js
+// Solution
+const operations = {
+  AND: (a, b) => a && b,
+  OR: (a, b) => a || b,
+  XOR: (a, b) => a !== b,
+}
+
+const logicalCalc = (array, op) => array.reduce(operations[op]);
+
+// other solution
+const logicalCalc = (array, op) => {
+  return array.reduce((acc, cur) => {
+    if (op === 'AND') return acc && cur;
+    if (op === 'OR') return acc || cur;
+    if (op === 'XOR') return acc != cur;
+  });
+};
 
 ```
