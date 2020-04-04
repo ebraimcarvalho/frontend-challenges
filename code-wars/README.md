@@ -735,3 +735,66 @@ function arrayMadness(a, b) {
 const sumPwrs = (a, p) => a.reduce( (s, n) => s + n ** p, 0);
 const arrayMadness = (a, b) => sumPwrs(a, 2) > sumPwrs(b, 3);
 ```
+
+### 20 - Row Weights
+<a href="https://www.codewars.com/kata/5abd66a5ccfd1130b30000a9/train/javascript" target="_blank">Link of problem</a>
+
+Scenario
+Several people are standing in a row divided into two teams. The first person goes into team 1, the second goes into team 2, the third goes into team 1, and so on.
+
+Task
+Given an array of positive integers (the weights of the people), return a new array/tuple of two integers, where the first one is the total weight of team 1, and the second one is the total weight of team 2.
+
+Notes
+Array size is at least 1.
+All numbers will be positive.
+Input >> Output Examples
+rowWeights([13, 27, 49])  ==>  return (62, 27)
+
+``` js
+// My first solution
+function rowWeights(array){
+  var length = array.length - 1;
+  var arr1 = [];
+  var arr2 = [];
+  for(var i = 0; i <= length; i++) {
+    if( length == 0) {
+      arr1.push(array[0]);
+    } else {
+      if( i % 2 == 1 )
+        arr2.push(array[i]);
+      if( i % 2 == 0 )
+        arr1.push(array[i]);
+    }
+  }
+  arr1 = arr1.reduce((acc, att) => acc + att, 0);
+  arr2 = arr2.reduce((acc, att) => acc + att, 0);
+  return [arr1, arr2]
+}
+
+// best practice
+function rowWeights(array){
+  let t1 = array.filter((x, i)=>i%2==0).reduce((a,item)=>a+item,0);
+  let t2 = array.filter((x, i)=>i%2!=0).reduce((a,item)=>a+item,0);
+  
+  return [t1, t2]
+}
+
+// or
+function rowWeights(array){
+  let team1 = array.reduce((sum,x,i)=>i%2==0? sum=sum+x:sum,0);
+  let team2 = array.reduce((sum,x,i)=>i%2!=0? sum=sum+x:sum,0);
+  
+  return [team1, team2];
+}
+
+// other solution
+function rowWeights(array){
+  var arr = [0, 0];
+  for (var i = 0; i < array.length; i++) {
+    i % 2 == 0 ? arr[0] += array[i] : arr[1] += array[i];
+  }
+  return arr;
+}
+
+```
