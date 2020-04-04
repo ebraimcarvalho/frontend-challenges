@@ -797,4 +797,7 @@ function rowWeights(array){
   return arr;
 }
 
+// clever
+const rowWeights = arr => arr.reduce((acc, att, i) => (acc[i%2]+=att, acc), [0, 0]);
+
 ```
