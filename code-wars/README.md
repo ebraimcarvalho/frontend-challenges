@@ -698,3 +698,40 @@ function perimeter(n) {
   return 4 * arr.reduce((sum, num) => sum + num, 0);
 }
 ```
+
+### 19 - SpeedCode #2 - Array Madness
+<a href="https://www.codewars.com/kata/56ff6a70e1a63ccdfa0001b1/train/javascript" target="_blank">Link of problem</a>
+
+Objective
+Given two integer arrays a, b, both of length >= 1, create a program that returns true if the sum of the squares of each element in a is strictly greater than the sum of the cubes of each element in b.
+
+E.g.
+
+array_madness(3, {4, 5, 6}, 3, {1, 2, 3}) == true;
+// because 4 ** 2 + 5 ** 2 + 6 ** 2 > 1 ** 3 + 2 ** 3 + 3 ** 3
+
+``` js
+// My first Solution
+function arrayMadness(a, b) {
+  var sumA = a.map(a => a ** 2).reduce((acc, att) => {
+    return acc + att
+  }, 0);
+  var sumB = b.map(b => b ** 3).reduce((acc, att) => {
+    return acc + att
+  }, 0);
+  return sumA > sumB
+}
+
+// using just reduce
+const arrayMadness = (a, b) => a.reduce((acc, x) => acc + x**2, 0) > b.reduce((acc, x) => acc + x**3, 0);
+
+// or
+function arrayMadness(a, b) {
+  return a.reduce( (sum, el) => sum + el ** 2, 0) >
+         b.reduce( (sum, el) => sum + el ** 3, 0);
+}
+
+// interesting
+const sumPwrs = (a, p) => a.reduce( (s, n) => s + n ** p, 0);
+const arrayMadness = (a, b) => sumPwrs(a, 2) > sumPwrs(b, 3);
+```
