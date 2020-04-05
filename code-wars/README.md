@@ -912,3 +912,49 @@ class Ball {
 }
 
 ```
+
+### 24 - Enumerable Magic #3 - Does My List Include This?
+<a href="https://www.codewars.com/kata/545991b4cbae2a5fda000158/javascript" target="_blank">Link of problem</a>
+
+Create a method that accepts a list and an item, and returns true if the item belongs to the list, otherwise false.
+
+``` js
+// My first solution
+function include(arr, item){
+  return arr.includes(item);
+}
+
+// other
+function include(arr, item) {
+  return arr.indexOf(item) !== -1;
+}
+```
+
+### 25 - Vowel remover
+<a href="https://www.codewars.com/kata/5547929140907378f9000039/solutions/javascript" target="_blank">Link of problem</a>
+
+Create a function called shortcut to remove all the lowercase vowels in a given string.
+
+Examples
+shortcut("codewars") // --> cdwrs
+shortcut("goodbye")  // --> gdby
+
+``` js
+// My first solution
+function shortcut(string){
+  return string.match(/[^aeiou]/g).join('');
+}
+
+// other solution
+function shortcut(string){
+  return string.replace(/[aeiou]/g,'')
+}
+
+// or
+function shortcut(str) {
+  return str.split('').filter(function(e) {
+    return ['a', 'e', 'i', 'o', 'u'].indexOf(e) == -1 
+  }).join('')
+}
+
+```
