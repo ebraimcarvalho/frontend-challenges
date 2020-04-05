@@ -871,3 +871,44 @@ function calculator(a,b,sign){
 }
 
 ```
+
+### 23 - sRegular Ball Super Ball
+<a href="https://www.codewars.com/kata/53f0f358b9cb376eca001079/solutions/javascript" target="_blank">Link of problem</a>
+
+Regular Ball Super Ball
+Create a class Ball.
+
+Ball objects should accept one argument for "ball type" when instantiated.
+
+If no arguments are given, ball objects should instantiate with a "ball type" of "regular."
+
+ball1 = new Ball();
+ball2 = new Ball("super");
+
+ball1.ballType     //=> "regular"
+ball2.ballType     //=> "super"
+
+``` js
+// first solution
+var Ball = function(ballType) {
+  if (ballType === undefined){
+    this.ballType = 'regular';
+  }
+  else {
+    this.ballType= 'super';
+  }
+};
+
+// other solution
+var Ball = function(ballType) {
+  this.ballType = ballType || 'regular';
+};
+
+// or
+class Ball {
+  constructor(ballType = "regular") {
+    this.ballType = ballType;
+  }
+}
+
+```
