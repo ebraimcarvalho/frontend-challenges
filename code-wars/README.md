@@ -958,3 +958,42 @@ function shortcut(str) {
 }
 
 ```
+
+### 26 - What is between?
+<a href="https://www.codewars.com/kata/55ecd718f46fba02e5000029/train/javascript" target="_blank">Link of problem</a>
+
+Complete the function that takes two integers (a, b, where a < b) and return an array of all integers between the input parameters, including them.
+
+For example:
+
+a = 1
+b = 4
+--> [1, 2, 3, 4]
+
+``` js
+// my first solution
+function between(a, b) {
+  var dif = b - a;
+  var arr = [];
+  for (var i = 0; i <= dif; i++){
+    arr.push(a+i)
+  }
+  return arr;
+}
+
+// or
+function between(a, b) {
+  // your code here
+  arr = []
+  for(i = a;i <= b; i++){ 
+      arr.push(i)
+  }
+  return arr
+}
+
+// other solution
+function between(a, b) {
+  return Array.from( {length: (b-a+1)}, (v, i) => a+i );
+}
+
+```
