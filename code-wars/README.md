@@ -1024,3 +1024,39 @@ function domainName(url){
 }
 
 ```
+
+### 28 - Responsible Drinking
+<a href="https://www.codewars.com/kata/5aee86c5783bb432cd000018/train/javascript" target="_blank">Link of problem</a>
+
+Welcome to the Codewars Bar!
+Codewars Bar recommends you drink 1 glass of water per standard drink so you're not hungover tomorrow morning.
+
+Your fellow coders have bought you several drinks tonight in the form of a string. Return a string suggesting how many glasses of water you should drink to not be hungover.
+
+Input 1:
+"1 shot, 5 beers, 2 shots, 1 glass of wine, 1 beer"
+
+Output 1:
+"10 glasses of water"
+
+``` js
+// my first solution
+function hydrate(s) {
+  const numberDrinks = s.match(/\d+/g).reduce((acc, att) => +acc + +att, 0);
+  return numberDrinks === 1 ? '1 glass of water' : `${numberDrinks} glasses of water`;
+}
+
+// other solution
+function hydrate(s) {
+  let res =s.match(/[0-9]/g)
+  let sum =0;
+  
+  for (let  i =0; i<res.length; i++) {
+    sum +=+res[i];
+  }
+  
+  let answer  = sum >1 ? sum + ' glasses of water' : sum + ' glass of water'
+    return answer;
+}
+
+```
