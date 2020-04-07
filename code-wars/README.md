@@ -1125,3 +1125,33 @@ function solution(a, b){
 }
 
 ```
+
+### 31 - Exclamation marks series #2: Remove all exclamation marks from the end of sentence
+<a href="https://www.codewars.com/kata/57faece99610ced690000165/train/javascript" target="_blank">Link of problem</a>
+
+Description:
+Remove all exclamation marks from the end of sentence.
+
+Examples
+remove("Hi!") === "Hi"
+remove("Hi!!!") === "Hi"
+remove("!Hi") === "!Hi"
+remove("!Hi!") === "!Hi"
+remove("Hi! Hi!") === "Hi! Hi"
+remove("Hi") === "Hi"
+
+``` js
+// my first solution
+function remove(s){
+  return s.replace(/[!]+$/g, '');  
+}
+
+// other solution
+const remove = s => s.replace(/!+$/, '');
+
+// or
+function remove(s){
+  return s.charAt(s.length - 1) === '!' ? remove(s.slice(0, s.length - 1)) : s;
+}
+
+```
