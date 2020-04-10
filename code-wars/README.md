@@ -1228,3 +1228,20 @@ function points(games) {
 // interesting
 const points = g => g.reduce((a, [x, _, y]) => a + (x > y ? 3 : x == y), 0);
 ```
+
+### 33 - Remove First and Last Character Part Two
+<a href="https://www.codewars.com/kata/570597e258b58f6edc00230d/javascript" target="_blank">Link of problem</a>
+
+This is a spin off of my first kata. You are given a list of character sequences as a comma separated string. Write a function which returns another string containing all the character sequences except the first and the last ones. If the input string is empty, or the removal of the first and last items would cause the string to be empty, return a null value.
+``` js
+// my first solution
+function array(arr){
+arr = arr.split(',');
+return (arr.length<3)?null:arr.slice(1,arr.length-1).join(' '); 
+}
+
+// other solution
+function array(arr){
+  return arr.split(",").slice(1,-1).join(" ") || null;
+}
+```
