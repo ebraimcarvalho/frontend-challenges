@@ -1245,3 +1245,45 @@ function array(arr){
   return arr.split(",").slice(1,-1).join(" ") || null;
 }
 ```
+
+### 34 - Is the string uppercase?
+<a href="https://www.codewars.com/kata/56cd44e1aa4ac7879200010b/train/javascript" target="_blank">Link of problem</a>
+
+Is the string uppercase?
+Task
+Add the isUpperCase method to String to see whether the string is ALL CAPS. For example:
+
+"c".isUpperCase() == false
+"C".isUpperCase() == true
+"hello I AM DONALD".isUpperCase() == false
+"HELLO I AM DONALD".isUpperCase() == true
+"ACSKLDFJSgSKLDFJSKLDFJ".isUpperCase() == false
+"ACSKLDFJSGSKLDFJSKLDFJ".isUpperCase() == true
+
+``` js
+// my first solution
+String.prototype.isUpperCase = function() {
+  var str = [];
+  if(this[0] === undefined) {
+    return "Must define the prototype isUpperCase";
+  } else {
+    for(let i = 0, len = this.length; i < len; i++){
+      str.push(this[i]);
+    }
+    str = str.toString().replace(/[,\s]*/g, '')
+    var test = str.toUpperCase();
+    return str === test
+  }
+}
+
+// just this solve
+String.prototype.isUpperCase = function() {
+  return this.toUpperCase() === this.toString();
+}
+
+// or this
+String.prototype.isUpperCase = function () {
+  return !/[a-z]/.test(this);
+};
+
+```
