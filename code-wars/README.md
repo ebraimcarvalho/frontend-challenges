@@ -1287,3 +1287,23 @@ String.prototype.isUpperCase = function () {
 };
 
 ```
+
+### 35 - Sum of positive
+<a href="https://www.codewars.com/kata/5715eaedb436cf5606000381/javascript" target="_blank">Link of problem</a>
+
+You get an array of numbers, return the sum of all of the positives ones.
+Example [1,-4,7,12] => 1 + 7 + 12 = 20
+Note: if there is nothing to sum, the sum is default to 0.
+
+``` js
+// my first solution
+function positiveSum(arr) {
+  return arr.filter(item => item > 0).reduce((acc, att) => acc + att, 0);
+}
+
+// other
+function positiveSum(arr) {
+   return arr.reduce((a,b)=> a + (b > 0 ? b : 0),0);
+}
+
+```
