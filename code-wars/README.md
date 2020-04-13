@@ -1349,3 +1349,41 @@ function calculate(a, o, b) {
 }
 
 ```
+
+### 37 - Basic Calculator
+<a href="https://www.codewars.com/kata/5413759479ba273f8100003d/javascript" target="_blank">Link of problem</a>
+
+Write a function reverse which reverses a list (or in clojure's case, any list-like data structure)
+
+(the dedicated builtin(s) functionalities are deactivated)
+
+``` js
+// my first solution
+reverse = function(array) {
+  let output = [];
+  for(let i = array.length - 1; i >= 0; i--){
+    output.push(array[i]);
+  }
+  return output;
+}
+
+// other solution
+function reverse(array) {
+  return array.reduce(function(a, b) {
+    return [b].concat(a)
+  }, []);
+}
+
+// or
+reverse = function(array) {
+  var result = [];
+  array.forEach(function(value) { result.unshift(value); });
+  return result;
+}
+
+// interesting
+reverse = function(array) {
+  return array.map((c, i) => array[array.length - 1 - i]);
+}
+
+```
