@@ -1387,3 +1387,41 @@ reverse = function(array) {
 }
 
 ```
+
+### 38 - Be Concise II - I Need Squares
+<a href="https://www.codewars.com/kata/56f4f7cfaf5b1f8cd100060e/javascript" target="_blank">Link of problem</a>
+
+You are given a program squaresOnly that accepts an array of natural numbers up to and including
+100
+(and including 0) of length >= 1, array, and returns a new array containing only square numbers that have appeared in the input array.
+
+Refactor the solution to use as few characters as possible. There is a maximum character limit of 127. Here are a few hints:
+
+There are a lot of handy built-in Array methods in Javascript that you may have never heard of even after completing a basic course in Javascript (e.g. those provided by Codecademy) - well, at least I haven't heard of until quite recently. You may also want to research any new built-in methods offered by ES6, the newest specification of Javascript at the time of writing.
+Don't you think the array parameter is a bit wordy? ;)
+
+``` js
+// my first solution
+var squaresOnly=a=>{
+let s=[0,1,4,9,16,25,36,49,64,81,100]
+let r=[]
+a.filter(i=>{s.includes(i)?r.push(i):0;})
+return r}
+
+// best practice
+function squaresOnly(a) {
+  return a.filter(x => x ** 0.5 % 1 == 0);
+}
+
+// or
+function squaresOnly(array) {
+  return array.filter(n => Number.isInteger(Math.sqrt(n)))
+}
+
+// other
+var squaresOnly = array => array.filter(number => Math.sqrt(number) % 1 === 0);
+
+// or
+let squaresOnly = a => a.filter(e => !(e ** 0.5 % 1));
+
+```
