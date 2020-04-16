@@ -8,12 +8,14 @@ export const removeSNames = names => {
   return names.filter(name => name.toLowerCase().charAt(0) !== 's');
 };
 
+const divMain = document.querySelector('.main');
 const divRender = document.querySelector('#container-products');
+let divButton = document.createElement('div');
 let url = 'https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1';
 function getData() {
   fetch(url).then(data => data.json()).then(data => {
-    console.log(data)
-    renderProducts(data)
+    console.log(data);
+    renderProducts(data);
   });
 }
 
@@ -36,10 +38,23 @@ function renderProducts(data) {
     </div>
     `;
   });
-  markup += `
+  divRender.innerHTML = markup;
+  renderButtonMore(data);
+};
+
+function renderButtonMore(data) {
+  divButton.innerHTML = `
     <button id="btn__list-more" class="main__list-more">Ainda mais produtos aqui!</button>
   `;
-  divRender.innerHTML = markup;
-};
+  divMain.appendChild(divButton);
+
+  const btnListMore = document.querySelector('#btn__list-more');
+  btnListMore.addEventListener('click', () => {
+    fetch(`https:${data.nextPage}`).then(data => data.json()).then(data => {
+      console.log(data)
+      renderProducts(data)
+    });
+  });
+}
 
 getData();
