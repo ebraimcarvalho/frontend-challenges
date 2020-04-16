@@ -117,33 +117,9 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"src/getDataAndRender.js":[function(require,module,exports) {
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.removeSNames = exports.add = exports.hello = void 0;
-
-var hello = function hello() {
-  return 'Hello World!';
-};
-
-exports.hello = hello;
-
-var add = function add(num1, num2) {
-  return typeof num1 === 'number' && typeof num2 === 'number' ? num1 + num2 : null;
-};
-
-exports.add = add;
-
-var removeSNames = function removeSNames(names) {
-  return names.filter(function (name) {
-    return name.toLowerCase().charAt(0) !== 's';
-  });
-};
-
-exports.removeSNames = removeSNames;
+})({"src/index.js":[function(require,module,exports) {
+// import './getDataAndRender';
+// import './validateForm';
 var divMain = document.querySelector('.main');
 var divRender = document.querySelector('#container-products');
 var markup = '';
@@ -184,7 +160,6 @@ function renderButtonMore(data) {
 }
 
 getData();
-},{}],"src/validateForm.js":[function(require,module,exports) {
 var form = document.querySelector('[data-js="form"]');
 var inputName = document.querySelector('[data-js="input-name"]');
 var inputEmail = document.querySelector('[data-js="input-email"]');
@@ -227,13 +202,7 @@ function checkEmail(email) {
   var re = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   return re.test(String(email).toLowerCase());
 }
-},{}],"src/index.js":[function(require,module,exports) {
-"use strict";
-
-require("./getDataAndRender");
-
-require("./validateForm");
-},{"./getDataAndRender":"src/getDataAndRender.js","./validateForm":"src/validateForm.js"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -261,7 +230,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "46045" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "44015" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
