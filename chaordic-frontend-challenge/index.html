@@ -31,125 +31,23 @@
   <main class="main">
     <h4 class="main__description">Sua seleção especial</h4>
     <div id="container-products" class="main__container-products">
-      <!-- <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <div class="product">
-        <div class="product__div-img">
-          <img src="" alt="" class="product__img">
-        </div>
-        <h5 class="product__name">Nome do Produto</h5>
-        <p class="product__description">
-          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
-        </p>
-        <p class="product__old-price">De: R$23,99</p>
-        <h4 class="product__new-price">Por: R$19,99</h4>
-        <p class="product__payment">ou 2x de R$9,99</p>
-        <button class="product__btn-purchase">Comprar</button>
-      </div>
-      <button class="main__list-more">Ainda mais produtos aqui!</button> -->
+     
     </div>
   </main>
 
   <section class="share">
     <h4 class="share__title">Compartilhe a novidade</h4>
     <p class="share__description">Quer que seus amigos também ganhem a lista persolanizada deles? Preencha agora!</p>
-    <form class="form">
+    <form class="form" data-js="form">
       <div class="form__control">
         <label class="form__label" for="name">Nome do seu amigo:</label>
-        <input class="form__input" id="name" type="text">
+        <input class="form__input" id="name" type="text" data-js="input-name">
+        <small class="controlName"></small>
       </div>
       <div class="form__control">
         <label class="form__label" for="email">Email:</label>
-        <input class="form__input" id="email" type="text">
+        <input class="form__input" id="email" type="text" data-js="input-email">
+        <small class="controlEmail"></small>
       </div>
       <button id="form__submit" class="form__submit">Enviar agora</button>
     </form>

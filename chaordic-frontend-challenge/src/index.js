@@ -1,1 +1,2 @@
-import './App';
+import './getDataAndRender';
+import './validateForm';

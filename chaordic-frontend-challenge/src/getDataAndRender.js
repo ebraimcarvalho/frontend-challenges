@@ -10,8 +10,10 @@ export const removeSNames = names => {
 
 const divMain = document.querySelector('.main');
 const divRender = document.querySelector('#container-products');
+let markup = '';
 let divButton = document.createElement('div');
 let url = 'https://frontend-intern-challenge-api.iurykrieger.now.sh/products?page=1';
+
 function getData() {
   fetch(url).then(data => data.json()).then(data => {
     console.log(data);
@@ -20,7 +22,6 @@ function getData() {
 }
 
 function renderProducts(data) {
-  let markup = '';
   data.products.forEach(item => {
     markup += `
     <div class="product">

@@ -197,11 +197,31 @@ body {
 .form__input {
   width: 340px;
   height: 30px;
+  padding: 5px 10px;
+  color: #4d4d4d;
+  font-size: 14px;
   border: 1px solid #707070;
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__input--success {
+  border: 1px solid green;
+}
+
+.form__input--error {
+  border: 1px solid rgb(212, 8, 8);
 }
 
 .form__control:first-child {
   margin-right: 30px;
+}
+
+small {
+  text-align: left;
+  padding-top: 5px;
 }
 
 .form__submit {
