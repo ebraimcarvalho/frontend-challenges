@@ -3,6 +3,10 @@
 
   const projects = [
     {
+      name: 'chaordic-frontend-challenge/dist',
+      linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/blob/master/chaordic-frontend-challenge/README.md'
+    },
+    {
       name: 'intro-component-with-signup-form-master',
       linkChallenge: 'https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1'
     },
