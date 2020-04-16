@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaordic - Frontend Challenge</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/styles/styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container-text">
+      <h2 class="header__title">
+        <span class="header__title--small">uma seleção de produtos</span>
+        especial para você
+      </h2>
+      <p class="header__description">
+        Todos os produtos desta lista foram selecionados a partir da sua navegação. Aproveite!
+      </p>
+    </div>
+    <nav class="header__nav">
+      <ul class="header__nav-list">
+        <a class="header__nav-item" href="#"><li>Conheça a Linx</li></a>
+        <a class="header__nav-item" href="#"><li>Ajude o algoritmo</li></a>
+        <a class="header__nav-item" href="#"><li>Seus produtos</li></a>
+        <a class="header__nav-item" href="#"><li>Compartilhe</li></a>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main">
+    <h4 class="main__description">Sua seleção especial</h4>
+    <div id="container-products" class="main__container-products">
+      <!-- <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <div class="product">
+        <div class="product__div-img">
+          <img src="" alt="" class="product__img">
+        </div>
+        <h5 class="product__name">Nome do Produto</h5>
+        <p class="product__description">
+          Descrição do produto um pouco maior, com duas linhas ou três que explica melhor do que se trata.
+        </p>
+        <p class="product__old-price">De: R$23,99</p>
+        <h4 class="product__new-price">Por: R$19,99</h4>
+        <p class="product__payment">ou 2x de R$9,99</p>
+        <button class="product__btn-purchase">Comprar</button>
+      </div>
+      <button class="main__list-more">Ainda mais produtos aqui!</button> -->
+    </div>
+  </main>
+
+  <section class="share">
+    <h4 class="share__title">Compartilhe a novidade</h4>
+    <p class="share__description">Quer que seus amigos também ganhem a lista persolanizada deles? Preencha agora!</p>
+    <form class="form">
+      <div class="form__control">
+        <label class="form__label" for="name">Nome do seu amigo:</label>
+        <input class="form__input" id="name" type="text">
+      </div>
+      <div class="form__control">
+        <label class="form__label" for="email">Email:</label>
+        <input class="form__input" id="email" type="text">
+      </div>
+      <button id="form__submit" class="form__submit">Enviar agora</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p class="footer__description">Testando suas habilidades em HTML, CSS e JS.</p>
+    <h1 class="footer__company-name">Linx Impulse</h1>
+    <p class="footer__year">2019</p>
+  </footer>
+  
+  <script src="./src/index.js"></script>  
+</body>
+</html>
