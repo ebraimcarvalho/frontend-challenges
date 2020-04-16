@@ -44,7 +44,8 @@ function renderButtonMore(data) {
 
   const btnListMore = document.querySelector('#btn__list-more');
   btnListMore.addEventListener('click', () => {
-    fetch(`https:${data.nextPage}`).then(data => data.json()).then(data => {
+    url = `https:${data.nextPage}`
+    fetch(url).then(data => data.json()).then(data => {
       console.log(data)
       renderProducts(data)
     });
