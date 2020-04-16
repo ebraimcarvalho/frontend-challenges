@@ -1425,3 +1425,48 @@ var squaresOnly = array => array.filter(number => Math.sqrt(number) % 1 === 0);
 let squaresOnly = a => a.filter(e => !(e ** 0.5 % 1));
 
 ```
+
+### 39 - My Languages
+<a href="https://www.codewars.com/kata/5b16490986b6d336c900007d/train/javascript" target="_blank">Link of problem</a>
+
+Your task
+You are given a dictionary/hash/object containing some languages and your test results in the given languages. Return the list of languages where your test score is at least 60, in descending order of the results.
+
+Note: the scores will always be unique (so no duplicate values)
+
+Examples
+{"Java": 10, "Ruby": 80, "Python": 65}    -->  ["Ruby", "Python"]
+{"Hindi": 60, "Dutch" : 93, "Greek": 71}  -->  ["Dutch", "Greek", "Hindi"]
+{"C++": 50, "ASM": 10, "Haskell": 20}     -->  []
+
+``` js
+// my first solution
+function myLanguages(results) {
+  var sortable = [];
+  var result = [];
+  for (var item in results) {
+      sortable.push([item, results[item]]);
+  };
+
+  sortable.sort(function(a, b) {
+      return a[1] < b[1];
+  });
+  sortable.filter(item => item[1] >= 60 ? result.push(item[0]) : '');
+  return result;
+}
+
+// best practices 
+function myLanguages(results) {
+  return Object.keys(results).filter(r => results[r] > 59).sort((a,b) => results[b] - results[a]);
+}
+
+// other solution
+myLanguages = r => Object.keys(r).sort((a,b) => r[b]-r[a]).filter(k => r[k] >= 60)
+
+// or
+const myLanguages = results => Object.entries(results)
+  .filter(([name, points]) => points >= 60)
+  .sort(([name1, points1], [name2, points2]) => points2 - points1)
+  .map(([name, points]) => name);
+
+```
