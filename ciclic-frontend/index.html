@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ciclic - Math</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__company">Ciclic</h1>
+  </header>
+  <main class="main">
+    <h3 class="main__title">Simulador</h3>
+    <form class="form">
+      <div class="form__control">
+        <label for="name">Nome</label>
+        <input id="name" type="text">
+      </div>
+      <div class="form__control">
+        <label for="payment">Mensalidade</label>
+        <input id="payment" type="text">
+      </div>
+      <div class="form__control">
+        <label for="time">Tempo</label>
+        <select name="time" id="time">
+          <option value="1">1 ano</option>
+          <option value="2">2 anos</option>
+          <option value="3">3 anos</option>
+          <option value="4">4 anos</option>
+          <option value="5">5 anos</option>
+        </select>
+      </div>
+      <button class="form__simulate">Simular</button>
+    </form>
+  </main>
+  <script src="./index.js"></script>
+</body>
+</html>
