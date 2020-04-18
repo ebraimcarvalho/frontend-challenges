@@ -17,16 +17,17 @@
     <h3 class="main__title">Simulador</h3>
     <form class="form">
       <div class="form__control">
-        <label for="name">Nome</label>
-        <input id="name" type="text" required>
+        <label class="label" for="name">Nome</label>
+        <input class="input" id="name" type="text" required>
       </div>
       <div class="form__control">
-        <label for="payment">Mensalidade</label>
-        <input id="payment" type="text" required>
+        <label class="label" for="payment">Mensalidade</label>
+        <input class="input" id="payment" type="text" required>
+        <small></small>
       </div>
       <div class="form__control">
-        <label for="time">Tempo</label>
-        <select name="time" id="time">
+        <label class="label" for="time">Tempo</label>
+        <select class="select" name="time" id="time">
           <option value="1">1 ano</option>
           <option value="2">2 anos</option>
           <option value="3">3 anos</option>
@@ -37,10 +38,6 @@
       <button class="form__simulate">Simular</button>
     </form>
   </main>
-
-  <section  class="render-response">
-
-  </section>
 
   <script src="./index.js"></script>
 

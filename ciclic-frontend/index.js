@@ -9,12 +9,17 @@ form.addEventListener('submit', simulate, false);
 function simulate(e) {
   e.preventDefault();
   console.log(Number(payment.value));
+  checkInput();
+}
+
+function checkInput() {
   if(isNaN(payment.value)) {
     payment.classList.add('error');
+    payment.nextElementSibling.innerHTML = `Que isso meu patrão?`
     console.log('Não é a mamãe!')
-    return
   } else {
-    payment.classList.remove('error')
+    payment.classList.remove('error');
+    payment.nextElementSibling.innerHTML = ``;
     calculate();
   }
 }
@@ -36,7 +41,7 @@ function renderResult(value) {
   value = Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
   let markup = `
-  <p class="response__text">Olá ${name.value}, juntando ${payMonth} todo mês, você terá ${value} em ${time.value} anos.</p>
+  <p class="response__text">Olá ${name.value}, juntando ${payMonth} todo mês, você terá ${value} em ${time.value} ${time.value <= 1 ? 'ano' : 'anos'}.</p>
   <button id="responseButton" class="response__button">Simular novamente</button>
   `
   renderResponse.innerHTML = markup;
