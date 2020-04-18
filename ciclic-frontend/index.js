@@ -16,5 +16,12 @@ function simulate(e) {
     body: JSON.stringify({ "expr": `${payment.value} * (((1 + 0.00517) ^ ${time.value * 12} - 1) / 0.00517)` })
   })
   .then(response => response.json())
-  .then(data => console.log(data.result))  
+  .then(data => {
+    console.log(data.result);
+    renderResult();
+  })  
+}
+
+function renderResult() {
+  console.log('render result now')
 }
