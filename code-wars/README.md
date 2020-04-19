@@ -1502,3 +1502,60 @@ function powersOfTwo(n) {
 }
 
 ```
+
+### 41 - Rock Paper Scissors!
+<a href="https://www.codewars.com/kata/5672a98bdbdd995fad00000f" target="_blank">Link of problem</a>
+
+Let's play! You have to return which player won! In case of a draw return Draw!.
+
+Examples:
+
+rps('scissors','paper') // Player 1 won!
+rps('scissors','rock') // Player 2 won!
+rps('paper','paper') // Draw!
+
+``` js
+// my first solution
+const rps = (p1, p2) => {
+  if(p1 == p2) {
+    return 'Draw!'
+  } else if(p1 == 'paper' && p2 == 'scissors'){
+    return 'Player 2 won!';
+  }
+  else {
+    return p1 < p2 
+    || (p1 == 'paper' && p2 == 'scissors') 
+    || (p1 == 'scissors' && p2 == 'paper') 
+    ? 'Player 1 won!' 
+    : 'Player 2 won!';
+  }
+};
+
+// best soluton
+const rps = (p1, p2) => {
+  if (p1 === p2) return "Draw!";
+  var rules = {rock: "scissors", paper: "rock", scissors: "paper"};
+  if (p2 === rules[p1]) {
+    return "Player 1 won!";
+  }
+  else {
+    return "Player 2 won!";
+  }
+};
+
+// or more interesting
+const rps = (p1, p2) => {
+  if(p1 === p2) {
+    return 'Draw!'
+  }; 
+  return `Player ${/rockscissors|scissorspaper|paperrock/.test(p1+p2)? 1 : 2} won!`;
+}
+
+```
+
+
+### 42 - Powers of 2
+<a href="https://www.codewars.com/kata/57a083a57cb1f31db7000028/javascript" target="_blank">Link of problem</a>
+
+### 43 - Powers of 2
+<a href="https://www.codewars.com/kata/57a083a57cb1f31db7000028/javascript" target="_blank">Link of problem</a>
