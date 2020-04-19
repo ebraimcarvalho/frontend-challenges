@@ -23,7 +23,7 @@ function checkInput() {
 }
 
 function calculate() {
-  fetch('http://api.mathjs.org/v4/', {
+  fetch('https://api.mathjs.org/v4/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json;charset=utf-8' },
     body: JSON.stringify({ "expr": `${payment.value} * (((1 + 0.00517) ^ ${time.value * 12} - 1) / 0.00517)` })
