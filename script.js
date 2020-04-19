@@ -3,6 +3,10 @@
 
   const projects = [
     {
+      name: 'ciclic-frontend',
+      linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/blob/master/ciclic-frontend/README.md'
+    },
+    {
       name: 'chaordic-frontend-challenge',
       linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/blob/master/chaordic-frontend-challenge/README.md'
     },
