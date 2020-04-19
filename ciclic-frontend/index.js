@@ -54,3 +54,16 @@ function backIndex(button) {
     window.location.href="./index.html"
   })
 }
+
+function add(num1, num2) {
+  return num1 + num2;
+}
+
+module.exports = {
+  simulate,
+  checkInput,
+  calculate,
+  renderResult,
+  backIndex,
+  add
+}

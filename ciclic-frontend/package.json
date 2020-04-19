@@ -1,0 +1,15 @@
+{
+  "name": "ciclic-frontend",
+  "version": "1.0.0",
+  "description": "Uma aplicação que fará uma simulação de investimento utilizando juros composto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^25.3.0"
+  }
+}
