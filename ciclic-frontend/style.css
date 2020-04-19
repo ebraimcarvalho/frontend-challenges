@@ -88,7 +88,6 @@ body {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  font-weight: 700;
   letter-spacing: 1px;
   color: white;
   background-color: rgb(55, 146, 55);
@@ -99,15 +98,13 @@ body {
 }
 
 .response {
-  height: 20vh;
-  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
 .response__text {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: rgb(54, 54, 54);
   margin-bottom: 20px;
 }
@@ -116,7 +113,6 @@ body {
   width: 100%;
   padding: 10px;
   font-size: 1rem;
-  font-weight: 500;
   letter-spacing: 1px;
   color: white;
   background-color: rgb(55, 146, 55);
