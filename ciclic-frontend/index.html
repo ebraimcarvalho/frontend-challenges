@@ -9,35 +9,38 @@
 </head>
 
 <body>
+  
   <header class="header">
-    <h1 class="header__company">Ciclic</h1>
+    <h1 class="header__company">Ciclic - Front-End Test</h1>
   </header>
 
-  <main id="renderResponse" class="main">
-    <h3 class="main__title">Simulador</h3>
-    <form class="form">
-      <div class="form__control">
-        <label class="label" for="name">Nome</label>
-        <input class="input" id="name" type="text" required>
-      </div>
-      <div class="form__control">
-        <label class="label" for="payment">Mensalidade</label>
-        <input class="input" id="payment" type="text" required>
-        <small></small>
-      </div>
-      <div class="form__control">
-        <label class="label" for="time">Tempo</label>
-        <select class="select" name="time" id="time">
-          <option value="1">1 ano</option>
-          <option value="2">2 anos</option>
-          <option value="3">3 anos</option>
-          <option value="4">4 anos</option>
-          <option value="5">5 anos</option>
-        </select>
-      </div>
-      <button class="form__simulate">Simular</button>
-    </form>
-  </main>
+  <div class="wrapper">
+    <main id="renderResponse" class="main">
+      <h3 class="main__title">Simulador de Investimento</h3>
+      <form class="form">
+        <div class="form__control">
+          <label class="label" for="name">Nome</label>
+          <input class="input" id="name" type="text" required>
+        </div>
+        <div class="form__control">
+          <label class="label" for="payment">Mensalidade</label>
+          <input class="input" id="payment" type="text" required>
+          <small class="small"></small>
+        </div>
+        <div class="form__control">
+          <label class="label" for="time">Tempo</label>
+          <select class="select" name="time" id="time">
+            <option value="1">1 ano</option>
+            <option value="2">2 anos</option>
+            <option value="3">3 anos</option>
+            <option value="4">4 anos</option>
+            <option value="5">5 anos</option>
+          </select>
+        </div>
+        <button class="form__simulate">Simular</button>
+      </form>
+    </main>
+  </div>
 
   <script src="./index.js"></script>
 
