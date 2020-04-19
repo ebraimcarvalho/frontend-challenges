@@ -1554,8 +1554,41 @@ const rps = (p1, p2) => {
 ```
 
 
-### 42 - Powers of 2
-<a href="https://www.codewars.com/kata/57a083a57cb1f31db7000028/javascript" target="_blank">Link of problem</a>
+### 42 - To square(root) or not to square(root)
+<a href="https://www.codewars.com/kata/57f6ad55cca6e045d2000627/train/javascript" target="_blank">Link of problem</a>
+
+#To square(root) or not to square(root)
+
+Write a method, that will get an integer array as parameter and will process every number from this array.
+Return a new array with processing every number of the input-array like this:
+
+If the number has an integer square root, take this, otherwise square the number.
+
+[4,3,9,7,2,1] -> [2,9,3,49,4,1]
+The input array will always contain only positive numbers and will never be empty or null.
+
+The input array should not be modified!
+
+``` js
+// my first solution
+function squareOrSquareRoot(array) {
+  return array.map(item => Math.sqrt(item) % 1 == 0 ? Math.sqrt(item) : item**2);  
+}
+
+// other solution
+function squareOrSquareRoot(array) {
+  return array.map(x => {
+    const n = Math.sqrt(x)
+    return Number.isInteger(n) ? n : x * x
+  })
+}
+
+// or
+function squareOrSquareRoot(array) {
+  return array.map(e => Number.isInteger(Math.sqrt(e)) ? Math.sqrt(e) : e*e);  
+}
+
+```
 
 ### 43 - Powers of 2
 <a href="https://www.codewars.com/kata/57a083a57cb1f31db7000028/javascript" target="_blank">Link of problem</a>
