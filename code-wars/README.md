@@ -1661,5 +1661,54 @@ function lowercaseCount(str){
 
 ```
 
-### 45 - Regex count lowercase letters
-<a href="https://www.codewars.com/kata/56a946cd7bd95ccab2000055/train/javascript" target="_blank">Link of problem</a>
+### 45 - Find the smallest integer in the array
+<a href="https://www.codewars.com/kata/55a2d7ebe362935a210000b2/javascript" target="_blank">Link of problem</a>
+
+Given an array of integers your solution should find the smallest integer.
+
+For example:
+
+Given [34, 15, 88, 2] your solution will return 2
+Given [34, -345, -1, 100] your solution will return -345
+You can assume, for the purpose of this kata, that the supplied array will not be empty.
+
+``` js
+// my first solution
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min(...args)
+  }
+}
+
+// other solution
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    args.sort(function(a, b) {
+    return a - b; } )
+    return args[0];
+  }
+}
+
+// or
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return args.sort((a,b)=>a-b)[0];
+  }
+}
+
+// other
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return Math.min.apply(Math, args)
+  }
+}
+
+// interesting
+class SmallestIntegerFinder {
+  findSmallestInt(args) {
+    return args.reduce(function(prev, curr, index, array) {
+      return prev < curr ? prev : curr;
+    });
+  }
+}
+```
