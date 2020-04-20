@@ -16,4 +16,8 @@ describe("My first test suite", () => {
     const testsAreEssential = true
     expect(testsAreEssential).toBe(true)
   })
+  test('should exist form', () => {
+    const form1 = 2;
+    expect(form1).toBeDefined()
+  })
 })
