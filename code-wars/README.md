@@ -1590,5 +1590,40 @@ function squareOrSquareRoot(array) {
 
 ```
 
-### 43 - Powers of 2
-<a href="https://www.codewars.com/kata/57a083a57cb1f31db7000028/javascript" target="_blank">Link of problem</a>
+### 43 - Grasshopper - Summation
+<a href="https://www.codewars.com/kata/55d24f55d7dd296eb9000030/javascript" target="_blank">Link of problem</a>
+
+Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+For example:
+
+summation(2) -> 3
+1 + 2
+
+summation(8) -> 36
+1 + 2 + 3 + 4 + 5 + 6 + 7 + 8
+
+``` js
+// my first solution
+var summation = function (num) {
+  return Array.from(Array(num), (_, i) => i + 1).reduce((acc, att) => acc + att, 0)
+}
+
+// other solution
+var summation = function f(num) {
+  return num ? num + f(num-1) : 0;
+}
+
+// or
+var summation = function (num) {
+  let result = 0;
+  for (var i = 1; i <= num; i++) {
+    result += i;
+  }
+  
+  return result;
+}
+```
+
+### 44 - Grasshopper - Summation
+<a href="https://www.codewars.com/kata/55d24f55d7dd296eb9000030/javascript" target="_blank">Link of problem</a>
