@@ -97,6 +97,14 @@ body {
   cursor: pointer;
 }
 
+.form__simulate:hover {
+  background-color: rgb(36, 100, 36);
+}
+
+.form__simulate:active {
+  transform: scale(0.98);
+}
+
 .response {
   display: flex;
   flex-direction: column;
@@ -120,4 +128,12 @@ body {
   border-radius: 5px;
   outline: none;
   cursor: pointer;
+}
+
+.response__button:hover {
+  background-color: rgb(36, 100, 36);
+}
+
+.response__button:active {
+  transform: scale(0.98);
 }
