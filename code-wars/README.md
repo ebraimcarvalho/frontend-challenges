@@ -1625,5 +1625,41 @@ var summation = function (num) {
 }
 ```
 
-### 44 - Grasshopper - Summation
-<a href="https://www.codewars.com/kata/55d24f55d7dd296eb9000030/javascript" target="_blank">Link of problem</a>
+### 44 - Regex count lowercase letters
+<a href="https://www.codewars.com/kata/56a946cd7bd95ccab2000055/train/javascript" target="_blank">Link of problem</a>
+
+Your task is simply to count the total number of lowercase letters in a string.
+
+Examples
+lowercaseCount("abc"); ===> 3
+
+lowercaseCount("abcABC123"); ===> 3
+
+lowercaseCount("abcABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 3
+
+lowercaseCount(""); ===> 0;
+
+lowercaseCount("ABC123!@€£#$%^&*()_-+=}{[]|\':;?/>.<,~"); ===> 0
+
+lowercaseCount("abcdefghijklmnopqrstuvwxyz"); ===> 26
+
+``` js
+// my first solution
+function lowercaseCount(str){
+  return str.match(/[a-z]/g) ? str.match(/[a-z]/g).length : 0
+}
+
+// other solution
+function lowercaseCount(str){
+    return (str.match(/[a-z]/g) || []).length
+}
+
+// or
+function lowercaseCount(str){
+    return str.replace(/[^a-z]/g, "").length;
+}
+
+```
+
+### 45 - Regex count lowercase letters
+<a href="https://www.codewars.com/kata/56a946cd7bd95ccab2000055/train/javascript" target="_blank">Link of problem</a>
