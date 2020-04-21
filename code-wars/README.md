@@ -1767,3 +1767,34 @@ function countBy(x, n){
 }
 
 ```
+
+### 48 - Counting sheep...
+<a href="https://www.codewars.com/kata/54edbc7200b811e956000556/train/javascript" target="_blank">Link of problem</a>
+
+Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+
+For example,
+
+[true,  true,  true,  false,
+  true,  true,  true,  true ,
+  true,  false, true,  false,
+  true,  false, false, true ,
+  true,  true,  true,  true ,
+  false, false, true,  true]
+The correct answer would be 17.
+
+``` js
+// my first solution
+function countSheeps(arrayOfSheep) {
+  return arrayOfSheep.reduce((acc, att) => att === true ? +acc + +att : +acc, 0)
+}
+
+// other solution
+function countSheeps(arr) {
+  return arr.filter(Boolean).length;
+}
+
+// or
+let countSheeps = x => x.filter( s => s ).length;
+
+```
