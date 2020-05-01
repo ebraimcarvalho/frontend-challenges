@@ -79,16 +79,6 @@ a {
   margin-top: 10px;
 }
 
-.hero__badge-codewar {
-  margin-top: 25px;
-  width: 100%;
-  max-width: 400px;
-}
-
-.hero__badge-codewar:hover {
-  transform: scale(0.98);
-}
-
 .container {
   margin-top: 10px;
   padding: 0 30px;
@@ -107,17 +97,26 @@ a:hover {
 
 .card-project {
   width: 340px;
-  height: 200px;
   background-color: white;
   margin: 10px 10px;
   padding: 20px 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   border-bottom: 5px solid rgb(32, 60, 138);
   overflow: hidden;
 }
 
 .card-project:hover {
   box-shadow: 0px 0px 10px 0px rgb(79, 80, 87);
+}
+
+.card-project__img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card-project__img:hover {
+  transform: scale(0.98);
 }
 
 .card-project p {
