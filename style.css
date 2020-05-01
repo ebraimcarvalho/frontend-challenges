@@ -96,6 +96,10 @@ a:hover {
 }
 
 .card-project {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
   width: 340px;
   background-color: white;
   margin: 10px 10px;

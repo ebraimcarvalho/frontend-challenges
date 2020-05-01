@@ -5,14 +5,14 @@
     {
       name: 'ciclic-frontend',
       linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/blob/master/ciclic-frontend/README.md',
-      description: 'An Investment simulator consuming an API to calculate the return at a fixed rate',
-      tags: 'HTML | CSS | JS'
+      description: 'An Investment simulator consuming an API to calculate the return at a fixed rate and with input validation',
+      tags: 'JS | API | CSS | HTML'
     },
     {
       name: 'chaordic-frontend-challenge',
       linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/blob/master/chaordic-frontend-challenge/README.md',
-      description: 'investment simulator',
-      tags: 'HTML | CSS | JS'
+      description: 'Web page for e-commerce with a structure that consumes an API to render products, information, prices and payment methods and with input validation',
+      tags: 'JS | API | CSS | HTML'
     },
     {
       name: 'intro-component-with-signup-form-master',
@@ -69,11 +69,11 @@
         <img class="card-project__img" src="./${name}/design/desktop-design.jpg">      
         <h4>${i + 2}. ${formatName(name)}</h4>
       </a>
-      <p>${description} developed for improve my frontend skills! Details and more informations, you can access on page: 
+      <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
         <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
         Or access the 
         <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/${name}" target="_blank">Code page - Github</a></p>
-      <small>${tags}</small>
+      <small class="card-project__small">${tags}</small>
     `;
 
     container.appendChild(cardProject);

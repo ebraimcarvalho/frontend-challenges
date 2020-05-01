@@ -11,6 +11,7 @@ body {
   background: linear-gradient(0deg, rgb(132, 165, 255) 13%, rgb(86, 126, 255) 100%);
   background-repeat: no-repeat;
   width: 100%;
+  min-height: 100vh;
 }
 
 a {
