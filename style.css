@@ -10,7 +10,7 @@ body {
   font-family: 'Lato';
   font-size: 18px;
   background-color: hsl(0, 0%, 98%);
-  color: hsl(240, 6%, 25%);
+  color: hsla(0, 0%, 30%, 0.959);
   width: 100%;
   height: 100vh;
 }
@@ -50,11 +50,12 @@ li {
 
 header nav ul li a {
   color: hsl(236, 7%, 37%);
-
+  font-weight: 500;
 }
 
 a {
   color: hsl(236, 7%, 37%);
+  font-weight: 700;
 }
 
 .hero {
@@ -76,11 +77,10 @@ a {
 
 .hero p {
   margin-top: 10px;
-  font-weight: 300;
 }
 
 .hero__badge-codewar {
-  margin-top: 20px;
+  margin-top: 25px;
   width: 100%;
   max-width: 400px;
 }
@@ -98,7 +98,7 @@ a, a:visited, a:focus, a:active {
 }
 
 a:hover {
-  color: rgb(202, 94, 94);  
+  color: rgb(228, 113, 113);
 }
 
 .card-project {
@@ -108,15 +108,17 @@ a:hover {
   margin: 10px 10px;
   padding: 20px 15px;
   border-radius: 5px;
-  border-bottom: 5px solid darkslategray;
+  border-bottom: 5px solid rgb(32, 60, 138);
   overflow: hidden;
-  
+}
+
+.card-project:hover {
+  box-shadow: 0px 0px 10px 0px rgb(79, 80, 87);
 }
 
 .card-project p {
   margin: 15px 0 20px;
   font-size: 15px;
-  font-weight: 300;
 }
 
 @media screen and (min-width: 600px) {
