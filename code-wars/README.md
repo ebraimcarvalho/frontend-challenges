@@ -1942,3 +1942,36 @@ const cannonsReady = (gunners) => {
 }
 
 ```
+
+### 53 - Double Char
+<a href="https://www.codewars.com/kata/56b1f01c247c01db92000076/train/javascript" target="_blank">Link of problem</a>
+
+Given a string, you have to return a string in which each character (case-sensitive) is repeated once.
+
+doubleChar("String") ==> "SSttrriinngg"
+
+doubleChar("Hello World") ==> "HHeelllloo  WWoorrlldd"
+
+doubleChar("1234!_ ") ==> "11223344!!__  "
+
+``` js
+// my first solution
+function doubleChar(str) {
+  return str.split('').map(letter => `${letter}${letter}`).join('')
+}
+
+// other solution using regex
+function doubleChar(str) {
+  return str.replace(/(.)/g, "$1$1")
+}
+
+// imperative
+function doubleChar(str) {
+  var word = '';
+  for (var i = 0; i < str.length; i++){
+    word = word + str[i] + str[i];
+  };
+  return word;
+};
+
+```
