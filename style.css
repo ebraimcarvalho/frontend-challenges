@@ -103,6 +103,7 @@ a:hover {
   width: 340px;
   background-color: white;
   margin: 10px 10px;
+  margin-bottom: 32px;
   padding: 20px 15px;
   border-radius: 10px;
   border-bottom: 5px solid rgb(32, 60, 138);
