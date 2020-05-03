@@ -46,6 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
+        {!this.state.isFetching && <h3>Calma, minha fera! Tá carregando...</h3>}
         {!!this.state.isFetching && <AppContent {...this.state} />}
       </div>
     )
