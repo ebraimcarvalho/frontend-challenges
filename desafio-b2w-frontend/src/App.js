@@ -3,65 +3,50 @@ import AppContent from './components/AppContent'
 
 class App extends React.Component {
   state = {
-    image: 'https://image.flaticon.com/icons/svg/25/25231.svg',
-    name: 'Brian Walker',
-    profession: 'Web Developer',
-    profile: '27-year old web developer fromt Colorado Springs with 5+ years of work experience in various fields',
-    contact: {
-      "tel": "123-456-7890",
-      "cel": "012-345-6789",
-      "address": "1490 General Woods. Colorado Springs",
-      "website": "brianwalker.co",
-      "mail": "mail@brianwalker.co" 
-    },
-    skills: [{
-      "name": "Front End",
-      "value": "80%"
-      },
-      {
-      "name": "Back End",
-      "value": "90%"
-      },
-      {
-      "name": "Writing",
-      "value": "75%"
-    }],
-    experience: [{
-      "name": "Front End Developer @ HillSong",
-      "date": "January 2014",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-      "name": "PHP Developer @ Creative Wizards",
-      "date": "March 2012 - December 2013",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-      "name": "UX Designer @ Graphics MasterMinds",
-      "date": "January 2012 - February 2012",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-    }],
-    education: [{
-      "name": "Web Developer @ Harvard University",
-      "date": "August 2006 - May 2010",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-      "name": "Colorado Springs College",
-      "date": "August 2003 - May 2006",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-      },
-      {
-      "name": "UX Designer @ Graphics MasterMinds",
-      "date": "January 2012 - February 2012",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley."
-    }]
+    isFetching: false,
+  }
+
+  componentDidMount() {
+    fetch('https://www.mocky.io/v2/5a5e38f3330000b0261923a5')
+      .then(data => data.json())
+      .then(data => {
+        data = data.profile
+        this.setState({
+          image: 'https://raw.githubusercontent.com/b2w-marketplace/code-challenge/master/files/avatar-dev.png',
+          name: data.name,
+          profession: data.profession,
+          profile: data.description,
+          contact: {
+            "tel": data.contact.tel,
+            "cel": data.contact.cel,
+            "address": data.contact.address,
+            "website": data.contact.website,
+            "mail": data.contact.mail 
+          },
+          skills: data.skills.map(item => ({
+            name: item.name,
+            value: item.value
+          })),
+          experience: data.experience.map(item => ({
+            name: item.name,
+            date: item.date,
+            description: item.description
+          })),
+          education: data.education.map(item => ({
+            name: item.name,
+            date: item.date,
+            description: item.description
+          })),
+          isFetching: true
+        })
+        console.log(this.state)
+      })
   }
 
   render() {
     return (
       <div>
-        <AppContent {...this.state} />
+        {!!this.state.isFetching && <AppContent {...this.state} />}
       </div>
     )
   }
