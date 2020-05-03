@@ -3,7 +3,7 @@ import AppContent from './components/AppContent'
 
 class App extends React.Component {
   state = {
-    image: 'https://github.com/b2w-marketplace/code-challenge/blob/master/files/avatar-dev.png',
+    image: 'https://image.flaticon.com/icons/svg/25/25231.svg',
     name: 'Brian Walker',
     profession: 'Web Developer',
     profile: '27-year old web developer fromt Colorado Springs with 5+ years of work experience in various fields',

@@ -1,37 +1,18 @@
 import React from 'react'
+import Cover from './cover'
+import Profile from './profile'
+import Contact from './contact'
+import Skills from './skills'
 import Infos from './infos'
 
 const AppContent = (state) => {
   return (
     <div className="container">
       <div className="left">
-        {/* <img src={state.image} alt=""/> */}
-        <h1>{state.name}</h1>
-        <p>{state.profession}</p>
-        <hr/>
-
-        <div>
-          <h3>Profile</h3>
-          <p>{state.profile}</p>
-        </div>
-
-        <div>
-          <h3>Contact</h3>
-          {Object.keys(state.contact).map((item, index) => (
-            <p key={index}>{state.contact[item]}</p>
-          ))}
-        </div>
-
-        <div>
-          <h3>Skills</h3>
-          {state.skills.map((item, index) => (
-            <div key={index}>
-              <p>{item.name}</p>
-              <p>{item.value}</p>
-            </div>
-          ))}
-        </div>
-
+        <Cover state={state}/>
+        <Profile title="Profile" profile={state.profile} />
+        <Contact title="Contact" contact={state.contact} />
+        <Skills title="Skills" skill={state.skills} />
       </div>
       <div className="right">
         <Infos title="Work Experience" info={state.experience} />
