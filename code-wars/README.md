@@ -2063,3 +2063,34 @@ function whatNumberIsIt(n){
 }
 
 ```
+
+### 56 - Training JS #9: loop statement --while and do..while
+<a href="https://www.codewars.com/kata/5722fd3ab7162a3a4500031f/train/javascript" target="_blank">Link of problem</a>
+
+``` js
+  Test.assertSimilar(padIt("a",1),"*a");
+  Test.assertSimilar(padIt("a",2),"*a*");
+  Test.assertSimilar(padIt("a",3),"**a*");
+  Test.assertSimilar(padIt("a",4),"**a**");
+  Test.assertSimilar(padIt("a",5),"***a**");
+```
+
+``` js
+// my first solution
+function padIt(str,n){
+  for(let i = 1; i <= n; i++) {
+    i % 2 ? str = '*' + str : str = str + '*'
+  }
+  return str
+}
+
+// other soltuion
+function padIt(str,n){
+  var i = 1
+  do {
+    i % 2 ? str = '*' + str : str = str + '*'
+    i++
+  } while (i <= n)
+  return str
+}
+```
