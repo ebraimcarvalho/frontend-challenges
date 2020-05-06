@@ -64,6 +64,10 @@ hr {
   margin-top: 60px;
 }
 
+.profile:nth-child(4) {
+  margin-top: 50px;
+}
+
 .profile__title {
   font-size: 1.3rem;
 }
@@ -87,4 +91,35 @@ hr {
 .profile__description:nth-child(4) {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+progress {
+  background: #333;
+  color: red;
+  border: 2px solid white;
+  height: 18px;
+  width: 240px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+progress::-webkit-progress-bar {
+  background: #333;
+}
+progress::-webkit-progress-value {
+  background: white;
+} 
+
+progress::-moz-progress-bar {
+  background-color: blue;
+}
+
+.skills {
+  padding-bottom: 50px;
+}
+
+.skills__description {
+  line-height: 1.7;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
