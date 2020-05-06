@@ -39,10 +39,10 @@ function renderResult(value) {
   value = Number(value).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
   let markup = `
-  <div class="response">
-  <p class="response__text">Olá ${name.value}, juntando ${payMonth} todo mês, você terá ${value} em ${time.value} ${time.value <= 1 ? 'ano' : 'anos'}, a uma taxa de 0.517% ao mês!</p>
-  <button id="responseButton" class="response__button">Simular novamente</button>
-  </div>
+    <div class="response">
+      <p class="response__text">Olá ${name.value}, juntando ${payMonth} todo mês, você terá ${value} em ${time.value} ${time.value <= 1 ? 'ano' : 'anos'}, a uma taxa de 0.517% ao mês!</p>
+      <button id="responseButton" class="response__button">Simular novamente</button>
+    </div>
   `
   renderResponse.innerHTML = markup;
   const responseButton = document.querySelector('#responseButton');
