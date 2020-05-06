@@ -66,8 +66,8 @@
 
     cardProject.innerHTML = `
       <a href="./${name}/index.html" target="_blank">
-        <img class="card-project__img" src="./${name}/design/desktop-design.jpg">      
-        <h4>${i + 2}. ${formatName(name)}</h4>
+        <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
+        <h4>${i + 3}. ${formatName(name)}</h4>
       </a>
       <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
         <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
