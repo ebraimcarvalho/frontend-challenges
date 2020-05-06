@@ -93,6 +93,17 @@ hr {
   margin-bottom: 20px;
 }
 
+.skills {
+  padding-bottom: 50px;
+}
+
+.skills__description {
+  line-height: 1.7;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+
 progress {
   background: #333;
   color: red;
@@ -100,7 +111,6 @@ progress {
   height: 18px;
   width: 240px;
   margin: 0 auto;
-  margin-bottom: 15px;
 }
 
 progress::-webkit-progress-bar {
@@ -112,14 +122,4 @@ progress::-webkit-progress-value {
 
 progress::-moz-progress-bar {
   background-color: blue;
-}
-
-.skills {
-  padding-bottom: 50px;
-}
-
-.skills__description {
-  line-height: 1.7;
-  letter-spacing: 1px;
-  margin-bottom: 10px;
 }
