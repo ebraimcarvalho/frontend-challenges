@@ -1,10 +1,10 @@
 import React from 'react'
 
 const Contact = ({ title, contact }) => (
-  <div>
-    <h3>{title}</h3>
+  <div className="profile">
+    <h3 className="profile__title">{title.toUpperCase()}</h3>
     {Object.keys(contact).map((item, index) => (
-      <p key={index}>{contact[item]}</p>
+      <p className="profile__description" key={index}>{contact[item]}</p>
     ))}
   </div>
 )

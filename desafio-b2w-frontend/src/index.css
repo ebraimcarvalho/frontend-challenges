@@ -37,11 +37,54 @@ code {
 .cover__name {
   font-size: 3rem;
   line-height: 1.2;
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 .cover__profession {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  font-size: 1rem;
+  margin-top: 15px;
+  margin-bottom: 60px;
+  font-size: 0.9rem;
   letter-spacing: 3px;
+}
+
+hr {
+  width: 95%;
+  margin-left: auto;
+}
+
+.profile {
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  max-width: 210px;
+}
+
+.profile:nth-child(2) {
+  margin-top: 60px;
+}
+
+.profile__title {
+  font-size: 1.3rem;
+}
+
+.profile__title::after {
+  content: '';
+  display: block;
+  width: 140px;
+  height: 2px;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+}
+
+.profile__description {
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+.profile__description:nth-child(4) {
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
