@@ -8,7 +8,7 @@ class App extends React.Component {
   constructor() {
     super()
     this.state = {
-      tasks: [ 'task 1', 'task 2', 'task 3' ],
+      tasks: [],
     }
   }
 
@@ -28,6 +28,7 @@ class App extends React.Component {
         <Header numTodo={this.state.tasks.length} />
         <Todos tasks={this.state.tasks} handleRemove={this.handleRemove} />
         <Submit handleAdd={this.handleAdd} valueForm={this.state.valueForm} />
+        <p>O que vamos fazer hoje?</p>
       </div>
     );
   }
