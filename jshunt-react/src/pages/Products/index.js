@@ -25,7 +25,7 @@ class Product extends React.Component {
         <div className='product-info'>
           <h1>{product.title}</h1>
           <p>{product.description}</p>
-          <p>URL: <a href={product.url} target='_blank'>{product.url}</a></p>
+          <p>URL: <a href={product.url} target='_blank' rel="noopener noreferrer">{product.url}</a></p>
         </div>
         <Link to='/' className='back'>Voltar para Home</Link>
       </div>

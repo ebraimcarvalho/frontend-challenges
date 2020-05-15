@@ -9,7 +9,7 @@
   align-items: center;
   margin-top: 20px;
   height: 40px;
-  background-color: rgb(102, 94, 94);
+  background-color: #665f8f;
   color: #ffffff;
   font-size: 18px;
   text-decoration: none;
@@ -37,5 +37,5 @@
 }
 
 .product-info a {
-  color: #069;
+  color: rgb(2, 94, 139);
 }
