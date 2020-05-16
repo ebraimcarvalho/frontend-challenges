@@ -2223,3 +2223,32 @@ function drawStairs(n) {
   return Array(n).fill("I").map((e,i)=>e.padStart(i+1," ")).join("\n")
 }
 ```
+
+### 60 - Fake Binary
+<a href="https://www.codewars.com/kata/57eae65a4321032ce000002d/javascript" target="_blank">Link of problem</a>
+
+Given a string of digits, you should replace any digit below 5 with '0' and any digit 5 and above with '1'. Return the resulting string.
+
+``` js
+// my first solution
+function fakeBin(x){
+  return x
+    .replace(/[01234]/g, '0')
+    .replace(/[56789]/g, '1');
+}
+
+// other solution
+function fakeBin(x) {
+    return x.split('').map(n => n < 5 ? 0 : 1).join('');
+}
+
+// or
+function fakeBin(x) {
+  return x.replace(/\d/g, d => d < 5 ? 0 : 1);
+}
+
+// interesting
+function fakeBin(x) {
+  return x.replace(/\d/g, n => "0000011111"[n])
+}
+```
