@@ -3,17 +3,17 @@ import React from 'react';
 function Persona({data, getRepos, repos}) {
   const info = data.info
   return (
-    <div>
-      <div>
-        <img width='200' src={info.avatar_url} alt={info.name} />
-        <p>Name: {info.name}</p>
-        <p>Bio: {info.bio}</p>
-        <p>Hireable: {info.hireable ? 'Yes' : 'No'}</p>
-        <p>Site: {info.blog}</p>
-        <p>Comapany: {info.company}</p>
-        <p>Following: {info.following}</p>
-        <p>Followers: {info.followers}</p>
-        <div>
+    <div className='persona'>
+      <div className='persona__info'>
+        <img className='persona__info-photo' width='200' src={info.avatar_url} alt={info.name} />
+        <p className='persona__info-name'>Name: {info.name}</p>
+        <p className='persona__info-bio'>Bio: {info.bio}</p>
+        <p className='persona__info-hire'>Hireable: {info.hireable ? 'Yes' : 'No'}</p>
+        <p className='persona__info-site'>Site: {info.blog}</p>
+        {!!info.company && <p className='persona__info-company'>Company: {info.company}</p>}
+        <p className='persona__info-following'>Following: {info.following}</p>
+        <p className='persona__info-followers'>Followers: {info.followers}</p>
+        <div className='persona__buttons'>
           <button value='repos' onClick={getRepos}>Get Repos</button>
           <button value='starred' onClick={getRepos}>Get Starred</button>
         </div>
