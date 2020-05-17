@@ -1,0 +1,13 @@
+.persona {
+  background-color: rgba(34, 33, 33, 0.76);
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.persona__info-photo {
+  border-radius: 30px;
+}

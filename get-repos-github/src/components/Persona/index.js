@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css'
 
 function Persona({data, getRepos, repos}) {
   const info = data.info
@@ -9,7 +10,7 @@ function Persona({data, getRepos, repos}) {
         <p className='persona__info-name'>Name: {info.name}</p>
         <p className='persona__info-bio'>Bio: {info.bio}</p>
         <p className='persona__info-hire'>Hireable: {info.hireable ? 'Yes' : 'No'}</p>
-        <p className='persona__info-site'>Site: {info.blog}</p>
+        <p className='persona__info-site'>Site: <a href={info.blog} target='_blank' rel="noopener noreferrer">{info.blog}</a></p>
         {!!info.company && <p className='persona__info-company'>Company: {info.company}</p>}
         <p className='persona__info-following'>Following: {info.following}</p>
         <p className='persona__info-followers'>Followers: {info.followers}</p>
