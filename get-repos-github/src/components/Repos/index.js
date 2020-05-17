@@ -1,6 +1,7 @@
 import React from 'react';
 
-function Repos({repos}) {
+function Repos({repos, typeRepo, user}) {
+  let type = typeRepo === 'repos' ? 'repositories' : 'stars'
   return (
     <div className='repos'>
       {repos.map(repo => (
@@ -10,6 +11,7 @@ function Repos({repos}) {
           <p className='repo__link'><a href={repo.html_url} target='_blank' rel="noopener noreferrer">{repo.html_url}</a></p>
         </div>
       ))}
+      <a href={`https://github.com/${user}?tab=${type}`} target='_blank' rel="noopener noreferrer">Go to all {type}</a>
     </div>
   )
 }

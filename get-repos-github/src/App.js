@@ -11,7 +11,8 @@ function App() {
   const [info, setInfo] = useState(false)
   const [isFetching, setIsFetching] = useState(false)
   const [error, setError] = useState(false)
-  const [repos, setRepos] = useState([])
+  const [repos, setRepos] = useState(false)
+  const [typeRepo, setTypeRepo] = useState('')
 
   function handleChange(e) {
     setName(e.target.value)
@@ -19,7 +20,7 @@ function App() {
 
   const getSearch = (e) => {
     e.preventDefault()
-    setRepos([])
+    setRepos(false)
     setIsFetching(true)
     setInfo(false)
     getApi()
@@ -47,16 +48,17 @@ function App() {
     api.get(`${lastuser}/${type}`)
       .then(response => {
         setRepos(response.data)
+        setTypeRepo(type)
       })
   }
-
+  
   return (
     <div className="App">
       <Search name={name} handleChange={handleChange} getSearch={getSearch}/>
       {!!isFetching && <p>Searching user...!</p>}
       {!!error && <p>Request error. User not found!</p>}
       {!!info && <Persona data={info} getRepos={getRepos} repos={repos} />}
-      {!!repos && <Repos repos={repos} />}
+      {!!repos && <Repos repos={repos} typeRepo={typeRepo} user={lastuser} />}
     </div>
   );
 }
