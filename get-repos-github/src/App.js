@@ -3,6 +3,7 @@ import api from './services/api'
 
 import Search from './components/Search'
 import Persona from './components/Persona'
+import Repos from './components/Repos'
 
 function App() {
   const [name, setName] = useState('')
@@ -43,13 +44,10 @@ function App() {
 
   const getRepos = (type) => {
     type = type.target.value
-    console.log(lastuser)
     api.get(`${lastuser}/${type}`)
       .then(response => {
-        console.log(response)
         setRepos(response.data)
       })
-    console.log('request repos: ', type, repos)
   }
 
   return (
@@ -58,6 +56,7 @@ function App() {
       {!!isFetching && <p>Searching user...!</p>}
       {!!error && <p>Request error. User not found!</p>}
       {!!info && <Persona data={info} getRepos={getRepos} repos={repos} />}
+      {!!repos && <Repos repos={repos} />}
     </div>
   );
 }

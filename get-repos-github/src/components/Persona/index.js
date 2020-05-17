@@ -1,5 +1,4 @@
 import React from 'react';
-import Repos from '../Repos'
 
 function Persona({data, getRepos, repos}) {
   const info = data.info
@@ -17,9 +16,6 @@ function Persona({data, getRepos, repos}) {
         <div>
           <button value='repos' onClick={getRepos}>Get Repos</button>
           <button value='starred' onClick={getRepos}>Get Starred</button>
-        </div>
-        <div>
-          {!!repos && <Repos repos={repos} />}
         </div>
       </div>
     </div>
