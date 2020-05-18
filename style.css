@@ -106,7 +106,7 @@ a:hover {
   margin-bottom: 32px;
   padding: 20px 15px;
   border-radius: 10px;
-  border-bottom: 5px solid rgb(32, 60, 138);
+  border-bottom: 5px solid rgba(52, 52, 53, 0.705);
   overflow: hidden;
 }
 
