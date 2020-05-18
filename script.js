@@ -18,7 +18,7 @@
       name: 'intro-component-with-signup-form-master',
       linkChallenge: 'https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1',
       description: 'A Sign up form with a responsive layout, mobile first and input validation',
-      tags: 'JS | API | CSS | HTML | Responsive'
+      tags: 'JS | CSS | HTML | Responsive'
     },
     {
       name: 'frontend-technical-test',
