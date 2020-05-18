@@ -1,0 +1,48 @@
+.repos {
+  /* background-color: red; */
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.repo {
+  background-color: rgba(34, 33, 33, 0.829);
+  border-radius: 10px;
+  padding: 20px 10px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.repo:nth-child(odd) {
+  background-color: rgba(0, 0, 0, 0.692);
+}
+
+.repo__name {
+  text-transform: capitalize;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.repo__description {
+  font-weight: 300;
+  line-height: 1.4;
+  margin-bottom: 5px;
+}
+
+.repo__all {
+  background-color: rgba(187, 182, 181, 0.74);
+  color: black;
+  padding: 10px 20px;
+  border-radius: 10px;
+  transition: all 0.2s;
+}
+
+.repo__all:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}

@@ -3,11 +3,80 @@
   width: 100%;
   padding-top: 20px;
   padding-bottom: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding-left: 20px;
+  overflow: hidden;
 }
 
-.persona__info-photo {
+.persona__top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.persona__top-photo {
   border-radius: 30px;
+  max-width: 250px;
+  margin-bottom: 20px;
+}
+
+.persona__info {
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.persona__info p {
+  margin-bottom: 5px;
+}
+
+.persona__buttons {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.persona__buttons button {
+  padding: 12px 30px;
+  font-size: 1rem;
+  background-color: rgba(238, 162, 149, 0.87);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.persona__buttons button:first-child {
+  background-color: rgba(236, 236, 236, 0.808);
+  color: black;
+  margin-right: 20px;
+}
+
+.persona__buttons button:hover {
+  opacity: 0.8;
+  box-shadow: 1px 0px 5px #fff;
+}
+
+@media screen and (min-width: 638px) {
+  .persona {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .persona__top {
+    align-items: center;
+  }
+
+  .persona__info {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .persona__info p {
+    margin-bottom: 15px;
+  }
+}
+
+@media screen and (min-width: 746px) {
+  .persona__info {
+    text-align: left;
+  }
 }

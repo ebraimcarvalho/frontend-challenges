@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.css'
 
 function Repos({repos, typeRepo, user}) {
   let type = typeRepo === 'repos' ? 'repositories' : 'stars'
@@ -11,7 +12,7 @@ function Repos({repos, typeRepo, user}) {
           <p className='repo__link'><a href={repo.html_url} target='_blank' rel="noopener noreferrer">{repo.html_url}</a></p>
         </div>
       ))}
-      <a href={`https://github.com/${user}?tab=${type}`} target='_blank' rel="noopener noreferrer">Go to all {type}</a>
+      <a className='repo__all' href={`https://github.com/${user}?tab=${type}`} target='_blank' rel="noopener noreferrer">Go to all {type}</a>
     </div>
   )
 }

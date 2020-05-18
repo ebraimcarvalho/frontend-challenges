@@ -30,6 +30,7 @@ a:hover {
 
 #root {
   width: 100%;
+  overflow: hidden;
 }
 
 .searching-msg {
