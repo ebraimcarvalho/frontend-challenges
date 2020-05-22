@@ -2285,3 +2285,39 @@ String.prototype.toAlternatingCase = function () {
 }
 
 ```
+
+### 62 - Pillars
+<a href="https://www.codewars.com/kata/5bb0c58f484fcd170700063d/train/javascript" target="_blank">Link of problem</a>
+
+There are pillars near the road. The distance between the pillars is the same and the width of the pillars is the same. Your function accepts three arguments:
+
+number of pillars (≥ 1);
+distance between pillars (10 - 30 meters);
+width of the pillar (10 - 50 centimeters).
+Calculate the distance between the first and the last pillar in centimeters (without the width of the first and last pillar).
+
+``` js
+// my first solution
+function pillars(num_pill, dist, width) {
+  return num_pill === 1 ? 0 :
+    num_pill === 2 ? (dist * 100) :    
+    (dist * (num_pill - 1) * 100) + ((num_pill - 2) * width)
+}
+```
+
+### 63 - Remove duplicates from list
+<a href="https://www.codewars.com/kata/57a5b0dfcf1fa526bb000118/train/javascript" target="_blank">Link of problem</a>
+
+Define a function that removes duplicates from an array of numbers and returns it as a result.
+
+The order of the sequence has to stay the same.
+
+``` js
+// my first solution
+function distinct(a) {
+  return a.filter((item, index) => a.indexOf(item) == index)
+}
+
+// or
+
+```
