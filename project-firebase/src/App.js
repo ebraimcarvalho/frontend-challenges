@@ -3,8 +3,8 @@ import firebase from './firebase'
 
 const App = () => {
   const [token, setToken] = useState('Carregando...')
-  const [tokenInput, setTokenInput] = useState('')
   const [name, setName] = useState('')
+  const [age, setAge] = useState('')
   const [list, setList] = useState([])
 
   useEffect(() => {
@@ -29,14 +29,18 @@ const App = () => {
 
   const addToken = (e) => {
     e.preventDefault()
-    firebase.database().ref('token').set(tokenInput)
-    let users = firebase.database().ref('users')
-    let key = users.push().key
-    users.child(key).set({
-      name: 'Ebra 2 teste',
-      age: 29
-    })
-    setTokenInput('')
+    var data = {
+      name: name,
+      age: age
+
+    }
+    firebase.database().ref('users').push(data)
+    // let users = firebase.database().ref('users')
+    // let key = users.push().key
+    // users.child(key).set({
+    //   name: 'Ebra 2 teste',
+    //   age: 29
+    // })
   }
   
   return (
@@ -45,8 +49,10 @@ const App = () => {
       <p>Hello World, I'm {name}</p>
 
       <form onSubmit={addToken}>
-        <label htmlFor="token">Token: </label>
-        <input type="text" id="token" value={tokenInput} onChange={(e) => setTokenInput(e.target.value)} />
+        <label htmlFor="name">Name: </label>
+        <input type="text" id="name" value={name} onChange={(e) => setName(e.target.value)} />
+        <label htmlFor="age">Age: </label>
+        <input type="text" id="age" value={age} onChange={(e) => setAge(e.target.value)} />
         <button type="submit">Submit</button>
       </form>
 
@@ -55,6 +61,7 @@ const App = () => {
           <p>ID: {child.key}</p>
           <p>name: {child.name}</p>
           <p>age: {child.age}</p>
+          <hr/>
         </div>
       ))}
 

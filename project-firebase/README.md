@@ -66,31 +66,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `yarn build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-
-
-``` js 
-<!-- The core Firebase JS SDK is always required and must be listed first -->
-<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-app.js"></script>
-
-<!-- TODO: Add SDKs for Firebase products that you want to use
-     https://firebase.google.com/docs/web/setup#available-libraries -->
-<script src="https://www.gstatic.com/firebasejs/7.14.5/firebase-analytics.js"></script>
-
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyA2XbQ5qQpKC5QQzYHgnyIse2njIXktyA4",
-    authDomain: "react-firebase-bd053.firebaseapp.com",
-    databaseURL: "https://react-firebase-bd053.firebaseio.com",
-    projectId: "react-firebase-bd053",
-    storageBucket: "react-firebase-bd053.appspot.com",
-    messagingSenderId: "565309572335",
-    appId: "1:565309572335:web:fcb679e5e2f3ea8a4e471a",
-    measurementId: "G-23QZYSG85N"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  firebase.analytics();
-</script>
-
-```
