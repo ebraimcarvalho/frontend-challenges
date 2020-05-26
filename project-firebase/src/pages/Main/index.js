@@ -6,6 +6,7 @@ const Main = () => {
   const [name, setName] = useState('')
   const [age, setAge] = useState('')
   const [list, setList] = useState([])
+  const [progress, setProgress] = useState(0)
 
   useEffect(() => {
     firebase.database().ref('token').on('value', (snapshot) => {
@@ -42,6 +43,24 @@ const Main = () => {
     //   age: 29
     // })
   }
+
+  const inputFile = (e) => {
+    let file = e.target.files[0]
+    let storageRef = firebase.storage().ref('arquivos/' + file.name)
+    let task = storageRef.put(file)
+    task.on('state_changed', 
+      function progress(snapshot) {
+        let percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        setProgress(percentage)
+      },
+      function error(err) {
+        console.log(err)
+      },
+      function complete() {
+        alert('envio completo!')
+      }
+    )
+  }
   
   return (
     <div>
@@ -64,6 +83,12 @@ const Main = () => {
           <hr/>
         </div>
       ))}
+
+      <div>
+        <progress value={progress} max={100}></progress>
+        <br/>
+        <input type="file" onChange={inputFile} />
+      </div>
 
     </div>
   )

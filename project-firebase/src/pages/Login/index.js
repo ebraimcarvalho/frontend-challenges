@@ -50,18 +50,9 @@ function Login() {
 
   const githubAuth = (e) => {
     e.preventDefault()
-    // console.log('github')
-    // var provider = new firebase.auth.GithubAuthProvider();
-    // signIn(provider)
-    var provider = new firebase.auth.GithubAuthProvider();
-
-    provider.addScope('repo');
-
-    firebase.auth().signInWithPopup(provider).then(function(result) {
-      console.log(result);
-    }).catch(function(error) {
-      console.log(error);
-    });
+    console.log('google')
+    var provider = new firebase.auth.GoogleAuthProvider();
+    signIn(provider)
   }
 
   const logoutUser = (e) => {
