@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import firebase from '../../firebase'
 import {Link} from 'react-router-dom';
 
@@ -6,6 +6,18 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [msg, setMsg] = useState('Você não está logado!')
+  const [user, setUser] = useState(null)
+
+  useEffect(() => {
+    firebase.auth().onAuthStateChanged((user) => {
+      if(user) {
+        alert('Usuário Logado com sucesso')
+        console.log(user)
+        setMsg(`Usuário logado com ${user.email}`)
+        setUser(user.email)
+      }
+    })
+  }, [])
 
   const createUserAuth = (e) => {
     e.preventDefault()
@@ -70,30 +82,48 @@ function Login() {
 
   return (
     <div>
-      <h3>Login</h3>
-      <p>{msg}</p>
-      <form>
-        <label htmlFor="email">Email: </label>
-        <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
-        <br/>
-        <label htmlFor="password">Password: </label>
-        <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
-        <br/>
-      </form>
-      <button onClick={authUser}>Autenticar</button>
-      <br/>
-      <button onClick={createUserAuth}>Cadastrar</button>
-      <br/>
-      <button onClick={logoutUser}>Logout</button>
-      <br/>
-      <hr/>
-      <div>
-        <button onClick={githubAuth}>Github</button>
-        <br/>
-      </div>
-      <Link to="/Main">Ir para Home</Link>
-      <p>email: {email}</p>
-      <p>pass: {password}</p>
+      {user ? 
+        <div>
+          <h1>Painel Admin</h1>
+          <p>Bem vindo, {user}</p>
+          <button onClick={() => {
+            firebase.auth().signOut().then(() => {
+              setUser(null)
+              setMsg('Você não está logado!')
+            })
+          }}>Sair</button>
+        </div>
+        :
+        <div>
+          <h3>Login</h3>
+          <p>{msg}</p>
+          <form>
+            <label htmlFor="email">Email: </label>
+            <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
+            <br/>
+            <label htmlFor="password">Password: </label>
+            <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} />
+            <br/>
+          </form>
+          <button onClick={authUser}>Autenticar</button>
+          <br/>
+          <button onClick={createUserAuth}>Cadastrar</button>
+          <br/>
+          <button onClick={logoutUser}>Logout</button>
+          <br/>
+          <hr/>
+          <div>
+            <button onClick={githubAuth}>Github</button>
+            <br/>
+          </div>
+          <Link to="/Main">Ir para Home</Link>
+          <br/>
+          <Link to="/Create">Create User</Link>
+          <p>email: {email}</p>
+          <p>pass: {password}</p>
+        </div>
+      }
+      
     </div>
   )
 }
