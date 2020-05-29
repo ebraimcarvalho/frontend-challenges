@@ -2357,3 +2357,36 @@ function twoSort(s) {
 }
 
 ```
+
+### 65 - Blood-Alcohol Content
+<a href="https://www.codewars.com/kata/571b6a4a7beb0a8ade0007a8/train/javascript" target="_blank">Link of problem</a>
+
+BAC calculator Formula:
+
+BAC% = (A × 5.14 / W × r) - .015 × H 
+
+A: Total alcohol consumed, in ounces (oz)
+W: Body weight, in pounds (lbs)
+r: The alcohol distribution ratio, 0.73 for man, and 0.66 for women
+H: Time passed since drinking, in hours
+
+Alcohol consumed will be passed as a drinks object with two properties: ounces (the total volume of beverage consumed in ounces), and abv (the % of alcohol by volume of the beverage as a floating point number--such as 0.05 for 5% abv beer or 0.4 for 40% abv whisky). For simplicity, Bob assures us that he drinks the same kind of beverage each time he drinks.
+
+The gender will be passed as a string, either "male" or "female".
+
+Output must be returned as a number data-type, greater than or equal to 0, with up to 4 decimal places. No error handling will be required.
+
+``` js
+// my first solution
+function bloodAlcoholContent(drinks, weight, sex, time){
+  sex = `${sex == 'male' ? 0.73 : 0.66}`;
+  let BAC = ((drinks.ounces * drinks.abv) * 5.14 / weight * +sex) - (.015 * time);
+  return +BAC.toFixed(4)
+}
+
+// other solution
+function bloodAlcoholContent(drinks, weight, sex, time){
+  return parseFloat(((drinks.ounces * drinks.abv * 5.14 / weight * (sex == 'male' ? 0.73 : 0.66)) - 0.015 * time).toFixed(4));
+}
+
+```
