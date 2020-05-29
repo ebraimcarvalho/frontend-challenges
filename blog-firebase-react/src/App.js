@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import firebase from './firebase'
 import './index.css'
 
 import Header from './components/Header'
@@ -13,14 +14,26 @@ function App() {
   const [firebaseInitialized, setFirebaseInitialized] = useState(false);
   
   useEffect(() => {
-    setTimeout(() => {
-      setFirebaseInitialized(true)
-    }, 1000)
+    firebase.app.ref('posts').once('value', (snapshot)=> {
+      let state = [1, 2]
+
+      snapshot.forEach((childItem)=>{
+        state.push({
+          key: childItem.key,
+          titulo: childItem.val().title,
+          image: childItem.val().url,
+          descricao: childItem.val().description,
+          autor: childItem.val().author,
+        })
+      });
+      setFirebaseInitialized(state.length);
+    })
   }, [])
 
   return firebaseInitialized ? (
     <BrowserRouter>
       <Header />
+      <p>{firebaseInitialized}</p>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/login" component={Login}/>
