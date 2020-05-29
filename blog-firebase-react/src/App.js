@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import './index.css'
 
@@ -10,7 +10,15 @@ import Dashboard from './components/Dashboard'
 import New from './components/New'
 
 function App() {
-  return (
+  const [firebaseInitialized, setFirebaseInitialized] = useState(false);
+  
+  useEffect(() => {
+    setTimeout(() => {
+      setFirebaseInitialized(true)
+    }, 1000)
+  }, [])
+
+  return firebaseInitialized ? (
     <BrowserRouter>
       <Header />
       <Switch>
@@ -20,8 +28,9 @@ function App() {
         <Route exact path="/dashboard" component={Dashboard}/>
         <Route exact path="/dashboard/new" component={New}/>
       </Switch>
-    </BrowserRouter>
-  );
+    </BrowserRouter> ) : (
+    <p>Carregando...</p>
+  )
 }
 
 export default App;
