@@ -25,7 +25,6 @@ function App() {
   return firebaseInitialized ? (
     <BrowserRouter>
       <Header />
-      <p>{firebaseInitialized}</p>
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/login" component={Login}/>
