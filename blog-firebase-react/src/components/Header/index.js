@@ -1,11 +1,11 @@
 import React from 'react';
-
-// import { Container } from './styles';
+import {Link} from 'react-router-dom'
 
 function Header() {
   return(
-    <header>
-      <h1>Header</h1>
+    <header className="header">
+      <Link to="/">Blog Firebase-React</Link>
+      <Link to="/login">Entrar</Link>
     </header>
   )
 }
