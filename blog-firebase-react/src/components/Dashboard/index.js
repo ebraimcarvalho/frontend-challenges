@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
-import {useHistory} from 'react-router-dom'
+import {useHistory, Link} from 'react-router-dom'
 import firebase from '../../firebase'
+import './styles.css'
 
 function Dashboard() {
   let history = useHistory();
@@ -25,13 +26,16 @@ function Dashboard() {
   }
 
   return (
-    <div>
-      <div>
-        <h1>Dashboard</h1>
-        <p>Hello {email}</p>
+    <div className="container__dashboard">
+      <div className="dashboard__info">
+        <h3>Dashboard</h3>
+        <p>Hello, you are loggin with {email}</p>
+        <Link to="/dashboard/new" className="link__new">
+          <button className="btn__new-post">New Post</button>
+        </Link>
       </div>
-      <div>
-        <button onClick={logout}>Logout</button>
+      <div className="div__logout">
+        <button className="btn__logout" onClick={logout}>Logout</button>
       </div>
     </div>
   )
