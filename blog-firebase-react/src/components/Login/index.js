@@ -41,7 +41,7 @@ function Login() {
     <div className="container__login">
       <div className="login">
         <form className="form" onSubmit={enter}>
-          <input type="text" placeholder="Name" value={email} autoFocus onChange={(e) => setEmail(e.target.value)} />
+          <input type="text" placeholder="Email" value={email} autoFocus onChange={(e) => setEmail(e.target.value)} />
           <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} />
           <button className="login__btn">Login</button>
           {error && <p className="error">{error}</p>}

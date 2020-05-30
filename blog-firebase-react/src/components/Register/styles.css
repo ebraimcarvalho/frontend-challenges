@@ -1,4 +1,4 @@
-.container__login {
+.container__register {
   max-width: 600px;
   height: 100vh;
   margin: 0 auto;
@@ -20,13 +20,6 @@
   width: 100%;
 }
 
-.form__msg {
-  text-align: center;
-  margin-bottom: 10px;
-  color: rgb(26, 25, 25);
-  font-size: 1rem;
-}
-
 input {
   height: 30px;
   border-radius: 5px;
@@ -36,29 +29,12 @@ input {
   margin-bottom: 20px;
 }
 
-.login__btn {
-  background-color: #227c1f;
+.button__register {
+  background-color: rgb(52, 58, 57);
   border: none;
   border-radius: 5px;
   height: 30px;
   color: white;
   font-size: 1rem;
   cursor: pointer;
-}
-
-.register {
-  margin-top: 10px;
-  color: rgb(26, 25, 25);
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.register__btn {
-  background-color: rgb(52, 58, 57);
-  font-size: 1rem;
-  padding: 5px 10px;
-  margin-left: 10px;
-  border-radius: 5px;
 }

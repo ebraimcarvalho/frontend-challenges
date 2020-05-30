@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
 import firebase from '../../firebase'
+import './styles.css'
 
 function Register() {
   let history = useHistory()
@@ -35,11 +36,11 @@ function Register() {
   return(
     <div className="container__register">
       <div className="register">
-        <form>
+        <form className="form">
           <input type="text" value={name} placeholder="Name" onChange={(e) => setName(e.target.value)} />
           <input type="text" value={email} placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
           <input type="password" value={password} placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-          <button onClick={enter}>New Register</button>
+          <button className="button__register" onClick={enter}>New Register</button>
           {error && <p className="error">{error}</p>}
         </form>
       </div>
