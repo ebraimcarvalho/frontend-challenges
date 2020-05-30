@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import {useHistory, Link} from 'react-router-dom'
+import React, { useEffect } from 'react';
+import { useHistory, Link } from 'react-router-dom'
 import firebase from '../../firebase'
 import './styles.css'
 
@@ -9,7 +9,7 @@ function Dashboard() {
 
   useEffect(() => {
     let user = firebase.getCurrent()
-    if(user) {
+    if (user) {
       console.log(user)
     } else {
       return history.push('/login')
@@ -28,8 +28,8 @@ function Dashboard() {
   return (
     <div className="container__dashboard">
       <div className="dashboard__info">
-        <h3>Dashboard</h3>
-        <p>Hello, you are loggin with {email}</p>
+        <h3 className="dashboard__title">Dashboard</h3>
+        <p>Hello, you are logged in with email: {email}</p>
         <Link to="/dashboard/new" className="link__new">
           <button className="btn__new-post">New Post</button>
         </Link>
