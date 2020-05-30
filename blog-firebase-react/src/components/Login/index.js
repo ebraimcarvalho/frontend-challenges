@@ -1,15 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { withRouter, Link, useHistory } from 'react-router-dom';
+import firebase from '../../firebase'
 import './styles.css'
 
 function Login() {
+  let history = useHistory();
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
 
   const enter = (e) => {
     e.preventDefault()
-    if (!email || !password) {      
+    if (!email || !password) {
       setError('Preenche os campos, boy!')
       return null
     }
@@ -17,8 +19,19 @@ function Login() {
     login(email, password)
   }
 
-  const login = (email, password) => {
-    console.log('logar com email', email, password)
+  const login = async (email, password) => {
+    let mount = false
+    await firebase.login(email, password)
+      .then(result => {
+        mount = true
+      })
+      .catch(error => {
+        console.log('Error: ', error)
+        setError(error.message)
+      })
+    setEmail('')
+    setPassword('')
+    return mount ? history.push('/') : ''
   }
 
   return (

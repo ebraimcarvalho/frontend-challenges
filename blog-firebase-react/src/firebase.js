@@ -17,6 +17,10 @@ class Firebase {
     this.app = app.database();
     this.storage = app.storage();
   }
+
+  login(email, password) {
+    return app.auth().signInWithEmailAndPassword(email, password)
+  }
 }
 
 export default new Firebase();
