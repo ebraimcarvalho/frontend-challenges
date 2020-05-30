@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { withRouter, Link, useHistory } from 'react-router-dom';
 import firebase from '../../firebase'
 import './styles.css'
@@ -8,6 +8,12 @@ function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
+
+  useEffect(() => {
+    if(firebase.getCurrent()){
+      return history.push('/dashboard')
+    }
+  })
 
   const enter = (e) => {
     e.preventDefault()
@@ -19,19 +25,16 @@ function Login() {
     login(email, password)
   }
 
-  const login = async (email, password) => {
-    let mount = false
-    await firebase.login(email, password)
+  const login = (email, password) => {
+    firebase.login(email, password)
       .then(result => {
-        mount = true
+        localStorage.email = email
+        history.push('/dashboard')
       })
       .catch(error => {
         console.log('Error: ', error)
         setError(error.message)
       })
-    setEmail('')
-    setPassword('')
-    return mount ? history.push('/') : ''
   }
 
   return (
