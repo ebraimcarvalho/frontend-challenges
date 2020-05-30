@@ -2390,3 +2390,33 @@ function bloodAlcoholContent(drinks, weight, sex, time){
 }
 
 ```
+
+### 66 - Arguments to Binary addition
+<a href="https://www.codewars.com/kata/57642a90dee2da8dd3000161/javascript" target="_blank">Link of problem</a>
+
+Given an array add all the number elements and return the binary equivalent of that sum; to make the code bullet proof anything else than a number should be addeded as 0 since it can't be addeded.
+
+If your language can handle float binaries assume the array won't contain float or doubles.
+
+``` js
+
+arr2bin([1,2]) == '11'
+arr2bin([1,2,'a']) == '11'
+arr2bin([]) == '0'
+
+```
+
+NOTE: NaN is a number too in javascript for decimal, binary and n-ary base
+
+``` js
+// my first solution
+function arr2bin(arr){
+  arr = arr.filter(item => typeof item === 'number')
+  return arr ? arr.reduce((acc, att) => acc + att, 0).toString(2) : 0
+}
+
+// other solution
+function arr2bin(arr) {
+  return arr.reduce((sum, cur) => typeof(cur) === 'number' ? sum + cur : sum, 0).toString(2);
+}
+```
