@@ -1,5 +1,7 @@
 # CodeWars - Training!
 
+###Teste git vs code
+
 CodeWars training and challenges in javascript. In order to explore new ways to solve the same problem, I will use my solutions and others that I find most interesting to explore!
 
 ![Design preview for the Base Apparel coming soon page coding challenge](https://www.codewars.com/users/ebraimcarvalho/badges/large)
