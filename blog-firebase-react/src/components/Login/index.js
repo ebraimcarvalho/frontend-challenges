@@ -18,7 +18,7 @@ function Login() {
   const enter = (e) => {
     e.preventDefault()
     if (!email || !password) {
-      setError('Preenche os campos, boy!')
+      setError('Please make sure all fields are filled in correctly')
       return null
     }
     setError('')
