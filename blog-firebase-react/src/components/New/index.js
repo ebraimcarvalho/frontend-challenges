@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Link, useHistory} from 'react-router-dom'
+import {Link, useHistory, withRouter} from 'react-router-dom'
 import firebase from '../../firebase'
 import './styles.css'
 
@@ -60,4 +60,4 @@ function New() {
   )
 }
 
-export default New;
+export default withRouter(New);

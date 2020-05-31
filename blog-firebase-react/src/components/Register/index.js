@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {useHistory} from 'react-router-dom'
+import {useHistory, withRouter} from 'react-router-dom'
 import firebase from '../../firebase'
 import './styles.css'
 
@@ -48,4 +48,4 @@ function Register() {
   )
 }
 
-export default Register;
+export default withRouter(Register);
