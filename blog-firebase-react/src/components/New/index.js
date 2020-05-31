@@ -3,7 +3,8 @@ import {Link, useHistory} from 'react-router-dom'
 import firebase from '../../firebase'
 
 function New() {
-  let history = useHistory();
+  let history = useHistory()
+  const email = localStorage.email
   const [author, setAuthor] = useState('')
   const [title, setTitle] = useState('')
   const [url, setUrl] = useState('')
@@ -21,21 +22,38 @@ function New() {
 
   const enter = (e) => {
     e.preventDefault()
-    if (!title || !url || !description) {
+    if (title && url && description) {
+      let posts = firebase.app.ref('posts')
+      let key = posts.push().key
+      posts.child(key).set({
+        author: author,
+        description: description,
+        title: title,
+        url: url,
+      }).then(res => history.push('/'))
+      .catch(error => console.log('Erro: ', error))
+    } else {
       setError('Preenche os campos, boy!')
       return null
     }
-    setError('')
-    create()
   }
 
-  const create = () => {
-    console.log('create post with', author, title, url, description)
-  }
+  // const create = () => {
+  //   let posts = firebase.app.ref('posts')
+  //   let key = posts.push().key
+  //   posts.child(key).set({
+  //     author: author,
+  //     description: description,
+  //     title: title,
+  //     url: url,
+  //   }).then(res => history.push('/'))
+  //   .catch(error => console.log('Erro: ', error))
+  // }
 
   return (
     <div className="container__newpost">
       <div className="newpost">
+        <p>Hello, you are creating a new post as: {email}</p>
         <Link to="/dashboard">Go to Dashboard</Link>
         <form className="form" onSubmit={enter}>
           <input type="text" placeholder="Author" value={author} onChange={(e) => setAuthor(e.target.value)}/>

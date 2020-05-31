@@ -6,7 +6,7 @@ function Home() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    firebase.app.ref('posts').on('value', (snapshot) => {
+    firebase.app.ref('posts').once('value', (snapshot) => {
       let state = [];
       snapshot.forEach((childItem) => {
         state.push({
