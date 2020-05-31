@@ -33,7 +33,9 @@ function App() {
         <Route exact path="/dashboard/new" component={New}/>
       </Switch>
     </BrowserRouter> ) : (
-    <p>Carregando...</p>
+      <div className="div__loading">
+        <p>Loading...</p>
+      </div>
   )
 }
 

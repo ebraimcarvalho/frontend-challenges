@@ -14,9 +14,7 @@ function New() {
 
   useEffect(() => {
     let user = firebase.getCurrent()
-    if (user) {
-      console.log(user)
-    } else {
+    if (!user) {
       return history.push('/login')
     }
   }, [history])
@@ -31,7 +29,6 @@ function New() {
   }
 
   const create = () => {
-    console.log('create post with', author, title, url, description)
     let posts = firebase.app.ref('posts')
     let key = posts.push().key
     posts.child(key).set({

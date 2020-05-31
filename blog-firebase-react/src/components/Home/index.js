@@ -23,7 +23,7 @@ function Home() {
   }, [])
 
   return (
-    <div>{console.log(posts)}
+    <div>
       {posts.map(item => (
         <div className="post" key={item.key}>
           <header className="post__header">
