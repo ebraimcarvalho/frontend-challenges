@@ -1,7 +1,5 @@
 # CodeWars - Training!
 
-###Teste git vs code
-
 CodeWars training and challenges in javascript. In order to explore new ways to solve the same problem, I will use my solutions and others that I find most interesting to explore!
 
 ![Design preview for the Base Apparel coming soon page coding challenge](https://www.codewars.com/users/ebraimcarvalho/badges/large)
@@ -2421,4 +2419,46 @@ function arr2bin(arr){
 function arr2bin(arr) {
   return arr.reduce((sum, cur) => typeof(cur) === 'number' ? sum + cur : sum, 0).toString(2);
 }
+```
+
+### 67 - Unicode Total
+<a href="https://www.codewars.com/kata/572b6b2772a38bc1e700007a/train/javascript" target="_blank">Link of problem</a>
+
+You'll be given a string, and have to return the total of all the unicode characters as an int. Should be able to handle any characters sent at it.
+
+examples:
+
+uniTotal("a") == 97 uniTotal("aaa") == 291
+
+``` js
+// my first solution
+function uniTotal (s) {
+  var length = s.length
+  var str = s.split('')
+  var result = []
+  for(let i = 0; i < length; i++){
+    result.push(str[i].charCodeAt())
+  }
+  return result.reduce((acc, att) => acc + att, 0)
+}
+
+// other solution
+function uniTotal(str) {
+  var count = 0;
+  for (var i = 0; i < str.length; i++) {
+    count += str.charCodeAt(i);
+  }
+  return count;
+}
+
+// or
+const uniTotal = str => [...str].reduce((acc, char) => acc + char.charCodeAt(0), 0);
+
+// or
+function uniTotal(str){
+  return str.split('').reduce(function(last,now){
+    return last+now.charCodeAt();
+  },0);
+}
+
 ```
