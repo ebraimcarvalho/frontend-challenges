@@ -1,6 +1,9 @@
 body {
   overflow-x: hidden;
-}.btn:focus, .btn:active {
+  width: 100vw;
+}
+
+.btn:focus, .btn:active {
   outline: none !important;
   box-shadow: none !important;
 }
@@ -28,12 +31,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  outline: none;
 }
 
 .div-company {
   min-height: 83px;
-  max-height: 145px;
   min-width: 146px;
+  max-height: 145px;
+  max-width: 256px;
 }
 
 .div-company img {
