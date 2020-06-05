@@ -1,0 +1,48 @@
+body {
+  overflow-x: hidden;
+}.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+.bg-44 {
+  min-height: 336px;
+  max-height: 422px;
+  background-image: url(./assets/images/Rectangle\ 44.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.bg-34 {
+  height: 381px;
+  background-image: url(./assets/images/Rectangle\ 34.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.icon-card {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-company {
+  min-height: 83px;
+  max-height: 145px;
+  min-width: 146px;
+}
+
+.div-company img {
+  width: 100%;
+}
+
+.icon-compare {
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
