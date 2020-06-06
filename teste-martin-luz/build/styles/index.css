@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+body {
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+  width: 100vw;
+}
+
+#container1__title {
+  color: #041F8F;
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+#container1__title span {
+  font-weight: normal;
+}
+#container1__description {
+  color: #84888C;
+  line-height: 1.5;
+}
+#container1__button {
+  background-color: #0285C9;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  height: 50px;
+}
+#container1__advice {
+  color: #0285C9;
+}
+#container1__advice strong {
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  #container1__title {
+    font-weight: 400;
+  }
+  #container1__title span {
+    font-weight: 500;
+  }
+  #container1__description {
+    max-width: 450px;
+  }
+  #container1__button {
+    width: 256px;
+  }
+}
+
+#container2__video {
+  min-height: 190px;
+  background-color: #2A1F87;
+}
+#container2__title {
+  color: #303D63;
+  font-weight: 400;
+  line-height: 1.3;
+}
+#container2__title span {
+  font-weight: 500;
+}
+#container2__description {
+  color: #84888C;
+  line-height: 1.5;
+}
+#container2__link--small-screen {
+  text-transform: uppercase;
+  color: #0285C9;
+  font-weight: 500;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  #container2__description {
+    max-width: 460px;
+  }
+}
+
+#container3 {
+  background-color: #0285C9;
+}
+#container3__title {
+  font-weight: 400;
+}
+#container3__title span {
+  font-weight: 500;
+}
+#container3__description {
+  line-height: 1.3;
+}
+#container3__link--small-screen {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  font-weight: 500;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 992px) {
+  #container3 {
+    width: 92vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 25px;
+    padding-left: 5rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #container3__title {
+    max-width: 347px;
+    line-height: 1.1;
+  }
+  #container3__description {
+    max-width: 347px;
+  }
+  #container3__image {
+    padding-left: 20px;
+    margin-top: -70px;
+  }
+  #container3__button {
+    background-color: #041F8F;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
+}
+
+#container4 {
+  background-color: #F6F9FC;
+}
+#container4__title {
+  color: #041F8F;
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+#container4__title span {
+  font-weight: 500;
+}
+#container4__description {
+  color: #84888C;
+  line-height: 1.6;
+}
+@media (min-width: 992px) {
+  #container4 {
+    width: 92vw;
+    max-width: 1280px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+}
+
+#container4__carousel--small-screen h3 {
+  color: #303D63;
+  padding-top: 10px;
+}
+#container4__carousel--small-screen p {
+  color: #84888C;
+  line-height: 1.8;
+  padding-top: 10px;
+}
+#container4__carousel--small-screen .slick-dots li.slick-active button:before {
+  color: #041F8F;
+}
+
+#container4__grid--large-screen h3 {
+  color: #303D63;
+  padding-top: 10px;
+  font-size: 24px;
+  line-height: 28px;
+}
+#container4__grid--large-screen p {
+  color: #84888C;
+  line-height: 1.8;
+  padding-top: 10px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+#container5__title {
+  color: #303D63;
+  font-size: 32px;
+  line-height: 1.4;
+  font-weight: 400;
+}
+#container5__title span {
+  font-weight: 500;
+}
+#container5__description {
+  color: #84888C;
+  line-height: 26px;
+  padding-top: 10px;
+}
+
+.div-company {
+  border: 2px solid #F6F9FC;
+  box-sizing: border-box;
+  border-radius: 20px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.div-company img {
+  width: 75%;
+}
+@media (min-width: 992px) {
+  .div-company {
+    height: 145px;
+  }
+  .div-company img {
+    width: 100%;
+  }
+}
+
+.div-company__card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#container6__title {
+  color: #303D63;
+  font-weight: 400;
+  font-size: 2rem;
+}
+#container6__title span {
+  font-weight: 500;
+}
+#container6 .compare1 {
+  border-bottom: 1px solid rgba(132, 136, 140, 0.295);
+  width: 90%;
+  margin: 0 auto;
+}
+@media (min-width: 992px) {
+  #container6 .compare1 {
+    width: 100%;
+    margin: 0;
+    border-bottom: none;
+    border-right: 1px solid rgba(132, 136, 140, 0.295);
+  }
+}
+#container6__description {
+  color: #84888C;
+  padding-top: 10px;
+  font-size: 18px;
+  line-height: 28px;
+}
+#container6 .title__li1 {
+  color: #84888C;
+  padding-top: 10px;
+}
+#container6 .li1 {
+  color: #84888C;
+  line-height: 28px;
+}
+#container6 .title__li2 {
+  color: #303D63;
+  padding-top: 10px;
+}
+#container6 .li2 {
+  color: #303D63;
+  font-weight: 500;
+  line-height: 28px;
+}
+
+#container7 {
+  background-image: url("../../assets/images/Rectangle 44.png");
+  height: 422px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#container7__title {
+  font-size: 32px;
+  margin: 0 10px;
+  line-height: 1.3;
+}
+#container7__description {
+  padding-top: 20px;
+  margin: 0 10px;
+  font-size: 18px;
+}
+#container7__button {
+  background-color: #0285C9;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 500;
+  height: 50px;
+  width: 256px;
+  margin-top: 10px;
+}
+#container7__description-small {
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 10px;
+}
+#container7__description-small span {
+  font-weight: 500;
+}
+@media (min-width: 992px) {
+  #container7 {
+    width: 92vw;
+    max-width: 1280px;
+    height: 336px;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+}
+
+#container8__description {
+  color: #041F8F;
+  font-size: 2rem;
+  line-height: 2;
+  font-weight: 500;
+}
+#container8__posts p {
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  width: 85%;
+  margin: 0 auto;
+  padding-bottom: 35px;
+}
+#container8 .bg-34 {
+  border-radius: 6px;
+  min-height: 55vh;
+  width: 100%;
+  background-image: url("../../assets/images/Rectangle 34.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#footer__description {
+  font-size: 2rem;
+  color: #303D63;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+.icon-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  outline: none;
+}
+
+.div-company {
+  min-height: 83px;
+  max-height: 145px;
+  min-width: 146px;
+  max-width: 256px;
+}
+
+.icon-compare {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+}
+
+/*# sourceMappingURL=index.css.map */

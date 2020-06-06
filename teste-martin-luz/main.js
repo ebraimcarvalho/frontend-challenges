@@ -50,5 +50,5 @@ autoPlayYouTubeModal();
 
 $('.carousel').slick({
   dots: true,
-  // adaptiveHeight: true
+  adaptiveHeight: true
 });
