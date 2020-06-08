@@ -2462,3 +2462,23 @@ function uniTotal(str){
 }
 
 ```
+
+### 68 - Is there a vowel in there?
+<a href="https://www.codewars.com/kata/57cff961eca260b71900008f/train/javascript" target="_blank">Link of problem</a>
+
+Given an array of numbers, check if any of the numbers are the character codes for lower case vowels (a, e, i, o, u).
+
+If they are, change the array value to a string of that vowel.
+
+Return the resulting array.
+
+``` js
+// my first solution
+function isVow(a){
+  return a.map(item => (/[aeiou]/).test(String.fromCharCode(item)) ? String.fromCharCode(item) : item)
+}
+
+// other solution
+const isVow = a => a.map(x=>'aeiou'.includes(y=String.fromCharCode(x)) ? y : x)
+
+```
