@@ -1,0 +1,38 @@
+header {  
+  padding: 10px 0px;
+  margin: 0 auto;
+  background-color: #191919;
+}
+
+.header__container {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.logo {
+  max-width: 80px;
+}
+
+.reservations {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.reservations div {
+  text-align: right;
+  margin-right: 10px;
+}
+
+.reservations strong {
+  display: block;
+  color: white;
+}
+
+.reservations span {
+  color: white;
+  font-size: 15px;
+}
