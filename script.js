@@ -3,6 +3,12 @@
 
   const projects = [
     {
+      name: 'gbtel',
+      linkChallenge: 'https://www.gbtel.com.br',
+      description: 'A responsive webpage for a company, using animation on scroll',
+      tags: 'JS | Animation | CSS | Responsive'
+    },
+    {
       name: 'teste-martin-luz',
       linkChallenge: 'https://www.figma.com/file/KBLCl4GG69LzFIeJEE6mMY/Teste---Martin-Luz?node-id=0%3A1',
       description: 'A test to do a responsive webpage using Bootstrap and Sass containing a Carousel and a Modal with a video',
