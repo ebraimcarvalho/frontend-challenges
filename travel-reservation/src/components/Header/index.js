@@ -17,7 +17,7 @@ function Header() {
         <Link className="reservations" to="/reservations">
           <div>
             <strong>Minhas Reservas</strong>
-            <span>{reserveSize} reservas</span>
+            <span>{reserveSize} {reserveSize <= 1 ? 'reserva' : 'reservas'}</span>
           </div>
         </Link>
       </div>
