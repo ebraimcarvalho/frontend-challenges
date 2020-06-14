@@ -1,5 +1,6 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux'
+import { useSelector, useDispatch } from 'react-redux';
+import { removeReserve } from '../../store/modules/reserve/actions'
 import { MdDelete } from 'react-icons/md'
 import './styles.css';
 
@@ -7,13 +8,9 @@ function Reservation() {
   const dispatch = useDispatch()
   const reserves = useSelector(state => state.reserve)
   const reservesAmount = reserves.reduce((acc, att) => acc + att.amount ,0)
-  console.log(reservesAmount)
 
   const handleRemove = (id) => {
-    dispatch({
-      type: 'REMOVE_RESERVE',
-      id
-    })
+    dispatch(removeReserve(id))
   }
 
   return(
