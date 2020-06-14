@@ -1,7 +1,19 @@
+import produce from 'immer'
+
 function reserve(state = [], action) {
   switch(action.type) {
     case 'ADD_RESERVE':
-      return [...state, action.trip]
+      return produce(state, draft => {
+        const tripIndex = draft.findIndex(trip => trip.id === action.trip.id)
+        if(tripIndex >= 0) {
+          draft[tripIndex].amount += 1
+        } else {
+          draft.push({
+            ...action.trip,
+            amount: 1
+          })
+        }
+      })
     default:
       return state
   }
