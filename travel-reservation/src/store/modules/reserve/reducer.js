@@ -1,12 +1,20 @@
 import produce from 'immer'
+import api from '../../../server.json'
 
 function reserve(state = [], action) {
   switch(action.type) {
     case 'ADD_RESERVE':
       return produce(state, draft => {
         const tripIndex = draft.findIndex(trip => trip.id === action.trip.id)
+        const stockIndex = api.stock.findIndex(trip => trip.id === action.trip.id)
         if(tripIndex >= 0) {
-          draft[tripIndex].amount += 1
+          const newAmount = draft[tripIndex].amount;
+          if((newAmount + 1 ) <= api.stock[stockIndex].amount){
+            draft[tripIndex].amount += 1
+          } else {
+            alert(`Estoque máximo para esse item: ${newAmount}`)
+            draft[tripIndex].amount = newAmount;
+          }
         } else {
           draft.push({
             ...action.trip,
@@ -27,8 +35,16 @@ function reserve(state = [], action) {
       }
       return produce(state, draft => {
         const tripIndex = draft.findIndex(trip => trip.id === action.id)
+        const stockIndex = api.stock.findIndex(trip => trip.id === action.id)
         if(tripIndex >= 0) {
-          draft[tripIndex].amount = Number(action.amount)
+          const maxAmount = api.stock[stockIndex].amount
+          const newAmount = Number(action.amount);
+          if(newAmount <= maxAmount){
+            draft[tripIndex].amount = newAmount
+          } else {
+            alert(`Estoque máximo para esse item: ${maxAmount}`)
+            draft[tripIndex].amount = newAmount - 1;
+          }          
         }
       })
       }
