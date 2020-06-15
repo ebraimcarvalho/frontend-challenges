@@ -6,7 +6,7 @@ import api from '../../server.json'
 
 import './styles.css';
 
-function Home() {
+function Home({history}) {
   const dispatch = useDispatch()
   const [trips, setTrips] = useState([])
 
@@ -20,6 +20,7 @@ function Home() {
 
   const handleAdd = (trip) => {
     dispatch(addReserve(trip))
+    history.push('/reservations')
   }
 
   return(
