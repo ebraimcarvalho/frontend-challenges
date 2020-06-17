@@ -1,0 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar-nav {
+  text-align: right;
+}
+
+body {
+  background-color: white;
+  width: 100vw;
+  height: 1200px;
+}
+
+h1 {
+  color: #08427E;
+}
+
+/*# sourceMappingURL=styles.css.map */
