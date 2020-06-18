@@ -4,13 +4,18 @@
   box-sizing: border-box;
 }
 
+a, a:hover {
+  text-decoration: none;
+}
+
 .navbar-nav {
   text-align: right;
 }
 
 body {
-  background-color: white;
-  width: 100vw;
+  background-color: #8d8d8d;
+  width: 100%;
+  overflow-x: hidden;
   height: 1200px;
 }
 
