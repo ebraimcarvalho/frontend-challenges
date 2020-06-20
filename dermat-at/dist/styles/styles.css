@@ -23,4 +23,8 @@ h1, h2, h3 {
   font-family: "DM Serif Display", serif;
 }
 
+.text-post {
+  column-count: 2;
+}
+
 /*# sourceMappingURL=styles.css.map */
