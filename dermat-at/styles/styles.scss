@@ -10,6 +10,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-family: 'Open Sans', sans-serif;
+  color: $color-text;
 }
 
 p {
@@ -64,6 +65,15 @@ h2 {
   }
 }
 
+.btn-toggler {
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
 // HOME
 .home__main {
   max-height: 410px;
@@ -113,4 +123,12 @@ h2 {
 .home__input {
   border-radius: 20px 0 0 20px;
   border: none;
+}
+
+footer {
+  padding-bottom: 100px;
+}
+
+.footer__info {
+  margin-top: 100px;
 }
