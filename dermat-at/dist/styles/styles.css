@@ -82,6 +82,107 @@ h2 {
   opacity: 0.8;
 }
 
+.modal-content {
+  border-radius: 56px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.modal-dialog {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.modal-header {
+  background-color: #43AFDA;
+  border-radius: 56px 56px 0px 0px;
+  color: white;
+  font-family: "DM Serif Display", serif;
+  font-size: 25px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.modal-header p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.close__modal {
+  outline: none;
+}
+.close__modal:focus {
+  outline: none;
+}
+
+@media (min-width: 992px) {
+  .modal-body {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+
+.donate-now {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.donate-now li {
+  width: 160px;
+  height: 47px;
+  font-size: 14px;
+  position: relative;
+  text-align: center;
+}
+
+.donate-now label, .donate-now input {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.donate-now input[type=radio] {
+  opacity: 0.011;
+  z-index: 100;
+}
+
+.donate-now input[type=radio]:checked + label {
+  color: white;
+  background: #014688;
+}
+
+.donate-now label {
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+  border-radius: 25px;
+}
+
+.donate-now label:hover {
+  background: #fafafa;
+}
+
+.form-select {
+  width: 100px;
+  height: 47px;
+  border-radius: 25px;
+}
+.form-select:focus {
+  outline: none;
+}
+
+.form-input {
+  border-radius: 25px;
+  height: 47px;
+}
+
+.form-textarea {
+  border-radius: 25px;
+  height: 106px !important;
+}
+
 .home__main {
   max-height: 410px;
 }

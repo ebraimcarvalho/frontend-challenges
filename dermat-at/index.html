@@ -51,23 +51,23 @@
   </header>
 
   <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal fade pr-0" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
       <div class="modal-content">
         <div class="modal-header">
           <div class="d-flex justify-content-between align-items-center w-100">
-            <h5 class="modal-title" id="exampleModalLabel">Agende a sua Consulta</h5>
+            <h4 class="modal-title" id="exampleModalLabel">Agende a sua Consulta</h4>
             <div class="d-none d-lg-flex justify-content-between align-items-center">
               <a href="#">
-                <img src="./assets/icons/Group 7.svg" alt="Whatsapp Aldo Dermato" class="img-fluid">
+                <img src="./assets/icons/Group 7.svg" alt="Whatsapp Aldo Dermato" class="img-fluid mr-4">
               </a>
-              <p class="m-0">(11) 3887-9530</p>
+              <p class="m-0 font-weight-bold">(11) 3887-9530</p>
             </div>
           </div>
         </div>
         <div class="modal-body">
           <div class="d-flex justify-content-end">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <button type="button" class="close close__modal" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
@@ -77,14 +77,16 @@
               <div class="col-lg-6 mb-lg-3">
                 <label class="d-block" for="validationDefault01">Tipo de Atendimento</label>
                 <div class="d-flex justify-content-center justify-content-lg-start">
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input checkbox-tools">
-                    <label class="custom-control-label for-checkbox-tools" for="customRadioInline1">Consulta Presencial</label>
-                  </div>
-                  <div class="custom-control custom-radio custom-control-inline">
-                    <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
-                    <label class="custom-control-label" for="customRadioInline2">Teleatendimento</label>
-                  </div>
+                  <ul class="donate-now m-0">
+                    <li>
+                        <input type="radio" id="presencial" name="amount" />
+                        <label class="d-flex justify-content-center align-items-center m-0" for="presencial">Consulta Presencial</label>
+                    </li>
+                    <li class="ml-2">
+                        <input type="radio" id="teleatendimento" name="amount" />
+                        <label class="d-flex justify-content-center align-items-center m-0" for="teleatendimento">Teleatendimento</label>
+                    </li>
+                  </ul>
                 </div>
               </div>
               
@@ -93,7 +95,8 @@
                   <label class="d-block" for="validationDefault01">Dia:</label>
                   <div class="d-flex justify-content-center justify-content-lg-start">
                     <div class="form-group">
-                      <select class="form-control" id="select-day">
+                      <select class="form-control form-select shadow-none" id="select-day">
+                        <option value="" selected disabled></option>
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -134,19 +137,20 @@
                   <label class="d-block" for="validationDefault01">Mês:</label>
                   <div class="d-flex justify-content-center justify-content-lg-start">
                     <div class="form-group">
-                      <select class="form-control" id="select-month">
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
+                      <select class="form-control form-select shadow-none" id="select-month">
+                        <option value="" selected disabled></option>
+                        <option value="1">Janeiro</option>
+                        <option value="2">Fevereiro</option>
+                        <option value="3">Março</option>
+                        <option value="4">Abril</option>
+                        <option value="5">Maio</option>
+                        <option value="6">Junho</option>
+                        <option value="7">Julho</option>
+                        <option value="8">Agosto</option>
+                        <option value="9">Setembro</option>
+                        <option value="10">Outubro</option>
+                        <option value="11">Novembro</option>
+                        <option value="12">Dezembro</option>
                       </select>
                     </div>
                   </div>
@@ -156,7 +160,8 @@
                   <label class="d-block" for="validationDefault01">Horário:</label>
                   <div class="d-flex justify-content-center justify-content-lg-start">
                     <div class="form-group">
-                      <select class="form-control" id="select-hour">
+                      <select class="form-control form-select shadow-none" id="select-hour">
+                        <option value="" selected disabled></option>
                         <option value="8">08h</option>
                         <option value="9">09h</option>
                         <option value="10">10h</option>
@@ -180,31 +185,31 @@
             <div class="form-row">
               <div class="col-lg-6 mb-3">
                 <label for="validationDefault01">Nome:</label>
-                <input type="text" class="form-control" id="validationDefault01" required>
+                <input type="text" class="form-control form-input" id="validationDefault01" required>
               </div>
               <div class="col-lg-6 mb-3">
                 <label for="validationDefault02">Sobrenome:</label>
-                <input type="text" class="form-control" id="validationDefault02" required>
+                <input type="text" class="form-control form-input" id="validationDefault02" required>
               </div>
             </div>
             <div class="form-row">
               <div class="col-lg-6 mb-3">
                 <label for="validationDefault03">E-mail:</label>
-                <input type="email" class="form-control" id="validationDefault03" required>
+                <input type="email" class="form-control form-input" id="validationDefault03" required>
               </div>
               <div class="col-lg-6 mb-3">
                 <label for="validationDefault03">Telefone:</label>
-                <input type="phone" class="form-control" id="validationDefault03" required>
+                <input type="phone" class="form-control form-input" id="validationDefault03" required>
               </div>
             </div>
             <div class="form-row">
               <div class="col-12 mb-3">
                 <label for="validationDefault03">Comentário:</label>
-                <textarea class="form-control" id="validationDefault03" required></textarea>
+                <textarea class="form-control form-textarea" id="validationDefault03" required></textarea>
               </div>
             </div>
             <div class="w-100 text-center">
-              <button class="btn btn-primary" type="submit">Enviar</button>
+              <button class="mb-2 btn shadow-none py-3 px-5 button-blue fs-14" type="submit">Enviar</button>
             </div>
           </form>
 
