@@ -26,6 +26,20 @@ p {
 
 h1, h2, h3 {
   font-family: "DM Serif Display", serif;
+  color: #2D5C8B;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 30px;
+}
+@media (min-width: 992px) {
+  h2 {
+    font-size: 40px;
+  }
 }
 
 .text-post {
@@ -51,13 +65,17 @@ h1, h2, h3 {
   font-size: 11px;
 }
 
-.fs-13 {
-  font-size: 16px;
+.fs-14 {
+  font-size: 14px;
 }
 @media (min-width: 992px) {
-  .fs-13 {
-    font-size: 13px;
+  .fs-14 {
+    font-size: 16px;
   }
+}
+
+.home__main {
+  max-height: 410px;
 }
 
 .home__img-hero {

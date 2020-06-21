@@ -18,6 +18,19 @@ p {
 
 h1, h2, h3 {
   font-family: 'DM Serif Display', serif;
+  color: $title;
+}
+
+h4 {
+  font-size: 25px;
+}
+
+h2 {
+  font-size: 30px;
+
+  @media (min-width: 992px) {
+    font-size: 40px;
+  }
 }
 
 .text-post {
@@ -43,15 +56,19 @@ h1, h2, h3 {
   font-size: 11px;
 }
 
-.fs-13 {
-  font-size: 16px;
+.fs-14 {
+  font-size: 14px;
 
   @media (min-width: 992px) {
-    font-size: 13px;
+    font-size: 16px;
   }
 }
 
 // HOME
+.home__main {
+  max-height: 410px;
+}
+
 .home__img-hero {
   background-image: url('../../assets/images/Untitled design (4) 1.svg');
   height: 346px;
