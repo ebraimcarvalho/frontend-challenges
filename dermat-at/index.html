@@ -16,33 +16,33 @@
 
 <body>
   <header class="sticky-top p-0 m-0">
-    <div class="d-flex justify-content-between bg-white border-bottom">
-      <div class="d-flex p-0 m-0">
-        <p><img src="./assets/icons/cil_location-pin.svg" alt="Icone mapa"> R. Bento de Andrade, 428 - Jardim Paulista, São Paulo</p>
-        <p class="d-none d-lg-block"><img src="./assets/icons/Vector.svg" alt="Icone Telefone">(11) 3887-9530 | (11) 99616-9978</p>
+    <div class="d-flex justify-content-center justify-content-lg-between bg-white border-bottom">
+      <div class="d-flex align-items-center py-2 pl-0 pl-lg-3 color-blue fs-13">
+        <p class="m-0"><img class="mr-1" src="./assets/icons/cil_location-pin.svg" alt="Icone mapa"> R. Bento de Andrade, 428 - Jardim Paulista, São Paulo</p>
+        <p class="d-none d-lg-flex m-0 ml-3 pl-3 border-left"><img class="mr-2" src="./assets/icons/Vector.svg" alt="Icone Telefone">(11) 3887-9530 <span class="pl-2">(11) 99616-9978</span></p>
       </div>
-      <div class="d-none d-lg-block">
+      <div class="d-none d-lg-block pr-3 py-2">
         <div class="d-flex flex-row justify-content-between">
-          <a class="nav-item nav-link" href="page-sobre.html">Sobre nós</a>
-          <a class="nav-item nav-link" href="blog.html">Blog</a>
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Agende uma Consulta</button>
+          <a class="nav-item nav-link color-text fs-13" href="page-sobre.html">Sobre nós</a>
+          <a class="nav-item nav-link mx-3 color-text fs-13" href="blog.html">Blog</a>
+          <button type="button" class="btn shadow-none px-4 button-blue" data-toggle="modal" data-target="#exampleModal">Agende uma Consulta</button>
         </div>
       </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light bg-white">
-      <a class="navbar-brand" href="#"><img src="./assets/images/logo ALDO toal  para inserção 1.svg" alt="Aldo Dermatologia" /></a>
+      <a class="navbar-brand pl-lg-4" href="#"><img src="./assets/images/logo ALDO toal  para inserção 1.svg" alt="Aldo Dermatologia" /></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav w-100 d-flex justify-content-between">
-          <a class="nav-item nav-link" href="page-pele.html">Pele, Unha e Cabelo<span class="sr-only">(current)</span></a>
-          <a class="nav-item nav-link" href="page-oncologica.html">Dermatologia Oncológica</a>
-          <a class="nav-item nav-link" href="page-esteticos.html">Procedimentos Estéticos</a>
-          <a class="nav-item nav-link" href="page-teleatendimento.html">Teleatendimento</a>
-          <a class="nav-item nav-link d-lg-none" href="page-sobre.html">Sobre Nós</a>
-          <a class="nav-item nav-link d-lg-none" href="blog.html">Blog</a>
-          <button type="button" class="btn btn-primary d-lg-none" data-toggle="modal" data-target="#exampleModal">Agende uma Consulta</button>
+        <div class="navbar-nav w-100 d-flex justify-content-between fs-13 ml-lg-3 px-1 px-lg-4">
+          <a class="nav-item nav-link color-text fs-13" href="page-pele.html">Pele, Unha e Cabelo<span class="sr-only">(current)</span></a>
+          <a class="nav-item nav-link color-text fs-13" href="page-oncologica.html">Dermatologia Oncológica</a>
+          <a class="nav-item nav-link color-text fs-13" href="page-esteticos.html">Procedimentos Estéticos</a>
+          <a class="nav-item nav-link color-text fs-13" href="page-teleatendimento.html">Teleatendimento</a>
+          <a class="nav-item nav-link d-lg-none color-text fs-13" href="page-sobre.html">Sobre Nós</a>
+          <a class="nav-item nav-link d-lg-none color-text fs-13" href="blog.html">Blog</a>
+          <button type="button" class="btn shadow-none py-2 my-2 button-blue d-lg-none btn-collapse fs-13" data-toggle="modal" data-target="#exampleModal">Agende uma Consulta</button>
         </div>
       </div>
     </nav>
@@ -237,25 +237,37 @@
   <main>
     <div class="container-fluid m-0 p-0">
       <div class="row m-0">
-        <div class="col-12 p-0">
-          <img src="./assets/images/Group 179.svg" alt="Clientes Aldo Dermato" class="img-fluid">
+        <div class="col-12 p-0 home__img-hero">
+          <div class="d-flex d-md-none flex-column align-items-end mr-4 mt-4 home__redes-sociais--mobile">
+            <a href="#">
+              <img class="img-fluid" src="./assets/icons/Vector(copy 1).svg" alt="Facebook Aldo Dermato">
+            </a>
+            <a class="mt-4" href="#">
+              <img class="img-fluid" src="./assets/icons/Group 4.svg" alt="Instagram Aldo Dermato">
+            </a>
+          </div>
         </div>
-        <div class="redes__sociais row justify-content-between w-100 m-0">
+        
+        <div class="hashtag w-100 d-flex justify-content-between align-items-center">
           <div>
-            <a href="#">
-              <img class="img-fluid" src="./assets/icons/Vector(copy).svg" alt="Facebook Aldo Dermato">
-            </a>
-            <a href="#">
-              <img class="img-fluid" src="./assets/icons/Group 6.svg" alt="Instagram Aldo Dermato">
-            </a>
+            <div class="home__redes-sociais d-none d-md-flex">
+              <a href="#">
+                <img class="img-fluid" src="./assets/icons/Group 6.svg" alt="Instagram Aldo Dermato">
+              </a>
+              <a href="#">
+                <img class="img-fluid ml-2" src="./assets/icons/Vector(copy).svg" alt="Facebook Aldo Dermato">
+              </a>
+            </div>
           </div>
-          <div class="hashtag">
-            <p>#PeleBonitaéPeleSadia</p>
+          <div class="d-flex flex-column align-items-end">
+            <p class="hashtag__text">#PeleBonitaéPeleSadia</p>
+            <div class="home__whats">
+              <a href="#">
+                <img class="img-fluid" src="./assets/icons/Group 7.svg" alt="Whatsapp Aldo Dermato">
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="whats">
-          <img class="img-fluid" src="./assets/icons/Group 7.svg" alt="Whatsapp Aldo Dermato">
-        </div>
+        </div>        
       </div>
       <div class="container text-center">
         <h2>Cuidamos da Saúde da sua Pele</h2>
