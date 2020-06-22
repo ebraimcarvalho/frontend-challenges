@@ -96,7 +96,7 @@ h2 {
 }
 
 .modal {
-  max-width: 100% !important;
+  max-width: 95% !important;
 }
 .modal::-webkit-scrollbar {
   width: 0px;
@@ -330,16 +330,16 @@ footer {
   }
 }
 
-ul {
+.procedimentos ul {
   list-style: none;
   max-width: 420px;
 }
-ul li {
+.procedimentos ul li {
   font-size: 14px;
   display: flex;
   align-items: center;
 }
-ul li:before {
+.procedimentos ul li:before {
   content: "•";
   color: #2D5C8B;
   display: inline-block;
