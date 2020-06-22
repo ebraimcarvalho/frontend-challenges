@@ -31,13 +31,14 @@ h2 {
   font-size: 30px;
 
   @media (min-width: 992px) {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 
 .text-post {
   column-count: 2;
 }
+
 // HEADER
 .color-text {
   color: $color-text!important;
@@ -48,6 +49,17 @@ h2 {
 
 .color-blue {
   color: $color-primary;
+}
+
+.color-title {
+  color: $title;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2D5C8B;
+  margin-bottom: 20px;
 }
 
 .button-blue {
@@ -306,5 +318,25 @@ footer {
   @media (min-width: 992px) {
     top: 370px;
     right: 40px;
+  }
+}
+
+ul {
+  list-style: none;
+  max-width: 420px;
+
+  li {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+
+  li:before {
+    content: "•"; 
+    color: #2D5C8B;
+    display: inline-block; 
+    width: 20px;
+    margin-left: -20px;
+    font-size: 30px;
   }
 }
