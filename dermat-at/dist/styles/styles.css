@@ -96,7 +96,7 @@ h2 {
 }
 
 .modal {
-  max-width: 95% !important;
+  max-width: 100% !important;
 }
 .modal::-webkit-scrollbar {
   width: 0px;
