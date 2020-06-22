@@ -18,7 +18,7 @@
   <header class="sticky-top p-0 m-0">
     <div class="d-flex justify-content-center justify-content-lg-between bg-white border-bottom">
       <div class="d-flex align-items-center py-2 pl-0 pl-lg-3 color-blue fs-14">
-        <p class="m-0"><img class="mr-1" src="./assets/icons/cil_location-pin.svg" alt="Icone mapa"> R. Bento de Andrade, 428 - Jardim Paulista, São Paulo</p>
+        <p class="m-0 text-center text-lg-left"><img class="mr-1" src="./assets/icons/cil_location-pin.svg" alt="Icone mapa"> R. Bento de Andrade, 428 - Jardim Paulista, São Paulo</p>
         <p class="d-none d-lg-flex m-0 ml-3 pl-3 border-left"><img class="mr-2" src="./assets/icons/Vector.svg" alt="Icone Telefone">(11) 3887-9530 <span class="pl-2">(11) 99616-9978</span></p>
       </div>
       <div class="d-none d-lg-block pr-3 py-2">
@@ -76,13 +76,13 @@
             <div class="form-row">
               <div class="col-lg-6 mb-lg-3">
                 <label class="d-block" for="validationDefault01">Tipo de Atendimento</label>
-                <div class="d-flex justify-content-center justify-content-lg-start">
-                  <ul class="donate-now m-0">
-                    <li>
+                <div class="">
+                  <ul class="donate-now m-0 d-flex justify-content-between justify-content-lg-start">
+                    <li class="w-50">
                         <input type="radio" id="presencial" name="amount" />
                         <label class="d-flex justify-content-center align-items-center m-0" for="presencial">Consulta Presencial</label>
                     </li>
-                    <li class="ml-2">
+                    <li class="w-50">
                         <input type="radio" id="teleatendimento" name="amount" />
                         <label class="d-flex justify-content-center align-items-center m-0" for="teleatendimento">Teleatendimento</label>
                     </li>
@@ -213,20 +213,21 @@
             </div>
           </form>
 
-          <span class="d-block d-lg-none text-center">Ou entre em contato</span>
-          <div class="d-flex d-lg-none justify-content-between align-items-center">
+          <span class="d-block d-lg-none text-center font-weight-bold my-4">Ou entre em contato</span>
+          <div class="d-flex d-lg-none justify-content-center align-items-center">
             <a href="#">
-              <img src="./assets/icons/Group 7.svg" alt="Whatsapp Aldo Dermato" class="img-fluid">
+              <img src="./assets/icons/Group 7.svg" alt="Whatsapp Aldo Dermato" class="img-fluid mr-5">
             </a>
-            <p class="m-0">(11) 3887-9530</p>
+            <p class="m-0 font-weight-bold color-text">(11) 3887-9530</p>
           </div>
-
-          <div style="background-color: cadetblue;" class="d-block d-lg-none">
-            <p class="text-center">Siga-nos</p>
+        </div>
+        <div style="background-color: #43AFDA;" class="modal-footer mt-5 d-lg-none">
+          <div class="d-flex w-100 h-100 flex-column align-items-center justify-content-center py-4 mx-0">
+            <p class="text-center font-weight-bold mb-4">Siga-nos</p>
             <div class="redes__sociais text-center">
               <div>
                 <a href="#">
-                  <img class="img-fluid" src="./assets/icons/Group 6.svg" alt="Instagram Aldo Dermato">
+                  <img class="img-fluid mr-2" src="./assets/icons/Group 6.svg" alt="Instagram Aldo Dermato">
                 </a>
                 <a href="#">          
                   <img class="img-fluid" src="./assets/icons/Vector(copy).svg" alt="Facebook Aldo Dermato">
@@ -234,7 +235,6 @@
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
@@ -269,13 +269,13 @@
           </div>
           
         </div>
-        <div style="background-color: #43AFDA;" class="col-lg-6 p-0">
-          <div style="position: relative;" class="text-white ml-3 pt-5 pl-4 pl-lg-5 pr-lg-5">
+        <div style="background-color: #43AFDA; position: relative;" class="col-lg-6 p-0">
+          <div class="text-white ml-3 pt-5 pl-4 pl-lg-5 pr-lg-5">
             <h1 class="text-white mt-4">Pele, Unha e Cabelo</h1>
             <p class="mt-4 pr-4">A nossa clínica é especialista no cuidado clínico da sua pele, unha e cabelo. Nossos profissionais estão preparados para lhe oferecer o melhor diagnóstico e o tratamento mais adequado para você.</p>
-            <div class="mt-5">
-              <button style="background-color: white; color: #43AFDA;" type="button" class="btn shadow-none px-5 px-lg-3 py-3 button-blue fs-14" data-toggle="modal" data-target="#exampleModal">Consulta Presencial</button>
-              <button style="background-color: white; color: #43AFDA;" type="button" class="btn shadow-none ml-3 px-5 px-lg-3 py-3 button-blue fs-14" data-toggle="modal" data-target="#exampleModal">Teleatendimento</button>
+            <div class="mt-5 mb-3">
+              <button style="background-color: white; color: #43AFDA;" type="button" class="btn shadow-none px-sm-5 px-lg-3 py-3 button-blue fs-14" data-toggle="modal" data-target="#exampleModal">Consulta Presencial</button>
+              <button style="background-color: white; color: #43AFDA;" type="button" class="btn shadow-none ml-3 px-sm-5 px-lg-3 py-3 button-blue fs-14" data-toggle="modal" data-target="#exampleModal">Teleatendimento</button>
             </div>
             <div class="whats d-flex justify-content-end">
               <a href="#">
@@ -288,9 +288,9 @@
     </div>
   </main>
 
-  <section class="container">
-    <div class="text-center">
-      <h2>Conheça as Nossas Principais Especialidades em Doenças
+  <section class="container text-lg-center mt-5">
+    <div class="">
+      <h2 class="mb-5">Conheça as Nossas Principais Especialidades em Doenças
         que Atingem a Pele, Unhas e Cabelos </h2>
     </div>
     <div class="container text-center">
@@ -483,7 +483,7 @@
           </div>
         </div>
         <div class="col-lg-4 text-center">
-          <button class="btn w-75 dropdown-toggle" type="button" data-toggle="collapse" data-target="#item20" aria-expanded="false" aria-controls="item20">Queda de cabelos: Eflúvio telógeno</button>
+          <button class="btn w-75 dropdown-toggle" type="button" data-toggle="collapse" data-target="#item20" aria-expanded="false" aria-controls="item20">Queda de cabelos</button>
           <div class="collapse multi-collapse" id="item20">
             <div class="card card-body text-left">
               Queloide é um crescimento anormal de tecido cicatricial que se forma no local de um traumatismo, corte ou cirurgia de pele.
@@ -680,7 +680,7 @@
   <section style="background-color: #AEDFE9;" class="newsletter py-5">
     <div>
       <form>
-        <div class="row align-items-center justify-content-center text-center mt-3">
+        <div class="row mx-0 align-items-center justify-content-center text-center mt-3">
           <div class="col-lg-3 mb-4 mb-lg-0">
             <p class="font-weight-bold">Inscreva-se na nossa newsletter</p>
           </div>

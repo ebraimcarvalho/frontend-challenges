@@ -15,8 +15,9 @@ a, a:hover {
 }
 
 body {
-  width: 100%;
+  width: 100vw;
   overflow-x: hidden;
+  overflow-wrap: break-word;
   font-family: "Open Sans", sans-serif;
   color: #3A3A3A;
 }
@@ -82,6 +83,13 @@ h2 {
   opacity: 0.8;
 }
 
+.modal {
+  max-width: 100% !important;
+}
+.modal::-webkit-scrollbar {
+  width: 0px;
+}
+
 .modal-content {
   border-radius: 56px;
   border: none;
@@ -89,8 +97,8 @@ h2 {
 }
 
 .modal-dialog {
-  margin-top: 0px;
-  margin-bottom: 0px;
+  margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .modal-header {
@@ -118,6 +126,10 @@ h2 {
     padding-left: 40px;
     padding-right: 40px;
   }
+}
+
+.modal-footer {
+  border-radius: 0px 0px 56px 56px;
 }
 
 .donate-now {
@@ -165,12 +177,17 @@ h2 {
 }
 
 .form-select {
-  width: 100px;
+  width: 60px;
   height: 47px;
   border-radius: 25px;
 }
 .form-select:focus {
   outline: none;
+}
+@media (min-width: 430px) {
+  .form-select {
+    width: 100px;
+  }
 }
 
 .form-input {
@@ -189,6 +206,7 @@ h2 {
 
 .home__img-hero {
   background-image: url("../../assets/images/Untitled design (4) 1.svg");
+  background-position: center;
   height: 346px;
 }
 @media (min-width: 768px) {
@@ -199,15 +217,27 @@ h2 {
 
 .hashtag {
   position: relative;
-  right: 60px;
-  top: -90px;
+  top: -80px;
+  right: 35px;
+}
+@media (min-width: 800px) {
+  .hashtag {
+    position: absolute;
+    top: 260px;
+    right: 70px;
+  }
 }
 
 .hashtag__text {
   color: white;
-  font-size: 40px;
+  font-size: 28px;
   font-style: italic;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 800px) {
+  .hashtag__text {
+    font-size: 42px;
+  }
 }
 
 .home__redes-sociais {
@@ -218,7 +248,7 @@ h2 {
 
 .home__whats {
   position: relative;
-  right: -35px;
+  right: -30px;
 }
 
 .home__link {
@@ -274,15 +304,17 @@ footer {
 }
 
 .whats {
-  position: relative;
-  width: 80px;
-  top: -55vh;
-  right: -70vw;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  top: -15px;
+  right: 20px;
 }
 @media (min-width: 992px) {
   .whats {
-    top: -55px;
-    right: -35vw;
+    top: 370px;
+    right: 40px;
   }
 }
 
