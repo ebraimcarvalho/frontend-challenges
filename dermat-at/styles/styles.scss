@@ -36,7 +36,18 @@ h2 {
 }
 
 .text-post {
-  column-count: 2;
+  column-count: 1;
+  font-size: 18px;
+  line-height: 28px;
+  padding-left: 30px;
+  padding-right: 40px;
+
+  @media (min-width: 992px) {
+    column-count: 2;
+    column-gap: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 // HEADER
