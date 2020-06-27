@@ -1,0 +1,83 @@
+// in root project terminal, run: sass --watch styles:dist/styles
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  overflow-x: hidden;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  height: 500vh;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #FFFFFF;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  padding-top: 5px;
+  padding-bottom: 5px;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+
+    @media (min-width: 980px) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+
+    .nav__icons {
+      display: flex;
+      align-items: center;
+
+      .email-icon {
+        background: #F58220;
+        border-radius: 50%;
+        box-shadow: 0px 1.8125px 1.8125px rgba(0, 0, 0, 0.25);
+        margin-right: 20px;
+        height: 60px;
+        width: 60px;
+        @include df-center;
+      }
+
+      .whats-icon {
+        background: #3BAB39;
+        border-radius: 50%;
+        box-shadow: 0px 1.8125px 1.8125px rgba(0, 0, 0, 0.25);
+        height: 60px;
+        width: 60px;
+        @include df-center;
+      }
+    }
+
+  }
+}
+
+.bg-hero {
+  background-image: url('../../assets/images/bg-hero.jpg');
+  background:
+    linear-gradient(
+      129.65deg, rgba(65, 53, 143, 0.8) 22.88%, rgba(65, 53, 143, 0) 78.62%
+    ),
+    url('../../assets/images/bg-hero.jpg') no-repeat;
+  height: 728px;
+}
+
+// .bg-hero:after {
+//   content: '';
+//   display: block;
+//   background: linear-gradient(129.65deg, rgba(65, 53, 143, 0.8) 22.88%, rgba(65, 53, 143, 0) 78.62%);
+//   z-index: 9999;
+// }
+
