@@ -63,9 +63,16 @@ header .nav .nav__icons .whats-icon {
 }
 
 .bg-hero {
-  background-image: url("../../assets/images/bg-hero.jpg");
-  background: linear-gradient(129.65deg, rgba(65, 53, 143, 0.8) 22.88%, rgba(65, 53, 143, 0) 78.62%), url("../../assets/images/bg-hero.jpg") no-repeat;
-  height: 728px;
+  background: linear-gradient(129.65deg, rgba(65, 53, 143, 0.8) 22.88%, rgba(65, 53, 143, 0) 78.62%), url("../../assets/images/bg-hero--mobile.jpg") no-repeat;
+  background-position: center center;
+  height: 604px;
+}
+@media (min-width: 480px) {
+  .bg-hero {
+    background: linear-gradient(129.65deg, rgba(65, 53, 143, 0.8) 22.88%, rgba(65, 53, 143, 0) 78.62%), url("../../assets/images/bg-hero.jpg") no-repeat;
+    background-position: center center;
+    height: 728px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
