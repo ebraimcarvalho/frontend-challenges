@@ -265,8 +265,9 @@ header {
       display: block;
       position: relative;
       top: 80px;
-      right: 40px;
+      right: 10px;
       max-height: 240px;
+      padding-right: 30px;
     }
   }
 
@@ -585,5 +586,27 @@ footer {
 
   .footer__creater {
     margin-top: 20px;
+  }
+}
+
+.go-back {
+  position: absolute;
+  display: block;
+  top: 140px;
+  right: 10px;
+
+  @media (min-width: 980px) {
+    right: 50px;
+  }
+
+  a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }

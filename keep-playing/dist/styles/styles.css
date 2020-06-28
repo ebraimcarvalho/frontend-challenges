@@ -253,8 +253,9 @@ header .nav .nav__icons .whats-icon {
     display: block;
     position: relative;
     top: 80px;
-    right: 40px;
+    right: 10px;
     max-height: 240px;
+    padding-right: 30px;
   }
 }
 .main__mail-ok .bg-mail .wrapper-content {
@@ -552,6 +553,27 @@ footer .sociais div:first-of-type {
 }
 footer .footer__creater {
   margin-top: 20px;
+}
+
+.go-back {
+  position: absolute;
+  display: block;
+  top: 140px;
+  right: 10px;
+}
+@media (min-width: 980px) {
+  .go-back {
+    right: 50px;
+  }
+}
+.go-back a {
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.go-back a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=styles.css.map */
