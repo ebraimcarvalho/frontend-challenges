@@ -3,6 +3,12 @@
 
   const projects = [
     {
+      name: 'dermat-at',
+      linkChallenge: 'http://www.aldotoschi.com.br',
+      description: 'A responsive webpage with blog and post using WordPress for a doctor clinic, calculate reading time of posts, call section blog on a static page',
+      tags: 'WordPress | PHP | JS | SASS | Bootstrap'
+    },
+    {
       name: 'gbtel',
       linkChallenge: 'https://www.gbtel.com.br',
       description: 'A responsive webpage for a company, using animation on scroll',
@@ -12,7 +18,7 @@
       name: 'teste-martin-luz',
       linkChallenge: 'https://www.figma.com/file/KBLCl4GG69LzFIeJEE6mMY/Teste---Martin-Luz?node-id=0%3A1',
       description: 'A test to do a responsive webpage using Bootstrap and Sass containing a Carousel and a Modal with a video',
-      tags: 'JS | SASS | Bootstrap | Carousel | Responsive'
+      tags: 'JS | SASS | Bootstrap | Wordpress | Responsive'
     },
     {
       name: 'ciclic-frontend',
@@ -79,7 +85,7 @@
     cardProject.innerHTML = `
       <a href="./${name}/index.html" target="_blank">
         <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
-        <h4>${i + 7}. ${formatName(name)}</h4>
+        <h4>${i + 9}. ${formatName(name)}</h4>
       </a>
       <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
         <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
