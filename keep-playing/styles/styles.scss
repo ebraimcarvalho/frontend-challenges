@@ -560,12 +560,12 @@ footer {
 .main__mail-ok .bg-mail {
   background: #41358F;
   // height: 604px;
+  min-height: calc(100vh - 77px);
   padding-top: 50px;
   padding-bottom: 80px;  
 
   @media (min-width: 980px) {
     display: flex;
-    height: calc(100vh - 77px);
     padding-top: 70px;
   }
 
@@ -644,4 +644,8 @@ footer {
       padding-right: 0px;
     }
   }
+}
+
+.d-none {
+  display: none;
 }

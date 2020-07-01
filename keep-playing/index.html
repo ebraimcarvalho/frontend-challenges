@@ -48,12 +48,13 @@
             <img src="./assets/images/adriano-foto.jpg" alt="Fale com Adriano da Keep On Playing">
             <h3>Peça Mais Informações Ao Adriano</h3>
           </div>
-          <form>
-            <input type="text" id="name" name="name" placeholder="Nome*" required>
-            <input type="text" id="endname" name="endname" placeholder="Sobrenome*" required>
-            <input type="text" id="phone" name="phone" placeholder="(DD) 99999-9999*" required>
-            <input type="email" id="email" name="email" placeholder="E-mail*" required>
-            <button type="submit">Enviar</button>
+          <form action="">
+            <input type="text" id="name" name="name" placeholder="Nome*">
+            <input type="text" id="endname" name="endname" placeholder="Sobrenome*">
+            <input type="text" id="phone" name="phone" placeholder="(DD) 99999-9999*">
+            <input type="email" id="email" name="email" placeholder="E-mail*">
+            <button id="btn-form">Enviar</button>
+            <span id="span-check" class="d-none">Erro ao enviar! Tente novamente!</span>
           </form>
         </div>
       </div>
@@ -125,12 +126,13 @@
         <img src="./assets/images/adriano-foto.jpg" alt="Fale com Adriano da Keep On Playing">
         <h3>Peça Mais Informações Ao Adriano</h3>
       </div>
-      <form>
-        <input type="text" id="name" name="name" placeholder="Nome*" required>
-        <input type="text" id="endname" name="endname" placeholder="Sobrenome*" required>
-        <input type="text" id="phone" name="phone" placeholder="(DD) 99999-9999*" required>
-        <input type="email" id="email" name="email" placeholder="E-mail*" required>
-        <button type="submit">Enviar</button>
+      <form action="">
+        <input type="text" id="name-mobile" name="name" placeholder="Nome*">
+        <input type="text" id="endname-mobile" name="endname" placeholder="Sobrenome*">
+        <input type="text" id="phone-mobile" name="phone" placeholder="(DD) 99999-9999*">
+        <input type="email" id="email-mobile" name="email" placeholder="E-mail*">
+        <button id="btn-form-mobile">Enviar</button>
+        <span id="span-check-mobile" class="d-none">Erro ao enviar! Tente novamente!</span>
       </form>
     </div>
   </section>
@@ -158,5 +160,7 @@
     </div>
 
   </footer>
+
+  <script src="./dist/main.js"></script>
 </body>
 </html>

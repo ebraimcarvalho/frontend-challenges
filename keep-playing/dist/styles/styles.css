@@ -531,13 +531,13 @@ footer .footer__creater {
 
 .main__mail-ok .bg-mail {
   background: #41358F;
+  min-height: calc(100vh - 77px);
   padding-top: 50px;
   padding-bottom: 80px;
 }
 @media (min-width: 980px) {
   .main__mail-ok .bg-mail {
     display: flex;
-    height: calc(100vh - 77px);
     padding-top: 70px;
   }
 }
@@ -616,6 +616,10 @@ footer .footer__creater {
   .go-back a {
     padding-right: 0px;
   }
+}
+
+.d-none {
+  display: none;
 }
 
 /*# sourceMappingURL=styles.css.map */
