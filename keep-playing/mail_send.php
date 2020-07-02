@@ -21,8 +21,8 @@ function enviaEmail($de, $assunto, $mensagem, $para, $email_servidor) {
   mail($para, $assunto, nl2br($body), $headers);
 }
 
-$email_servidor = "teste@gmail.com";
-$para = "teste@gmail.com";
+$email_servidor = "keeponplaying@keeponplaying.com.br";
+$para = "contato@keeponplaying.com.br";
 $de = pegaValor("email");
 $name = pegaValor("name");
 $phone = pegaValor("phone");

@@ -8,6 +8,24 @@ const emailMobile = document.getElementById('email-mobile');
 form.addEventListener('click', checkForm, false);
 formMobile.addEventListener('click', checkFormMobile, false);
 
+// form.ajax({
+//   url : "mail_send.php",
+//   type : 'post',
+//   data : {
+//     nome : "Maria Fernanda",
+//     salario :'3500'
+//   },
+//   beforeSend : function(){
+//     $("#resultado").html("ENVIANDO...");
+//   }
+// })
+// .done(function(msg){
+//   $("#resultado").html(msg);
+// })
+// .fail(function(jqXHR, textStatus, msg){
+//   alert(msg);
+// }); 
+
 function checkForm(e) {
   e.preventDefault()
   console.log(!!email.value)
@@ -15,6 +33,8 @@ function checkForm(e) {
     span.classList.remove("d-none")
   } else {
     span.classList.add('d-none')
+    e.returnValue = true;
+    form.submit()
     window.location.href="./mail-ok.html"
   }  
 }
@@ -25,6 +45,8 @@ function checkFormMobile(e) {
     spanMobile.classList.remove("d-none")
   } else {
     spanMobile.classList.add('d-none')
+    e.returnValue = true
+    form.submit()
     window.location.href="./mail-ok.html"
   }  
 }

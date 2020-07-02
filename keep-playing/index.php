@@ -48,7 +48,7 @@
             <img src="./assets/images/adriano-foto.jpg" alt="Fale com Adriano da Keep On Playing">
             <h3>Peça Mais Informações Ao Adriano</h3>
           </div>
-          <form method="post" action="mail_send.php" >
+          <form method="post" action="enviar-email.php" >
             <input type="text" id="name" name="name" placeholder="Nome*">
             <input type="text" id="endname" name="endname" placeholder="Sobrenome*">
             <input type="text" id="phone" name="phone" placeholder="(DD) 99999-9999*">
@@ -162,6 +162,20 @@
 
   </footer>
 
-  <script src="./dist/main.js"></script>
+  <!-- <script src="./dist/main.js"></script> -->
+  <script>
+    <?php
+      if(isset($_GET['status'])):
+        if($_GET['status'] == 'sucesso'):
+          echo "<script>alert('ok')</script>";
+        else:
+          echo "<script>
+            const span = document.getElementById('span-check');
+            span.classList.remove('d-none')
+          </script>";
+        endif;
+      endif;
+    ?>
+  </script>
 </body>
 </html>
