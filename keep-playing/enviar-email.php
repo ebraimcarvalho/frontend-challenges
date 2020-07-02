@@ -23,7 +23,7 @@ $status = mail($email_to, mb_encode_mimeheader($subject, "utf-8"), $corpo, $head
 
 if ($status):
   // Enviada com sucesso
-  header('location:mail-ok.html');
+  header('location:mail-ok.php');
 else:
   // Se der erro
   header('location:index.php?status=erro');

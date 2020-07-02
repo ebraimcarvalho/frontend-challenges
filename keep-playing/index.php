@@ -127,12 +127,12 @@
         <img src="./assets/images/adriano-foto.jpg" alt="Fale com Adriano da Keep On Playing">
         <h3>Peça Mais Informações Ao Adriano</h3>
       </div>
-      <form action="">
+      <form method="post" action="enviar-email.php" >
         <input type="text" id="name-mobile" name="name" placeholder="Nome*">
         <input type="text" id="endname-mobile" name="endname" placeholder="Sobrenome*">
         <input type="text" id="phone-mobile" name="phone" placeholder="(DD) 99999-9999*">
         <input type="email" id="email-mobile" name="email" placeholder="E-mail*">
-        <button id="btn-form-mobile">Enviar</button>
+        <button type="submit" id="btn-form-mobile">Enviar</button>
         <span id="span-check-mobile" class="d-none">Erro ao enviar! Tente novamente!</span>
       </form>
     </div>
