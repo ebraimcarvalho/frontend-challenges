@@ -180,7 +180,7 @@ body::-webkit-scrollbar {
     align-items: flex-start;
   }
 }
-.principal .right .right__form form input {
+.principal .right .right__form form input, .principal .right .right__form form select {
   background-color: #373636;
   border: none;
   border-radius: 20px;
@@ -192,8 +192,12 @@ body::-webkit-scrollbar {
   outline: none;
   padding-left: 20px;
 }
-.principal .right .right__form form input:not(:last-of-type) {
+.principal .right .right__form form input:not(:last-of-type), .principal .right .right__form form select {
   margin-bottom: 25px;
+}
+.principal .right .right__form form select {
+  white-space: pre-wrap;
+  padding-left: 16px;
 }
 .principal .right .right__form form span {
   margin-top: 15px;

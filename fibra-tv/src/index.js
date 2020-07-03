@@ -14,6 +14,8 @@
 //   }
 // });
 
+console.log('hi')
+
 var root = document.documentElement;
 root.className += ' js';
 
@@ -72,3 +74,31 @@ $(document).ready(function() {
 		}, 150);
 	});
 });
+
+// Postman
+var form = new FormData();
+form.append("nome", "Pessoa teste");
+form.append("telefone", "(55) 99999-9999");
+form.append("email", "email@empresateste.com.br");
+form.append("empresa", "Empresa Teste");
+form.append("mensagem", "Mensagem de Teste");
+
+var settings = {
+  "url": "http://synsuite.local/api/api/events/new_suspect",
+  "type": "POST",
+  "timeout": 0,
+  "headers": {
+    "Authorization-Token": "38511563c31b4420a9c237f242b1eead"
+  },
+  "processData": false,
+  "mimeType": "multipart/form-data",
+  "contentType": false,
+  "data": form
+};
+
+setTimeout(console.log(form, settings), 2000)
+
+// $.ajax(settings).done(function (response) {
+//   console.log(response);
+// });
+

@@ -191,7 +191,7 @@ body {
           align-items: flex-start;
         }
   
-        input {
+        input, select {
           background-color: #373636;
           border: none;
           border-radius: 20px;
@@ -204,8 +204,13 @@ body {
           padding-left: 20px;
         }
   
-        input:not(:last-of-type) {
+        input:not(:last-of-type), select {
           margin-bottom: 25px;
+        }
+
+        select {
+          white-space: pre-wrap;
+          padding-left: 16px;
         }
   
         span {
