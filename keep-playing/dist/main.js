@@ -35,7 +35,7 @@ function checkForm(e) {
     span.classList.add('d-none')
     e.returnValue = true;
     form.submit()
-    window.location.href="./mail-ok.html"
+    // window.location.href="./mail-ok.html"
   }  
 }
 
@@ -47,6 +47,6 @@ function checkFormMobile(e) {
     spanMobile.classList.add('d-none')
     e.returnValue = true
     form.submit()
-    window.location.href="./mail-ok.html"
+    // window.location.href="./mail-ok.html"
   }  
 }
