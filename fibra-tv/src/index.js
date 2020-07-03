@@ -84,8 +84,10 @@ form.append("empresa", "Empresa Teste");
 form.append("mensagem", "Mensagem de Teste");
 
 var settings = {
-  "url": "http://synsuite.local/api/api/events/new_suspect",
-  "type": "POST",
+  "url": "http://synsuite.lideri.com.br/",
+	"type": "POST",
+	// "crossDomain": true,
+	"dataType": "jsonp",
   "timeout": 0,
   "headers": {
     "Authorization-Token": "38511563c31b4420a9c237f242b1eead"
@@ -98,7 +100,6 @@ var settings = {
 
 setTimeout(console.log(form, settings), 2000)
 
-// $.ajax(settings).done(function (response) {
-//   console.log(response);
-// });
-
+$.ajax(settings).done(function (response) {
+  console.log(response);
+});
