@@ -13,6 +13,10 @@ html {
   scroll-behavior: smooth;
 }
 
+a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Montserrat', sans-serif;
   overflow-x: hidden;
@@ -260,6 +264,10 @@ header {
   }
 }
 
+#content-init {
+  padding-top: 30px;
+}
+
 .main__text {
   font-size: 22px;
   line-height: 35px;
@@ -326,6 +334,7 @@ header {
       position: relative;
       top: 10px;
       width: 110%;
+      max-width: 100%;
 
       @media (min-width: 980px) {
         left: -50px;

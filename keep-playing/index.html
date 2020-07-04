@@ -1,29 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="description" content="É Simples, Fácil E Rápido Criar Sua Escola Virtual De Música Com A Keep On Playing. Sem Programação.">
+  <title>Crie Sua Música Online Em Instantes | Keep On Playing</title>
+  <link rel="icon" href="./assets/icons/Site-Icon-150x150.png" sizes="32x32">
+  <link rel="icon" href="./assets/icons/Site-Icon.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./assets/icons/Site-Icon-apple.png">
   <link rel="stylesheet" href="./dist/styles/styles.css">
 </head>
 <body>
   <header>
     <nav class="nav">
       <div>
-        <a href="#">
+        <a href="/">
           <img src="./assets/images/AF_KeepOnPlaying 1.png" alt="Keep On Playing Logo">
         </a>
       </div>
 
       <div class="nav__icons">
         <div class="email-icon">
-          <a href="javascript:document.getElementById('name').focus()">
+          <a href="mailto:adriano.carvalho@keeponplaying.com.br?subject=Contato%20KeepOnPlaying">
             <img src="./assets/icons/email.png" alt="Email Keep on Playing">
           </a>
         </div>
 
         <div class="whats-icon">
-          <a href="">
+          <a href="https://wa.me/5511982621250" target="_blank">
             <img src="./assets/icons/whatsapp.png" alt="Whatsapp Keep on Playing">
           </a>
         </div>
@@ -35,11 +39,11 @@
     <div class="bg-hero">
       <div class="left">
         <div class="wrapper-content">
-          <img src="./assets/icons/video 1.png" alt="Escola Virtual">
+          <img src="./assets/icons/video 1.png" alt="Escola Virtual de música">
           <p>Sua Escola Virtual</p>
           <h1>Crie sua Escola Online de Música</h1>
-          <button class="button__large">Saiba Mais</button>
-          <button class="button__mobile"><img src="./assets/icons/whatsapp.png" alt=""> Fale Conosco</button>
+          <a href="#content-init"><button class="button__large">Saiba Mais</button></a>
+          <a href="https://wa.me/5511982621250" target="_blank"><button class="button__mobile"><img src="./assets/icons/whatsapp.png" alt="Whatsapp Adriano Keep On Playing" >Fale Conosco</button></a>
         </div>
       </div>
       <div class="right-form">
@@ -49,10 +53,10 @@
             <h3>Peça Mais Informações Ao Adriano</h3>
           </div>
           <form method="POST" action="enviar-email.php" >
-            <input type="text" id="name" name="name" placeholder="Nome*">
+            <input type="text" id="name" name="name" placeholder="Nome*" required>
             <input type="text" id="endname" name="endname" placeholder="Sobrenome*">
             <input type="text" id="phone" name="phone" placeholder="(DD) 99999-9999*">
-            <input type="email" id="email" name="email" placeholder="E-mail*">
+            <input type="email" id="email" name="email" placeholder="E-mail*" required>
             <input style="display: none;" type="text" class="nao-aparece" id="leaveblank" name="leaveblank">
             <button type="submit" id="btn-form">Enviar</button>
             <span id="span-check" class="d-none">Erro ao enviar! Tente novamente!</span>
@@ -61,7 +65,7 @@
         </div>
       </div>
     </div>
-    <div class="wrapper-content">
+    <div id="content-init" class="wrapper-content">
       <p class="main__text">A nossa plataforma <strong>Keep On Playing Escolas</strong> foi desenvolvida para trazer a dinâmica da sua escola de música para o ambiente virtual, preservando a sua identidade visual e a experiência dos seus alunos com a sua marca.</p>
     </div>
   </main>
@@ -73,9 +77,9 @@
       <p>O espaço virtual do aluno é acessado no próprio website da sua escola, através do ícone “escola online de música" no menu da página.</p>
       <p>A ferramenta é customizada com a sua logomarca e com as cores predominantes da sua identidade visual, a fim de manter ou criar a experiência da sua escola entre alunos e professores de música no ambiente digital.</p>
       <div class="create__images">
-        <img src="./assets/images/create-1.jpg" alt="">
-        <img src="./assets/images/create-2.jpg" alt="">
-        <img src="./assets/images/create-3.jpg" alt="">
+        <img src="./assets/images/create-1.jpg" alt="Escola de Música Keep On Playing">
+        <img src="./assets/images/create-2.jpg" alt="Aprenda Música online">
+        <img src="./assets/images/create-3.jpg" alt="Soluções para sua escola de música">
       </div>
     </div>
   </section>
@@ -129,12 +133,12 @@
         <h3>Peça Mais Informações Ao Adriano</h3>
       </div>
       <form method="POST" action="enviar-email.php">
-        <input type="text" id="name-mobile" name="name" placeholder="Nome*">
+        <input type="text" id="name-mobile" name="name" placeholder="Nome*" required>
         <input type="text" id="endname-mobile" name="endname" placeholder="Sobrenome*">
-        <input type="text" id="phone-mobile" name="phone" placeholder="(DD) 99999-9999*">
-        <input type="email" id="email-mobile" name="email" placeholder="E-mail*">
+        <input type="text" id="phone-mobile" name="phone" placeholder="(DD) 99999-9999*" required>
+        <input type="email" id="email-mobile" name="email" placeholder="E-mail*" required>
         <input style="display: none;" type="text" class="nao-aparece" id="leaveblank" name="leaveblank">
-        <button id="btn-form-mobile">Enviar</button>
+        <button type="submit" id="btn-form-mobile">Enviar</button>
         <span id="span-check-mobile" class="d-none">Erro ao enviar! Tente novamente!</span>
       </form>
     </div>
@@ -142,17 +146,17 @@
 
   <footer>
     <div class="wrapper-content">
-      <img src="./assets/images/logo-white.png" alt="">
+      <img src="./assets/images/logo-white.png" alt="Escola de Música Online">
       <p class="footer__phone">(11) 98262-1250</p>
       <p>info@keeponplaying.com</p>
       <div class="sociais">
         <div>
-          <a href="#">
+          <a href="https://instagram.com/keeponplayingoficial/?hl=pt-br" target="_blank">
             <img src="./assets/icons/instagram.png" alt="">
           </a>
         </div>
         <div>
-          <a href="#">
+          <a href="https://facebook.com/keeponplayingoficial" target="_blank">
             <img src="./assets/icons/facebook.png" alt="">
           </a>
         </div>
@@ -164,6 +168,6 @@
 
   </footer>
 
-  <script src="./dist/main.js"></script>
+  <!-- <script src="./dist/main.js"></script> -->
 </body>
 </html>
