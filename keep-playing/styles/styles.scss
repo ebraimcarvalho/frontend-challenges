@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
   overflow-wrap: break-word;
   max-width: 100%;
-  ::-webkit-scrollbar {
+  &::-webkit-scrollbar {
       width: 0px;
   }
   // height: 500vh;

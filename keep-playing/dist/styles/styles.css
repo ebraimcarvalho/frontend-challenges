@@ -20,7 +20,7 @@ body {
   overflow-wrap: break-word;
   max-width: 100%;
 }
-body ::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0px;
 }
 
