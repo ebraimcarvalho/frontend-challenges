@@ -116,9 +116,9 @@ $(document).ready(function () {
 
 		var settings = {
 			"url": "http://synsuite.lideri.com.br/",
-			"type": "POST",
-			"crossDomain": true,
-			"dataType": "jsonp",
+			"method": "POST",
+			// "crossDomain": true,
+			// "dataType": "jsonp",
 			"timeout": 0,
 			"headers": {
 				"Authorization-Token": "38511563c31b4420a9c237f242b1eead"
@@ -131,9 +131,28 @@ $(document).ready(function () {
 
 		// setTimeout(console.log('name: ', $name, settings), 2000)
 
-		$.ajax(settings).done(function (response) {
-			console.log(response);
-		})
+		// $.ajax(settings).done(function (response) {
+		// 	console.log(response, 'entrou');
+		// 	$erro.text('Retornaremos o contato em breve!')
+		// 	$erro.css("color", "green");
+		// 	$erro.show();
+		// })
+
+		// $.ajax(settings).then(result => console.log(result));
+
+		$.ajax(settings)
+			.done(function( msg ) {
+				$erro.text('Retornaremos o contato em breve!')
+				$erro.css("color", "green");
+				$erro.show();
+				// alert( "Data Saved: " + msg );
+			})
+			.fail(function (jqXHR, textStatus) {
+				$erro.text("Request failed: " + textStatus)
+				$erro.css("color", "rgb(255, 68, 68)");
+				$erro.show();
+				// alert("Request failed: " + textStatus)
+			})
 	});
 });
 
