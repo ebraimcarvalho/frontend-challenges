@@ -231,6 +231,14 @@ body::-webkit-scrollbar {
   color: #FFFFFF;
   text-shadow: 0px 3px 6px #00000029;
 }
+.principal .right .right__form form p {
+  display: none;
+  color: #ff4444;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: -10px;
+  text-align: center;
+}
 .principal .right .right__bottom {
   display: none;
 }
@@ -238,7 +246,7 @@ body::-webkit-scrollbar {
   .principal .right .right__bottom {
     display: flex;
     justify-content: flex-end;
-    margin-top: 95px;
+    margin-top: 85px;
   }
 }
 

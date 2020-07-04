@@ -41,11 +41,11 @@
         <div class="right__form">
           <p class="text1">Conheça todos os nossos produtos e venha fazer parte da empresa que oferta as <strong>melhores soluções de internet, com segurança e velocidade para você e seu negócio.</strong></p>
           <p class="text2">Faça seu cadastro agora e <strong>ganhe 50% do valor da instalação!</strong></p>
-          <form>
-            <input type="text" placeholder="Nome Completo *" required>
-            <input type="text" placeholder="Celular para Contato *" required>
+          <form enctype="multipart/form-data">
+            <input id="name" type="text" placeholder="Nome Completo *" required>
+            <input id="phone" type="text" placeholder="Celular para Contato *" required>
             <!-- <input type="" placeholder="Cidade *" required> -->
-            <select name="cidade" id="cidade">
+            <select id="city" name="cidade" id="cidade">
               <option value="Cidade" selected disabled>Cidade</option>
               <option value="Abreu e Lima">Abreu e Lima</option>
               <option value="Cruz de Rebouças">Cruz de Rebouças</option>
@@ -56,9 +56,10 @@
               <option value="Paulista">Paulista</option>
               <option value="Recife">Recife</option>
             </select>
-            <input type="email" placeholder="E-mail">
+            <input id="email" type="email" placeholder="E-mail">
             <span>O contato será efetuado em um prazo máximo 24 horas</span>
-            <button>SIM, EU QUERO!</button>
+            <button id="btn-enviar">SIM, EU QUERO!</button>
+            <p id="erro">Erro!</p>
           </form>
         </div>
 
