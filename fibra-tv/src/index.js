@@ -118,7 +118,7 @@ $(document).ready(function () {
 			"url": "http://synsuite.lideri.com.br/",
 			"type": "POST",
 			"crossDomain": true,
-			// "dataType": "jsonp",
+			"dataType": "jsonp",
 			"timeout": 0,
 			"headers": {
 				"Authorization-Token": "38511563c31b4420a9c237f242b1eead"
@@ -129,11 +129,11 @@ $(document).ready(function () {
 			"data": form
 		};
 
-		setTimeout(console.log('name: ', $name, settings), 2000)
+		// setTimeout(console.log('name: ', $name, settings), 2000)
 
 		$.ajax(settings).done(function (response) {
 			console.log(response);
-		});
+		})
 	});
 });
 
