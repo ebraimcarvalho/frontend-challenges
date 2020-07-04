@@ -20,6 +20,9 @@ body {
   overflow-wrap: break-word;
   max-width: 100%;
 }
+body ::-webkit-scrollbar {
+  width: 0px;
+}
 
 button {
   border: none;
@@ -52,7 +55,7 @@ header .nav {
   justify-content: space-between;
   align-items: center;
   padding-left: 20px;
-  padding-right: 20px;
+  padding-right: 10px;
 }
 @media (min-width: 980px) {
   header .nav {
@@ -349,12 +352,13 @@ header .nav .nav__icons .whats-icon {
   position: relative;
   left: -20px;
   top: 15px;
-  width: 112%;
+  width: 110%;
 }
 @media (min-width: 980px) {
   .beneficios ul li::after {
     content: "";
     border: none;
+    width: 112%;
   }
 }
 @media (min-width: 980px) {

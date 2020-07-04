@@ -22,6 +22,9 @@ body {
   overflow-x: hidden;
   overflow-wrap: break-word;
   max-width: 100%;
+  ::-webkit-scrollbar {
+      width: 0px;
+  }
   // height: 500vh;
 }
 
@@ -55,7 +58,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding-left: 20px;
-    padding-right: 20px;
+    padding-right: 10px;
 
     @media (min-width: 980px) {
       padding-left: 50px;
@@ -358,11 +361,12 @@ header {
       position: relative;
       left: -20px;
       top: 15px;
-      width: 112%;
+      width: 110%;
 
       @media (min-width: 980px) {
         content: '';
         border: none;
+        width: 112%;
       }
     }
 
