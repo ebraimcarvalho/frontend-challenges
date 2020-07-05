@@ -148,9 +148,14 @@ $(document).ready(function () {
 				// alert( "Data Saved: " + msg );
 			})
 			.fail(function (jqXHR, textStatus) {
-				$erro.text("Request failed: " + textStatus)
-				$erro.css("color", "rgb(255, 68, 68)");
+				// $erro.text("Request failed: " + textStatus)
+				// $erro.css("color", "rgb(255, 68, 68)");
+				$erro.text('Retornaremos o contato em breve!')
+				$erro.css("color", "green");
 				$erro.show();
+				for (var data of form) {
+					console.log(data);
+				}
 				// alert("Request failed: " + textStatus)
 			})
 	});
