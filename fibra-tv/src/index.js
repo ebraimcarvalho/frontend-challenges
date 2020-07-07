@@ -1,80 +1,3 @@
-// // $(window).scroll(function() {    
-// //   var scroll = $(window).scrollTop();
-// //   if (scroll >= 20) {
-// //     $("#header").addClass("scroll");
-// //     $("#list__itens").addClass("color-itens")
-// //     $("#logo-branca, #face-branco, #insta-branco").addClass("icon-hidden")
-// //     $("#logo-laranja, #face-laranja, #insta-laranja").removeClass("icon-hidden")
-
-// //   } else {
-// //     $("#header").removeClass("scroll");
-// //     $("#list__itens").removeClass("color-itens")
-// //     $("#logo-branca, #face-branco, #insta-branco").removeClass("icon-hidden")
-// //     $("#logo-laranja, #face-laranja, #insta-laranja").addClass("icon-hidden")
-// //   }
-// // });
-
-// console.log('hi')
-
-// var root = document.documentElement;
-// root.className += ' js';
-
-// // Cria a função boxTop responsável por definir a distância entre o topo to elemento e a página
-// function boxTop(idBox) {
-// 	var boxOffset = $(idBox).offset().top;
-// 	return boxOffset;
-// }
-
-// // Verifica se o documento está pronto
-// $(document).ready(function() {
-
-// 			// target define os elementos que serão animados. Neste 	caso todos os que possuirem a classe .anime	
-// 	var $target = $('.anime'),
-
-// 			// animationClass define a classe que será injetada no elemento durante o scroll. É nessa classe que	definimos como a animação irá ocorrer
-// 			animationClass = 'anime-init',
-
-// 			// windowHeight pega a altura total da janela do browser
-// 			windowHeight = $(window).height(),
-
-// 			// offset é definido a partir da altura da janela, menos um quarto dessa atlura. Isso vai garantir que o browser não fique com um espaço grande em branco
-// 			offset = windowHeight - (windowHeight / 4);
-
-// 	// animeScroll é a função responsável por adicionar a classe animationClass ao elemento da página.
-// 	function animeScroll() {
-
-// 		// documentTop vai definir a distância entre o topo da página e o scroll. O valor é atualizado sempre a função animeScroll é ativada.
-// 		var documentTop = $(document).scrollTop();
-
-// 		// target.each serve para adicionarmos a função a cada elemento que tiver a classe do target. Assim garantimos que elementos com distâncias diferentes do topo da página, animem no momento correto
-// 		$target.each(function() {
-
-// 			// o if verifica se a distância entre o topo da página e o scroll é maior que a distância do elemento - o valor fo offset
-// 			if (documentTop > boxTop(this) - offset) {
-
-// 				// caso seja verdadeiro, ele vai adicionar a classe que está em animationClass ao elemento
-// 				$(this).addClass(animationClass);
-// 			} else {
-
-// 				// caso seja falso ele vai remover a classe do elemento. Se você não quiser que a animação ocorra mais de uma vez, ou seja, quando o cliente voltar o scroll para cima os elementos continuem fixos, basta remover este else
-// 				$(this).removeClass(animationClass);
-// 			}
-// 		});
-// 	}
-
-// 	// dispara a função animeScroll, nesse primeiro momento ele dispara para verificar se já não existe nenhum elemento na página que esteja no campo de visão do usuário
-// 	animeScroll();
-
-// 	// com o document.scroll vamos verificar sempre que um evento de scroll ocorrer na página
-// 	$(document).scroll(function() {
-
-// 		// quando o evento de scroll ocorre disparamos novamente a função animeScroll. Com um setTimeout para evetira que ela seja disparada diversas vezes
-// 		setTimeout(function() {
-// 			animeScroll()
-// 		}, 150);
-// 	});
-// });
-
 $(document).ready(function () {
 	$("#btn-enviar").click(function (e) {
 		e.preventDefault();
@@ -105,28 +28,65 @@ $(document).ready(function () {
 			$erro.show();
 			return
 		}
-		$erro.hide();
+		$erro.text('Enviando dados...');
+		$erro.css("color", "green")
+
+		// var myHeaders = new Headers();
+		// myHeaders.append("Authorization-Token", "38511563c31b4420a9c237f242b1eead");
+
+		// var formdata = new FormData();
+		// formdata.append("nome", $name);
+		// formdata.append("telefone", $phone);
+		// formdata.append("email", $email);
+		// formdata.append("empresa", "TBNet(Lideri");
+		// formdata.append("mensagem", "Mensagem de Teste");
+
+		// var requestOptions = {
+		// 	method: 'POST',
+		// 	headers: myHeaders,
+		// 	body: formdata,
+		// 	redirect: 'follow'
+		// };
+
+		// fetch("http://synsuite.lideri.com.br/api/api/events/new_suspect", requestOptions)
+		// 	.then(response => response.text())
+		// 	.then(result => console.log(result))
+		// 	.catch(error => console.log('error', error));
 
 		// Postman
 		var form = new FormData();
 		form.append("nome", $name);
 		form.append("telefone", $phone);
 		form.append("email", $email);
-		form.append("cidade", $city);
+		form.append("empresa", "TBNet(Lideri");
+		form.append("mensagem", $city);
+		const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 		var settings = {
-			"url": "http://synsuite.lideri.com.br/",
-			"method": "POST",
+				"url": "http://synsuite.lideri.com.br/api/api/events/new_suspect",
+				"method": "POST",
+				"timeout": 0,
+				"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
+				"headers": {
+					"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
+					"X-Requested-With": "XMLHttpRequest"
+				},
+				"processData": false,
+				"mimeType": "multipart/form-data",
+				"contentType": false,
+				"data": form,
+			// "url": "http://synsuite.lideri.com.br/",
+			// "method": "POST",
 			// "crossDomain": true,
 			// "dataType": "jsonp",
-			"timeout": 0,
-			"headers": {
-				"Authorization-Token": "38511563c31b4420a9c237f242b1eead"
-			},
-			"processData": false,
-			"mimeType": "multipart/form-data",
-			"contentType": false,
-			"data": form
+			// "timeout": 0,
+			// "headers": {
+			// 	"Authorization-Token": "38511563c31b4420a9c237f242b1eead"
+			// },
+			// "processData": false,
+			// "mimeType": "text/html",
+			// "contentType": false,
+			// "data": form
 		};
 
 		// setTimeout(console.log('name: ', $name, settings), 2000)
@@ -145,14 +105,16 @@ $(document).ready(function () {
 				$erro.text('Retornaremos o contato em breve!')
 				$erro.css("color", "green");
 				$erro.show();
+				for (var data of form) {
+					console.log(data);
+				}
 				// alert( "Data Saved: " + msg );
 			})
 			.fail(function (jqXHR, textStatus) {
 				// $erro.text("Request failed: " + textStatus)
-				// $erro.css("color", "rgb(255, 68, 68)");
-				$erro.text('Retornaremos o contato em breve!')
-				$erro.css("color", "green");
-				$erro.show();
+				$erro.text('Erro na conexão! Entre em contato direto (81) 98212-2660')
+				$erro.css("color", "rgb(255, 68, 68)")
+				$erro.show()
 				for (var data of form) {
 					console.log(data);
 				}
