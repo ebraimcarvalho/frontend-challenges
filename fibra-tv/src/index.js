@@ -56,25 +56,28 @@ $(document).ready(function () {
 		// Postman
 		var form = new FormData();
 		form.append("nome", $name);
-		form.append("telefone", $phone);
+		// form.append("telefone", $phone);
 		form.append("email", $email);
-		form.append("empresa", "TBNet(Lideri");
+		form.append("empresa", $phone);
 		form.append("mensagem", $city);
-		const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
 		var settings = {
-				"url": "http://synsuite.lideri.com.br/api/api/events/new_suspect",
-				"method": "POST",
+				"url": "https://synsuite.lideri.com.br/api/api/events/new_suspect",
+				"type": "POST",
 				"timeout": 0,
-				"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
 				"headers": {
 					"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
-					"X-Requested-With": "XMLHttpRequest"
+					"X-Requested-With": "XMLHttpRequest",
+					'Content-Type': 'application/x-www-form-urlencoded',
 				},
+				"Access-Control-Allow-Origin": "*",
 				"processData": false,
 				"mimeType": "multipart/form-data",
-				"contentType": false,
+				"dataType": "json",
+				// "contentType": "multipart/form-data",
+				// "Content-Length": "<calculated when request is sent>",
 				"data": form,
+			// "Authorization-Token": "38511563c31b4420a9c237f242b1eead",
 			// "url": "http://synsuite.lideri.com.br/",
 			// "method": "POST",
 			// "crossDomain": true,
