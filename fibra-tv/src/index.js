@@ -36,10 +36,10 @@ $(document).ready(function () {
 
 		// var formdata = new FormData();
 		// formdata.append("nome", $name);
-		// formdata.append("telefone", $phone);
+		// // formdata.append("telefone", $phone);
 		// formdata.append("email", $email);
-		// formdata.append("empresa", "TBNet(Lideri");
-		// formdata.append("mensagem", "Mensagem de Teste");
+		// formdata.append("empresa", $phone);
+		// formdata.append("mensagem", $city);
 
 		// var requestOptions = {
 		// 	method: 'POST',
@@ -48,10 +48,26 @@ $(document).ready(function () {
 		// 	redirect: 'follow'
 		// };
 
-		// fetch("http://synsuite.lideri.com.br/api/api/events/new_suspect", requestOptions)
+		// fetch("https://synsuite.lideri.com.br/api/api/events/new_suspect", requestOptions)
 		// 	.then(response => response.text())
-		// 	.then(result => console.log(result))
-		// 	.catch(error => console.log('error', error));
+		// 	.then(result => {
+		// 		console.log(result)
+		// 		$erro.text('Retornaremos o contato em breve!')
+		// 		$erro.css("color", "green");
+		// 		$erro.show();
+		// 		for (var data of formdata) {
+		// 			console.log(data);
+		// 		}
+		// 	})
+		// 	.catch(error => {
+		// 		console.log('error', error)
+		// 		$erro.text('Erro na conexão! Entre em contato direto (81) 98212-2660')
+		// 		$erro.css("color", "rgb(255, 68, 68)")
+		// 		$erro.show()
+		// 		for (var data of formdata) {
+		// 			console.log(data);
+		// 		}
+		// 	});
 
 		// Postman
 		var form = new FormData();
@@ -67,13 +83,13 @@ $(document).ready(function () {
 				"timeout": 0,
 				"headers": {
 					"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
-					"X-Requested-With": "XMLHttpRequest",
-					'Content-Type': 'application/x-www-form-urlencoded',
+					// "X-Requested-With": "XMLHttpRequest",
+					// 'Content-Type': 'application/x-www-form-urlencoded',
 				},
-				"Access-Control-Allow-Origin": "*",
+				// "Access-Control-Allow-Origin": "*",
 				"processData": false,
 				"mimeType": "multipart/form-data",
-				"dataType": "json",
+				"contentType": false,
 				// "contentType": "multipart/form-data",
 				// "Content-Length": "<calculated when request is sent>",
 				"data": form,
