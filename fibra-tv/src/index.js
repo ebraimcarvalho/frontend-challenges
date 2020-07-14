@@ -29,7 +29,37 @@ $(document).ready(function () {
 			return
 		}
 		$erro.text('Enviando dados...');
-		$erro.css("color", "green")
+		$erro.css("color", "green");
+
+		var form = new FormData();
+		form.append("nome", $name);
+		form.append("telefone", "(55) 99999-9999");
+		form.append("email", $email);
+		form.append("empresa", $city);
+		form.append("mensagem", $phone);
+
+		var settings = {
+			"url": "https://synsuite.lideri.com.br/api/api/events/new_suspect",
+			"method": "POST",
+			"timeout": 0,
+			"headers": {
+				"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
+			},
+			"processData": false,
+			"mimeType": "multipart/form-data",
+			"contentType": false,
+			"data": form
+		};
+
+		$.ajax(settings).done(function (response) {
+			console.log(response);
+			$erro.text('Retornaremos o contato em breve!')
+			$erro.css("color", "green");
+			$erro.show();
+			for (var data of form) {
+				console.log(data);
+			}
+		});
 
 		// var myHeaders = new Headers();
 		// myHeaders.append("Authorization-Token", "38511563c31b4420a9c237f242b1eead");
@@ -69,76 +99,76 @@ $(document).ready(function () {
 		// 		}
 		// 	});
 
-		// Postman
-		var form = new FormData();
-		form.append("nome", $name);
-		// form.append("telefone", $phone);
-		form.append("email", $email);
-		form.append("empresa", $phone);
-		form.append("mensagem", $city);
+		// // Postman
+		// var form = new FormData();
+		// form.append("nome", $name);
+		// // form.append("telefone", $phone);
+		// form.append("email", $email);
+		// form.append("empresa", $phone);
+		// form.append("mensagem", $city);
 
-		var settings = {
-				"url": "https://synsuite.lideri.com.br/api/api/events/new_suspect",
-				"type": "POST",
-				"timeout": 0,
-				"headers": {
-					"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
-					// "X-Requested-With": "XMLHttpRequest",
-					// 'Content-Type': 'application/x-www-form-urlencoded',
-				},
-				// "Access-Control-Allow-Origin": "*",
-				"processData": false,
-				"mimeType": "multipart/form-data",
-				"contentType": false,
-				// "contentType": "multipart/form-data",
-				// "Content-Length": "<calculated when request is sent>",
-				"data": form,
-			// "Authorization-Token": "38511563c31b4420a9c237f242b1eead",
-			// "url": "http://synsuite.lideri.com.br/",
-			// "method": "POST",
-			// "crossDomain": true,
-			// "dataType": "jsonp",
-			// "timeout": 0,
-			// "headers": {
-			// 	"Authorization-Token": "38511563c31b4420a9c237f242b1eead"
-			// },
-			// "processData": false,
-			// "mimeType": "text/html",
-			// "contentType": false,
-			// "data": form
-		};
+		// var settings = {
+		// 		"url": "https://synsuite.lideri.com.br/api/api/events/new_suspect",
+		// 		"method": "POST",
+		// 		"timeout": 100000,
+		// 		"headers": {
+		// 			"Authorization-Token": "38511563c31b4420a9c237f242b1eead",
+		// 			// "X-Requested-With": "XMLHttpRequest",
+		// 			// 'Content-Type': 'application/x-www-form-urlencoded',
+		// 		},
+		// 		// "Access-Control-Allow-Origin": "*",
+		// 		"processData": false,
+		// 		"mimeType": "multipart/form-data",
+		// 		"contentType": false,
+		// 		// "contentType": "multipart/form-data",
+		// 		// "Content-Length": "<calculated when request is sent>",
+		// 		"data": form,
+		// 	// "Authorization-Token": "38511563c31b4420a9c237f242b1eead",
+		// 	// "url": "http://synsuite.lideri.com.br/",
+		// 	// "method": "POST",
+		// 	// "crossDomain": true,
+		// 	// "dataType": "jsonp",
+		// 	// "timeout": 0,
+		// 	// "headers": {
+		// 	// 	"Authorization-Token": "38511563c31b4420a9c237f242b1eead"
+		// 	// },
+		// 	// "processData": false,
+		// 	// "mimeType": "text/html",
+		// 	// "contentType": false,
+		// 	// "data": form
+		// };
 
-		// setTimeout(console.log('name: ', $name, settings), 2000)
+		// // setTimeout(console.log('name: ', $name, settings), 2000)
 
-		// $.ajax(settings).done(function (response) {
-		// 	console.log(response, 'entrou');
-		// 	$erro.text('Retornaremos o contato em breve!')
-		// 	$erro.css("color", "green");
-		// 	$erro.show();
-		// })
+		// // $.ajax(settings).done(function (response) {
+		// // 	console.log(response, 'entrou');
+		// // 	$erro.text('Retornaremos o contato em breve!')
+		// // 	$erro.css("color", "green");
+		// // 	$erro.show();
+		// // })
 
-		// $.ajax(settings).then(result => console.log(result));
+		// // $.ajax(settings).then(result => console.log(result));
 
-		$.ajax(settings)
-			.done(function( msg ) {
-				$erro.text('Retornaremos o contato em breve!')
-				$erro.css("color", "green");
-				$erro.show();
-				for (var data of form) {
-					console.log(data);
-				}
-				// alert( "Data Saved: " + msg );
-			})
-			.fail(function (jqXHR, textStatus) {
-				// $erro.text("Request failed: " + textStatus)
-				$erro.text('Erro na conexão! Entre em contato direto (81) 98212-2660')
-				$erro.css("color", "rgb(255, 68, 68)")
-				$erro.show()
-				for (var data of form) {
-					console.log(data);
-				}
-				// alert("Request failed: " + textStatus)
-			})
+		// $.ajax(settings)
+		// 	.done(function( msg ) {
+		// 		$erro.text('Retornaremos o contato em breve!')
+		// 		$erro.css("color", "green");
+		// 		$erro.show();
+		// 		for (var data of form) {
+		// 			console.log(data);
+		// 		}
+		// 		// alert( "Data Saved: " + msg );
+		// 	})
+		// 	.fail(function (jqXHR, textStatus) {
+		// 		// $erro.text("Request failed: " + textStatus)
+		// 		$erro.text('Erro na conexão! Entre em contato direto (81) 98212-2660')
+		// 		$erro.css("color", "rgb(255, 68, 68)")
+		// 		$erro.show()
+		// 		for (var data of form) {
+		// 			console.log(data);
+		// 		}
+		// 		// alert("Request failed: " + textStatus)
+		// 	})
 	});
 });
 
