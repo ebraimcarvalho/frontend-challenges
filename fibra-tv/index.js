@@ -14,21 +14,10 @@ $(document).ready(function () {
 			return
 		}
 		if (!res) {
-			$erro.text('Telefone errado!');
-			$erro.css("color", "rgb(255, 68, 68)");
+			$erro.text('Telefone errado!')
 			$erro.show();
 			return
 		} else if (res) {
-			if($phone.length == 8) {
-				$phone = "(81) 9" + $phone;
-			} else if ($phone.length == 9) {
-				$phone = "(81) " + $phone;
-			} else if($phone.length == 10) {
-				$erro.text('Telefone errado!');
-				$erro.css("color", "rgb(255, 68, 68)");
-				$erro.show();
-				return
-			};
 			$erro.text('Telefone correto!')
 			$erro.css("color", "green");
 			$erro.show();
