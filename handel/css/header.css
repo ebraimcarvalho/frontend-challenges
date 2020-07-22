@@ -1,0 +1,122 @@
+.header {
+  margin: 30px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: minmax(160px, auto) minmax(auto, 600px) minmax(280px, auto);
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 40px;
+}
+
+@media (max-width: 800px) {
+  .header {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .header img {
+    margin: 0 auto;
+  }
+}
+
+.busca form {
+  display: grid;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.busca #s {
+  border: 2px solid #000;
+  border-radius: 4px;
+  font-size: 1.125rem;
+  padding: 12px 40px 12px 20px;
+  grid-area: 1/1;
+}
+
+.busca #searchButton {
+  background: transparent url('../img/icons/search.svg') no-repeat center center;
+  border: none;
+  cursor: pointer;
+  grid-area: 1/1;
+  justify-self: end;
+  text-indent: -100px;
+  width: 50px;
+}
+
+.conta {
+  display: grid;
+  column-gap: 20px;
+  grid-template-columns: auto auto;
+}
+
+@media (max-width: 800px) {
+  .conta {
+    column-gap: 40px;
+    justify-content: center;
+  }
+}
+
+.conta .minha-conta,
+.conta .carrinho {
+  padding: 5px 0px 5px 34px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.conta .minha-conta {
+  background-image: url('../img/icons/user.svg');
+}
+
+.conta .carrinho {
+  background-image: url('../img/icons/cart.svg');
+  position: relative;
+}
+
+.carrinho-count {
+  align-items: center;
+  background-color: orangered;
+  border-radius: 50%;
+  color: #fff;
+  display: flex;
+  font-size: 0.7rem;
+  font-weight: bold;
+  height: 16px;
+  justify-content: center;
+  left: 5px;
+  position: absolute;
+  top: 0px;
+  width: 16px;
+}
+
+.menu-categorias {
+  background-color: #000;
+  padding: 5px;
+}
+
+.menu-categorias ul {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-categorias ul li {
+  margin: 15px 10px;
+}
+
+.menu-categorias a {
+  color: #fff;
+  padding: 10px;
+}
+
+.menu-categorias a:hover,
+.menu-categorias .current-menu-item a {
+  color: orangered;
+}
+
+@media (max-width: 800px) {
+  .menu-categorias {
+    position: relative;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+}

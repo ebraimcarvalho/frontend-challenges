@@ -1,0 +1,62 @@
+/* VANTAGENS */
+.vantagens {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.vantagens li {
+  margin: 0 20px;
+  padding: 5px 0 5px 35px;
+  background-repeat: no-repeat;
+  background-position: center left;
+}
+
+.vantagens li:nth-child(1) {
+  background-image: url('../img/icons/frete.svg');
+}
+
+.vantagens li:nth-child(2) {
+  background-image: url('../img/icons/troca.svg');
+}
+
+.vantagens li:nth-child(3) {
+  background-image: url('../img/icons/card.svg');
+}
+
+/* SLIDE */
+.slide-item {
+  display: grid;
+  grid-template-columns: 65% 35%;
+  background: #000;
+}
+
+.slide-info {
+  padding: 0 20px 40px 20px;
+  color: #fff;
+  align-self: end;
+}
+
+@media (max-width: 800px) {
+  .slide-item {
+    grid-template-columns: 1fr;
+  }
+
+  .slide-info {
+    margin-top: 20px;
+  }
+}
+
+.slide-preco {
+  color: rgba(255,255,255, 0.6);
+  display: block;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+.slide-nome {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
