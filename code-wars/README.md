@@ -2596,3 +2596,84 @@ def sorter(textbooks):
 def sorter(textbooks):
   return sorted(textbooks, key = lambda arg: arg.lower())
 ```
+
+### 72 - Merging sorted integer arrays (without duplicates)
+<a href="https://www.codewars.com/kata/573f5c61e7752709df0005d2/train/python" target="_blank">Link of problem</a>
+
+Write a function that merges two sorted arrays into a single one. The arrays only contain integers. Also, the final outcome must be sorted and not have any duplicate.
+
+``` py
+# my solution
+def merge_arrays(first, second): 
+  return sorted(set(first + second))
+
+# other
+def merge_arrays(first, second): 
+    working = []
+    for e in first:
+        if e not in working:
+            working.append(e)
+    for i in second:
+        if i not in working:
+            working.append(i)
+    return sorted(working)
+
+# or
+def merge_arrays(first, second): 
+    # your code here
+    first.extend(second)
+    x = list(set(first))
+    x.sort()
+    return x
+```
+
+### 73 - Name Your Python!
+<a href="https://www.codewars.com/kata/53cf459503f9bbb774000003/train/python" target="_blank">Link of problem</a>
+
+Python is now supported on Codewars!
+
+For those of us who are not very familiar with Python, let's handle the very basic challenge of creating a class named Python. We want to give our Pythons a name, so it should take a name argument that we can retrieve later.
+
+For example:
+`
+bubba = Python('Bubba')
+bubba.name # should return 'Bubba'
+`
+
+``` py
+# my solution
+class Python:
+  def __init__(self, name):
+    self.name = name
+```
+
+### 74 - Fix the loop!
+<a href="https://www.codewars.com/kata/55ca43fb05c5f2f97f0000fd/train/python" target="_blank">Link of problem</a>
+
+Your collegue wrote an simple loop to list his favourite animals. But there seems to be a minor mistake in the grammar, which prevents the program to work. Fix it! :)
+
+If you pass the list of your favourite animals to the function, you should get the list of the animals with orderings and newlines added.
+
+For example, passing in:
+
+animals = [ 'dog', 'cat', 'elephant' ]
+will result in:
+
+list_animals(animals) == '1. dog\n2. cat\n3. elephant\n'
+
+``` py
+# my solution
+def list_animals(animals):
+  list = ''
+  for i in range(len(animals)):
+    list += str(i + 1) + '. ' + animals[i] + '\n'
+  return list
+
+# other
+def list_animals(animals):
+    return ''.join('{}. {}\n'.format(i, x) for (i, x) in enumerate(animals, 1))
+
+# or
+def list_animals(animals):
+    return ''.join('{0}. {1}\n'.format(i + 1, x) for i, x in enumerate(animals))
+```
