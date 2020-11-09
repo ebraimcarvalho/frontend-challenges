@@ -2677,3 +2677,75 @@ def list_animals(animals):
 def list_animals(animals):
     return ''.join('{0}. {1}\n'.format(i + 1, x) for i, x in enumerate(animals))
 ```
+
+### 75 - Polish alphabet
+<a href="https://www.codewars.com/kata/57ab2d6072292dbf7c000039/train/python" target="_blank">Link of problem</a>
+
+There are 32 letters in the Polish alphabet: 9 vowels and 23 consonants.
+
+Your task is to change the letters with diacritics:
+
+ą -> a,
+ć -> c,
+ę -> e,
+ł -> l,
+ń -> n,
+ó -> o,
+ś -> s,
+ź -> z,
+ż -> z
+and print out the string without the use of the Polish letters.
+
+For example:
+
+"Jędrzej Błądziński"  -->  "Jedrzej Bladzinski"
+
+``` py
+# my solution
+dic = {
+  'ą' : 'a',
+  'ć' : 'c',
+  'ę' : 'e',
+  'ł' : 'l',
+  'ń' : 'n',
+  'ó' : 'o',
+  'ś' : 's',
+  'ź' : 'z',
+  'ż' : 'z' 
+}
+
+def correct_polish_letters(st):
+  newSent = []
+  for x in st:
+    if x in dic.keys():
+      newSent.append(dic[x])
+    else:
+      newSent.append(x) 
+
+  return ''.join(newSent)
+
+# or
+def correct_polish_letters(s):
+    return s.translate(str.maketrans("ąćęłńóśźż", "acelnoszz"))
+
+# other
+def correct_polish_letters(st):
+    l = "ąćęłńóśźż"
+    lt = "acelnoszz"
+    for i in range(len(l)):
+        st = st.replace(l[i], lt[i])
+    return st
+
+# and
+def correct_polish_letters(st): 
+    d={'ą':'a',
+    'ć':'c',
+    'ę':'e',
+    'ł':'l',
+    'ń':'n',
+    'ó':'o',
+    'ś':'s',
+    'ź':'z',
+    'ż':'z'}
+    return "".join(d[c] if c in d else c for c in st)
+```
