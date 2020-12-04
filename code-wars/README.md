@@ -2749,3 +2749,59 @@ def correct_polish_letters(st):
     'ż':'z'}
     return "".join(d[c] if c in d else c for c in st)
 ```
+
+### 76 - Easy SQL: Convert to Hexadecimal
+<a href="https://www.codewars.com/kata/594a50bafd3b7031c1000013/solutions/sql" target="_blank">Link of problem</a>
+
+to hexYou have access to a table of monsters as follows:
+
+** monsters table schema **
+
+    id
+    name
+    legs
+    arms
+    characteristics
+
+Your task is to turn the numeric columns (arms, legs) into equivalent hexadecimal values.
+
+** output table schema **
+
+    legs
+    arms
+
+
+``` sql
+-- my solution
+SELECT
+  to_hex(legs) AS legs,
+  to_hex(arms) AS arms
+FROM monsters
+
+-- other solutions
+SELECT TO_HEX(legs) legs, TO_HEX(arms) arms from monsters;
+```
+
+### 77 - SQL Basics: Mod
+<a href="https://www.codewars.com/kata/594a9592704e4d21bc000131" target="_blank">Link of problem</a>
+
+Given the following table 'decimals':
+
+** decimals table schema **
+
+    id
+    number1
+    number2
+
+Return a table with one column (mod) which is the output of number1 modulus number2.
+
+``` sql
+-- my soluton
+SELECT (number1 % number2) as mod
+FROM decimals;
+
+-- other solutions
+select
+  mod(number1, number2) as mod
+from decimals
+```
