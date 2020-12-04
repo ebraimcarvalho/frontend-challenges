@@ -2805,3 +2805,25 @@ select
   mod(number1, number2) as mod
 from decimals
 ```
+
+### 78 - Adults only (SQL for Beginners #1)
+<a href="https://www.codewars.com/kata/590a95eede09f87472000213/train/sql" target="_blank">Link of problem</a>
+
+In your application, there is a section for adults only. You need to get a list of names and ages of users from the users table, who are 18 years old or older.
+
+users table schema
+
+    name
+    age
+
+``` sql
+-- my solution
+SELECT name, age
+FROM users
+WHERE age >= 18;
+
+-- other solution
+select u.name, u.age 
+from users as u
+where age >= 18
+```
