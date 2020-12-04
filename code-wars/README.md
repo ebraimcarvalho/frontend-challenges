@@ -2873,3 +2873,30 @@ WHERE lower(country) NOT IN ('usa', 'canada', 'mexico')
 SELECT GREATEST((a+b+c), (a*b*c), ((a+b) * c), (a * (b+c))) AS res
 FROM expression_matter;
 ```
+
+### 81 - Easy SQL: Square Root and Log
+<a href="https://www.codewars.com/kata/594a691720ac16a544000075/train/sql" target="_blank">Link of problem</a>
+
+Given the following table 'decimals':
+
+** decimals table schema **
+
+    id
+    number1
+    number2
+
+Return a table with two columns (root, log) where the values in root are the square root of those provided in number1 and the values in log are changed to a base 10 logarithm from those in number2.
+
+``` sql
+-- my solution
+SELECT sqrt(number1) as root, log(number2) as log
+FROM decimals;
+
+-- other solution
+SELECT |/ number1 as root, log(number2) as log
+FROM decimals;
+
+-- or
+SELECT number1^0.5 as root,  LOG(number2) as log
+FROM decimals;
+```
