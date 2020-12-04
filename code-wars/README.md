@@ -2860,3 +2860,16 @@ SELECT *
 FROM travelers
 WHERE lower(country) NOT IN ('usa', 'canada', 'mexico')
 ```
+
+### 80 - Expressions Matter 
+<a href="https://www.codewars.com/kata/5ae62fcf252e66d44d00008e/train/sql" target="_blank">Link of problem</a>
+
+
+    Given three integers a ,b ,c, return the largest number obtained after inserting the following operators and brackets: +, *, ()
+    In other words , try every combination of a,b,c with [*+()] , and return the Maximum Obtained
+
+``` sql
+-- my solution
+SELECT GREATEST((a+b+c), (a*b*c), ((a+b) * c), (a * (b+c))) AS res
+FROM expression_matter;
+```
