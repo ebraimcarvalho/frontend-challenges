@@ -3,6 +3,13 @@
 
   const projects = [
     {
+      name: 'keep-playing',
+      linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/tree/master/keep-playing',
+      description: 'A responsive landingpage for a music school, using Javascript and PHP for cend email, pure style using SASS and responsive for all screen size',
+      tags: 'JS | PHP | SASS | Responsive',
+      date: '04/07/2020'
+    },
+    {
       name: 'dermat-at',
       linkChallenge: 'http://www.aldotoschi.com.br',
       description: 'A responsive webpage with blog and post using WordPress for a doctor clinic, calculate reading time of posts, call section blog on a static page',
