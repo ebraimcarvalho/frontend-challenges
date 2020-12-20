@@ -198,7 +198,7 @@
         <div>
           <a href="./${name}/index.html" target="_blank">
             <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
-            <h4>${i + 10}. ${formatName(name)}</h4>
+            <h4>${i + 2}. ${formatName(name)}</h4>
             <p><small>${date ? `Date of Project: ${date}` : ''}</small></p>
           </a>
           <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
@@ -213,7 +213,7 @@
         <div>
           <a href=${linkChallenge} target="_blank">
             <img class="card-project__img" src=${img} alt=${name} width="100" />
-            <h4>${i + 10}. ${formatName(name)}</h4>
+            <h4>${i + 2}. ${formatName(name)}</h4>
             <p><small>${date ? `Date of Project: ${date}` : ''}</small></p>
           </a>
           <p>${description}</p>
