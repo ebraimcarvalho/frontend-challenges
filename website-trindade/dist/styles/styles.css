@@ -1,0 +1,981 @@
+@import url("https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share:ital,wght@1,400;1,700&display=swap");
+body {
+  background-color: #E5E5E5;
+  color: #343027;
+  font-family: "Scada", sans-serif;
+  font-size: 18px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+body::-webkit-scrollbar {
+  width: 0px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.4s;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+.header {
+  background-color: #0A0904;
+  color: #fff;
+  font-family: "Share", cursive;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+.header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+@media (min-width: 580px) {
+  .header nav {
+    flex-direction: row;
+    padding-bottom: 0px;
+  }
+}
+.header nav .header__logo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.header nav .header__logo a:last-of-type {
+  display: none;
+}
+@media (min-width: 580px) {
+  .header nav .header__logo a:last-of-type {
+    display: block;
+  }
+}
+.header nav .header__logo h1 {
+  font-size: 24px;
+  margin-left: 15px;
+}
+.header nav .header__itens {
+  opacity: 0.7;
+  font-size: 20px;
+}
+.header nav .header__itens .active {
+  color: #CC5E31;
+}
+.header nav .header__itens a:hover {
+  color: #CC5E31;
+}
+.header nav .header__itens a:not(:last-child) {
+  margin-right: 5px;
+}
+.header nav .header__itens a:last-of-type {
+  margin-right: 0px;
+}
+
+.bg-hero {
+  background: linear-gradient(129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%), url("../../assets/images/bg-hero.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  height: 649px;
+}
+.bg-hero .wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 20%;
+}
+@media (min-width: 980px) {
+  .bg-hero .wrapper {
+    padding-top: 16.5%;
+  }
+}
+.bg-hero .wrapper h2 {
+  font-family: Share;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 44px;
+  line-height: 72px;
+  text-align: center;
+}
+@media (min-width: 980px) {
+  .bg-hero .wrapper h2 {
+    font-size: 64px;
+  }
+}
+.bg-hero .wrapper p {
+  font-style: italic;
+  font-size: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+@media (min-width: 980px) {
+  .bg-hero .wrapper p {
+    font-size: 24px;
+  }
+}
+.bg-hero .wrapper button {
+  background: #FB0352;
+  height: 53px;
+  margin-top: 80px;
+  width: 211px;
+  font-family: Share;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1156px;
+}
+
+.about, .what, .services, .contato {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  position: relative;
+  top: 0px;
+}
+@media (min-width: 980px) {
+  .about, .what, .services, .contato {
+    top: -50px;
+    flex-direction: row;
+  }
+}
+.about__left, .what__left, .services__left, .contato__left {
+  flex: 1;
+}
+.about__left img, .what__left img, .services__left img, .contato__left img {
+  max-width: 100%;
+  max-height: 550px;
+}
+@media (min-width: 980px) {
+  .about__left img, .what__left img, .services__left img, .contato__left img {
+    max-height: 100%;
+  }
+}
+.about__right, .what__right, .services__right, .contato__right {
+  flex: 1;
+}
+.about__right .text, .what__right .text, .services__right .text, .contato__right .text {
+  padding-right: 10px;
+  padding-left: 10px;
+  padding-top: 30px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+@media (min-width: 980px) {
+  .about__right .text, .what__right .text, .services__right .text, .contato__right .text {
+    padding-right: 60px;
+    padding-left: 60px;
+  }
+}
+.about__right .text h3, .what__right .text h3, .services__right .text h3, .contato__right .text h3 {
+  font-family: "Share", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+.about__right .text h3::after, .what__right .text h3::after, .services__right .text h3::after, .contato__right .text h3::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 7px;
+  background: #FB0352;
+  margin-top: 15px;
+}
+.about__right .text p, .what__right .text p, .services__right .text p, .contato__right .text p {
+  font-family: "Scada";
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 60px;
+  text-align: left;
+}
+.about__right .text button, .what__right .text button, .services__right .text button, .contato__right .text button {
+  background: #FB0352;
+  height: 53px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 211px;
+  font-family: Share;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+@media (min-width: 980px) {
+  .about__right .text button, .what__right .text button, .services__right .text button, .contato__right .text button {
+    margin-top: 80px;
+    margin-bottom: 0px;
+  }
+}
+.about__bottom, .what__bottom, .services__bottom, .contato__bottom {
+  background: linear-gradient(129.65deg, rgba(251, 3, 82, 0.8) 22.88%, rgba(251, 3, 82, 0.8) 78.62%), url("../../assets/images/bottom-section.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 278px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 0px;
+}
+@media (min-width: 980px) {
+  .about__bottom, .what__bottom, .services__bottom, .contato__bottom {
+    top: -55px;
+  }
+}
+.about__bottom h3, .what__bottom h3, .services__bottom h3, .contato__bottom h3 {
+  font-family: "Share";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 48px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #F2EBDA;
+}
+
+.what {
+  top: 0px;
+}
+@media (min-width: 980px) {
+  .what {
+    top: -55px;
+  }
+}
+.what__left {
+  order: 2;
+}
+.what__right {
+  order: 1;
+}
+.what__bottom {
+  background: linear-gradient(129.65deg, rgba(52, 48, 39, 0.7) 22.88%, rgba(52, 48, 39, 0.7) 78.62%), url("../../assets/images/bottom-section.png") no-repeat;
+  top: -5px;
+}
+@media (min-width: 980px) {
+  .what__bottom {
+    top: -60px;
+  }
+}
+
+.services {
+  top: -5px;
+}
+@media (min-width: 980px) {
+  .services {
+    top: -60px;
+  }
+}
+.services .controls {
+  margin-top: 0px;
+  text-align: center;
+}
+@media (min-width: 980px) {
+  .services .controls {
+    margin-top: 60px;
+    text-align: left;
+  }
+}
+.services .controls button {
+  width: 86px;
+  padding-bottom: 5px;
+  background: #FFFFFF;
+  border: 3px solid #FB0352;
+  color: #FB0352;
+  font-family: "Scada";
+  font-weight: bold;
+  font-size: 32px;
+}
+.services .controls button:hover {
+  background: #FB0352;
+  color: #fff;
+}
+.services .controls button:first-of-type {
+  margin-right: 16px;
+}
+
+.contato {
+  background-color: #12171D;
+  color: #fff;
+  top: -5px;
+}
+@media (min-width: 980px) {
+  .contato {
+    top: -65px;
+  }
+}
+.contato__left {
+  order: 2;
+  background-image: url("../../assets/images/contato.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center right;
+  height: 499px;
+  width: 100%;
+}
+.contato__right .text {
+  padding-left: 10px;
+  text-align: center;
+}
+@media (min-width: 980px) {
+  .contato__right .text {
+    padding-left: 25%;
+  }
+}
+.contato__right .text h3 {
+  text-align: left;
+}
+.contato__right .text p {
+  color: #e5e5e5;
+  text-align: left;
+}
+.contato__right .text button {
+  width: 211px;
+  height: 53px;
+  margin-top: 36px;
+  background: #FB0352;
+  color: #FFFFFF;
+  font-family: "Share";
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.4s;
+}
+.contato__right .text button:hover {
+  opacity: 0.8;
+}
+
+.separator {
+  background: #FB0352;
+  height: 118px;
+  position: relative;
+  top: -18px;
+  z-index: 1;
+}
+@media (min-width: 980px) {
+  .separator {
+    top: -65px;
+  }
+}
+
+footer {
+  background-color: #FFFFFF;
+  margin-top: -18px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  bottom: 0px;
+}
+@media (min-width: 980px) {
+  footer {
+    margin-top: -135px;
+    padding-top: 130px;
+    padding-bottom: 120px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
+footer .footer__content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+@media (min-width: 980px) {
+  footer .footer__content {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+footer .footer__content .content-text:nth-child(2) {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+@media (min-width: 980px) {
+  footer .footer__content .content-text:nth-child(2) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+footer .footer__content .content-text h3 {
+  font-family: "Share";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+  color: #FB0352;
+}
+footer .footer__content .content-text p {
+  color: #343027;
+  font-family: "Share";
+  font-style: italic;
+  font-size: 24px;
+  letter-spacing: 0.15em;
+}
+footer .footer__content .content-text p:first-of-type {
+  margin-top: 24px;
+  margin-bottom: 5px;
+}
+footer .footer__content .content-text .sociais a {
+  font-family: "Share";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: 0.15em;
+  color: #343027;
+  transition: all 0.4s;
+}
+footer .footer__content .content-text .sociais a:first-of-type {
+  margin-right: 30px;
+}
+footer .footer__content .content-text .sociais a:hover {
+  color: #CC5E31;
+}
+
+.footer-adjust {
+  position: relative;
+  top: -42px;
+}
+@media (min-width: 980px) {
+  .footer-adjust {
+    top: 0px;
+  }
+}
+
+.final-adjust {
+  margin-top: -40px;
+}
+@media (min-width: 980px) {
+  .final-adjust {
+    margin-top: 0px;
+  }
+}
+
+.footer__final {
+  width: 1440px;
+  height: 78px;
+  background: #343027;
+  position: relative;
+  bottom: 0px;
+}
+
+.header-sobre {
+  background-color: #444845;
+}
+
+.bg-sobre {
+  background: linear-gradient(129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%), url("../../assets/images/bg-sobre.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.bg-sobre .wrapper {
+  padding-top: 25%;
+}
+@media (min-width: 980px) {
+  .bg-sobre .wrapper {
+    padding-top: 14%;
+  }
+}
+.bg-sobre .wrapper h2 {
+  font-family: "Share";
+  font-style: italic;
+  line-height: 80px;
+  font-size: 40px;
+}
+@media (min-width: 980px) {
+  .bg-sobre .wrapper h2 {
+    font-size: 80px;
+  }
+}
+.bg-sobre .wrapper h2 span {
+  display: block;
+  font-size: 180px;
+}
+
+.about__top {
+  font-family: "Share";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 142.5%;
+  text-align: center;
+  color: #000000;
+  background-color: #fff;
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 60px;
+}
+@media (min-width: 980px) {
+  .about__top {
+    font-size: 33px;
+    padding-left: 130px;
+    padding-right: 127px;
+  }
+}
+
+.init {
+  position: relative;
+  top: 0px;
+}
+@media (min-width: 980px) {
+  .init {
+    top: -50px;
+  }
+}
+
+.about-sobre, .what-sobre {
+  top: 0px;
+}
+.about-sobre .about__right .text .cite, .about-sobre .what__right .text .cite, .what-sobre .about__right .text .cite, .what-sobre .what__right .text .cite {
+  font-family: "Share";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: -0.05em;
+  margin-top: 20px;
+}
+.about-sobre .about__right .text p, .about-sobre .what__right .text p, .what-sobre .about__right .text p, .what-sobre .what__right .text p {
+  margin-top: 40px;
+}
+
+@media (min-width: 980px) {
+  .what-sobre {
+    top: -55px;
+  }
+}
+
+@media (min-width: 980px) {
+  .contato-sobre {
+    top: -60px;
+  }
+}
+
+.separator-sobre {
+  top: -60px;
+}
+
+.bg-servicos {
+  background: linear-gradient(129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%), url("../../assets/images/bg-servicos.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.bg-servicos .wrapper {
+  padding-top: 30%;
+}
+@media (min-width: 980px) {
+  .bg-servicos .wrapper {
+    padding-top: 16%;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 780px) {
+  .cards {
+    flex-direction: row;
+  }
+}
+.cards .card {
+  height: 366px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 780px) {
+  .cards .card {
+    height: 366px;
+    width: 33.3333%;
+  }
+}
+.cards .card h3 {
+  font-family: "Share";
+  font-style: italic;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 41px;
+  text-align: center;
+  color: #FFFFFF;
+  margin-top: 34px;
+  margin-bottom: 30px;
+}
+.cards .card button {
+  width: 145px;
+  height: 36.42px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 3px solid #FFFFFF;
+  box-sizing: border-box;
+  font-family: "Share";
+  font-weight: bold;
+  font-size: 12px;
+  color: #FFFFFF;
+}
+.cards .card1 {
+  background-color: #FB0352;
+}
+.cards .card2 {
+  background: linear-gradient(129.65deg, rgba(76, 66, 60, 0.3) 22.88%, rgba(76, 66, 60, 0.3) 78.62%), #FB0352;
+}
+.cards .card3 {
+  background: linear-gradient(129.65deg, rgba(76, 66, 60, 0.6) 22.88%, rgba(76, 66, 60, 0.6) 78.62%), #FB0352;
+}
+.cards .active {
+  border: 10px solid #FFFFFF;
+}
+
+.header-contato {
+  background-color: #42413E;
+}
+
+.bg-contato {
+  background: linear-gradient(129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%), url("../../assets/images/bg-contato.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.bg-contato .wrapper {
+  padding-top: 20%;
+}
+@media (min-width: 980px) {
+  .bg-contato .wrapper {
+    padding-top: 14%;
+  }
+}
+.bg-contato .wrapper p {
+  font-family: "Scada";
+  font-style: italic;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+.contato-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@media (min-width: 780px) {
+  .contato-top {
+    flex-direction: row;
+  }
+}
+.contato-top .left {
+  background-color: #F6F6F6;
+  height: 366px;
+  width: 100%;
+  padding-top: 60px;
+  padding-left: 60px;
+}
+@media (min-width: 780px) {
+  .contato-top .left {
+    width: 50%;
+  }
+}
+.contato-top .left h3 {
+  font-family: "Share", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+.contato-top .left h3::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 7px;
+  background: #FB0352;
+  margin-top: 15px;
+}
+.contato-top .left p {
+  font-family: "Scada";
+  font-style: italic;
+  font-size: 18px;
+  line-height: 144.6%;
+  margin-top: 30px;
+  text-align: left;
+}
+.contato-top .right {
+  height: 366px;
+  width: 100%;
+  background: linear-gradient(129.65deg, #fb0352 0%, #f95b00 100%), url("../../assets/images/rose-bg.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding-top: 60px;
+}
+@media (min-width: 780px) {
+  .contato-top .right {
+    width: 50%;
+  }
+}
+.contato-top .right h3 {
+  font-family: "Share";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 41px;
+  display: flex;
+  color: #FFFFFF;
+  padding-left: 60px;
+}
+.contato-top .right img {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.contato-contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+}
+@media (min-width: 980px) {
+  .contato-contato {
+    top: -150px;
+    margin-bottom: -85px;
+  }
+}
+.contato-contato .contato__right .text {
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: center;
+}
+@media (min-width: 980px) {
+  .contato-contato .contato__right .text {
+    padding-right: 80px;
+    padding-left: 60px;
+  }
+}
+.contato-contato .contato__right1 {
+  background-color: #fff;
+  color: #000;
+  order: 2;
+  flex: 1;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+@media (min-width: 980px) {
+  .contato-contato .contato__right1 {
+    padding-left: 70px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+.contato-contato .contato__right1 .text {
+  padding-right: 10px;
+  padding-left: 10px;
+  text-align: center;
+}
+@media (min-width: 980px) {
+  .contato-contato .contato__right1 .text {
+    padding-right: 80px;
+    padding-left: 60px;
+  }
+}
+.contato-contato .contato__right1 .text h3 {
+  font-family: "Share", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  letter-spacing: -0.05em;
+  text-align: left;
+}
+.contato-contato .contato__right1 .text h3::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 7px;
+  background: #FB0352;
+  margin-top: 15px;
+}
+.contato-contato .contato__right1 .text p {
+  font-family: "Scada";
+  font-size: 18px;
+  line-height: 22px;
+  margin-top: 60px;
+  text-align: left;
+}
+.contato-contato .contato__right1 .text button {
+  width: 211px;
+  height: 53px;
+  margin-top: 36px;
+  background: #FB0352;
+  color: #FFFFFF;
+  font-family: "Share";
+  font-weight: bold;
+  font-size: 13px;
+  transition: all 0.4s;
+}
+.contato-contato .contato__right1 .text button:hover {
+  opacity: 0.8;
+}
+.contato-contato .contato-black {
+  background-color: #000;
+  color: #fff;
+  order: 1;
+}
+
+.form {
+  background: #FFFFFF;
+}
+.form .form-wrapper {
+  height: 720px;
+  width: 100%;
+  margin: 0 auto;
+  background: linear-gradient(129.65deg, rgba(18, 23, 29, 0.78) 22.88%, rgba(18, 23, 29, 0.78) 78.62%), url("../../assets/images/contato-form.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+  position: relative;
+  box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (min-width: 950px) {
+  .form .form-wrapper {
+    width: 70%;
+  }
+}
+@media (min-width: 980px) {
+  .form .form-wrapper {
+    top: -50px;
+  }
+}
+.form .form-wrapper h3 {
+  font-family: "Share";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: -0.05em;
+  color: #FFFFFF;
+  max-width: 574px;
+  margin: 0 auto;
+}
+.form .form-wrapper h3::after {
+  content: "";
+  display: block;
+  width: 66px;
+  height: 7px;
+  background: #FB0352;
+  margin: 15px auto;
+}
+.form .form-wrapper form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 10px;
+}
+@media (min-width: 950px) {
+  .form .form-wrapper form {
+    margin-top: 40px;
+  }
+}
+.form .form-wrapper form .form-group {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+}
+@media (min-width: 950px) {
+  .form .form-wrapper form .form-group {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 30px;
+  }
+}
+.form .form-wrapper form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1.5px solid #fff;
+  width: 85%;
+  padding: 10px;
+  outline: none;
+  color: #fff;
+  font-size: 18px;
+}
+@media (min-width: 950px) {
+  .form .form-wrapper form input {
+    width: 317.87px;
+  }
+}
+.form .form-wrapper form input::placeholder {
+  color: #fff;
+  font-family: "Share";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  letter-spacing: -0.05em;
+}
+.form .form-wrapper form textarea {
+  width: 90%;
+  height: 165px;
+  background: #FFFFFF;
+  border: 2px solid #343027;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+.form .form-wrapper form button {
+  width: 211px;
+  height: 53px;
+  background: #FB0352;
+  margin-top: 40px;
+  font-family: "Share";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=styles.css.map */

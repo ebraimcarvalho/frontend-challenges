@@ -3,9 +3,16 @@
 
   const projects = [
     {
+      name: 'website-trindade',
+      linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/tree/master/website-trindade',
+      description: 'A responsive website for a web agency, pure style using SASS and responsive for all screen size',
+      tags: 'CSS | BEM | SASS | Responsive',
+      date: '09/07/2020'
+    },
+    {
       name: 'keep-playing',
       linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/tree/master/keep-playing',
-      description: 'A responsive landingpage for a music school, using Javascript and PHP for cend email, pure style using SASS and responsive for all screen size',
+      description: 'A responsive landingpage for a music school, using Javascript and PHP for send email, pure style using SASS and responsive for all screen size',
       tags: 'JS | PHP | SASS | Responsive',
       date: '04/07/2020'
     },

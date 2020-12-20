@@ -1,0 +1,1097 @@
+// run sass --watch styles:dist/styles for watching changes
+
+@import url('https://fonts.googleapis.com/css2?family=Scada:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Share:ital,wght@1,400;1,700&display=swap');
+@import 'variables';
+
+body {
+  background-color: #E5E5E5;
+  color: $color-text;
+  font-family: 'Scada', sans-serif;
+  font-size: 18px;
+  max-width: 100%;
+  overflow-x: hidden;
+  &::-webkit-scrollbar {
+      width: 0px;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  transition: all 0.4s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.header {
+  background-color: #0A0904;
+  color: #fff;
+  font-family: 'Share', cursive;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    padding-bottom: 20px;
+
+    @media(min-width: 580px) {
+      flex-direction: row;
+      padding-bottom: 0px;
+    }
+
+    .header__logo {
+      @include df-center;
+
+      a:last-of-type {
+        display: none;
+
+        @media(min-width: 580px) {
+          display: block;
+        }
+      }
+
+      h1 {
+        font-size: 24px;
+        margin-left: 15px;
+      }
+    }
+
+    .header__itens {
+      opacity: 0.7;
+      font-size: 20px;
+
+      .active {
+        color: #CC5E31;
+      }
+
+      a:hover {
+        color: #CC5E31;
+      }
+
+      a:not(:last-child) {
+        margin-right: 5px;
+      }
+
+      a:last-of-type {
+        margin-right: 0px;
+      }
+      
+    }
+  }
+}
+
+.bg-hero {
+  background:
+    linear-gradient(
+      129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%
+    ),
+    url('../../assets/images/bg-hero.png') no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: #fff;
+  height: 649px;
+
+  .wrapper {
+    @include df-center;
+    flex-direction: column;
+    padding-top: 20%;
+
+    @media (min-width: 980px) {
+      padding-top: 16.5%;
+    }
+
+    h2 {
+      font-family: Share;
+      font-style: italic;
+      font-weight: normal;
+      font-size: 44px;
+      line-height: 72px;
+      text-align: center;
+
+      @media (min-width: 980px) {
+        font-size: 64px;
+      }
+    }
+
+    p {
+      font-style: italic;
+      font-size: 20px;
+      margin-top: 20px;
+      text-align: center;
+
+      @media (min-width: 980px) {
+        font-size: 24px;
+      }
+    }
+
+    button {
+      background: #FB0352;
+      height: 53px;
+      margin-top: 80px;
+      width: 211px;
+
+      font-family: Share;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }  
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1156px;
+}
+
+.about, .what, .services, .contato {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+  position: relative;
+  top: 0px;
+
+  @media(min-width: 980px) {
+    top: -50px;
+    flex-direction: row;
+  }
+
+  &__left {
+    flex: 1;
+    img {
+      max-width: 100%;
+      max-height: 550px;
+      @media(min-width: 980px) {
+        max-height: 100%;
+      }
+    }
+  }
+
+  &__right {
+    flex: 1;
+
+   .text {
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-top: 30px;
+      padding-bottom: 40px;
+      text-align: center;
+
+      @media(min-width: 980px) {
+        padding-right: 60px;
+        padding-left: 60px;
+      }
+
+     h3 {
+      font-family: 'Share', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      letter-spacing: -0.05em;
+      text-align: left;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 66px;
+        height: 7px;
+        background: #FB0352;
+        margin-top: 15px;
+      }
+     }
+
+     p {
+      font-family: 'Scada';
+      font-size: 18px;
+      line-height: 22px;  
+      margin-top: 60px;
+      text-align: left; 
+     }
+
+      button {
+        background: #FB0352;
+        height: 53px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 211px;
+
+        font-family: Share;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        color: #FFFFFF;
+
+        @media(min-width: 980px) {
+          margin-top: 80px;
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    background:
+      linear-gradient(
+        129.65deg, rgba(251, 3, 82, 0.8) 22.88%, rgba(251, 3, 82, 0.8) 78.62%
+      ),
+      url('../../assets/images/bottom-section.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 278px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 0px;
+
+    @media(min-width: 980px) {
+      top: -55px;
+    }
+  
+    h3 {
+      font-family: 'Share';
+      font-style: italic;
+      font-weight: normal;
+      font-size: 48px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #F2EBDA;
+    }
+  }
+}
+
+.what {
+  top: 0px;
+
+  @media(min-width: 980px) {
+    top: -55px;
+  }
+  &__left {
+    order: 2;
+  }
+
+  &__right {
+    order: 1;
+  }
+
+  &__bottom {
+    background:
+      linear-gradient(
+        129.65deg, rgba(52, 48, 39, 0.7) 22.88%, rgba(52, 48, 39, 0.7) 78.62%
+      ),
+      url('../../assets/images/bottom-section.png') no-repeat;
+    top: -5px;
+
+    @media(min-width: 980px) {
+      top: -60px;
+    }
+  }
+}
+
+.services {
+  top: -5px;
+
+  @media(min-width: 980px) {
+    top: -60px;
+  }
+
+  .controls {
+    margin-top: 0px;
+    text-align: center;
+
+    @media(min-width: 980px) {
+      margin-top: 60px;
+      text-align: left;
+    }
+
+    button {
+      width: 86px;
+      padding-bottom: 5px;
+      background: #FFFFFF;
+      border: 3px solid #FB0352;
+
+      color: #FB0352;
+      font-family: 'Scada';
+      font-weight: bold;
+      font-size: 32px;
+
+      &:hover {
+        background: #FB0352;
+        color: #fff;
+      }
+
+      &:first-of-type {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+.contato {
+  background-color: #12171D;
+  color: #fff;
+  top: -5px;
+
+  @media(min-width: 980px) {
+    top: -65px;
+  }
+
+  &__left {
+    order: 2;
+    background-image: url('../../assets/images/contato.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center right;
+    height: 499px;
+    width: 100%;
+  }
+
+  &__right {
+
+    .text {
+      padding-left: 10px;
+      text-align: center;
+
+      @media(min-width: 980px) {
+        padding-left: 25%;
+      }
+
+      h3 {
+        text-align: left;
+      }
+
+      p {
+        color: #e5e5e5;
+        text-align: left;
+      }
+
+      button {
+        width: 211px;
+        height: 53px;
+        margin-top: 36px;
+        background: #FB0352;
+
+        color: #FFFFFF;
+        font-family: 'Share';
+        font-weight: bold;
+        font-size: 14px;
+        transition: all 0.4s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+}
+
+.separator {
+  background: #FB0352;
+  height: 118px;
+  position: relative;
+  top: -18px;
+  z-index: 1;
+
+  @media(min-width: 980px) {
+    top: -65px;
+  }
+}
+
+footer {
+  background-color: #FFFFFF;
+  margin-top: -18px;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  bottom: 0px;
+
+  @media(min-width: 980px) {
+    margin-top: -135px;
+    padding-top: 130px;
+    padding-bottom: 120px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    @media(min-width: 980px) {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .content-text {
+      &:nth-child(2) {
+        margin-top: 30px;
+        margin-bottom: 30px;
+
+        @media(min-width: 980px) {
+          margin-top: 0px;
+          margin-bottom: 0px;
+        }
+      }
+
+      h3 {
+        font-family: 'Share';
+        font-style: italic;
+        font-weight: bold;
+        font-size: 24px;
+        letter-spacing: 0.15em;
+        color: #FB0352;
+      }
+
+      p {
+        color: #343027;
+        font-family: 'Share';
+        font-style: italic;
+        font-size: 24px;
+        letter-spacing: 0.15em;
+        
+        &:first-of-type {
+          margin-top: 24px;
+          margin-bottom: 5px;
+        }
+      }
+
+      .sociais {
+        a {
+          font-family: 'Share';
+          font-style: italic;
+          font-weight: normal;
+          font-size: 24px;
+          line-height: 27px;
+          letter-spacing: 0.15em;
+          color: #343027;
+          transition: all 0.4s;
+
+          &:first-of-type {
+            margin-right: 30px;
+          }
+
+          &:hover {
+            color: #CC5E31;
+          }
+        }        
+      }
+    }
+  }
+}
+
+.footer-adjust {
+  position: relative;
+  top: -42px;
+
+  @media(min-width: 980px) {
+    top: 0px;
+  }
+}
+
+.final-adjust {
+  margin-top: -40px;
+
+  @media(min-width: 980px) {
+    margin-top: 0px;
+  }
+}
+
+.footer__final {
+  width: 1440px;
+  height: 78px;
+  background: #343027;
+  position: relative;
+  bottom: 0px;
+}
+
+// SOBRE
+.header-sobre {
+  background-color: #444845;
+}
+
+.bg-sobre {
+  background:
+    linear-gradient(
+      129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%
+    ),
+    url('../../assets/images/bg-sobre.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+  
+  .wrapper {
+    padding-top: 25%;
+
+    @media(min-width: 980px) {
+      padding-top: 14%;
+    }
+
+    h2 {
+      font-family: 'Share';
+      font-style: italic;
+      line-height: 80px;
+      font-size: 40px;
+
+      @media(min-width: 980px) {
+        font-size: 80px;
+      }
+
+      span {
+        display: block;
+        font-size: 180px;
+      }
+    }
+  }
+}
+
+.about__top {
+  font-family: 'Share';
+  font-style: italic;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 142.5%;
+  text-align: center;
+  color: #000000;
+  background-color: #fff;
+
+  padding-top: 80px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 60px;
+
+  @media(min-width: 980px) {
+    font-size: 33px;
+    padding-left: 130px;
+    padding-right: 127px;
+  }
+}
+
+.init {
+  position: relative;
+  top: 0px;
+
+  @media(min-width: 980px) {
+    top: -50px;
+  }
+}
+
+.about-sobre, .what-sobre {
+  top: 0px;
+
+  .about__right, .what__right {
+
+    .text {
+      .cite {
+        font-family: 'Share';
+        font-style: italic;
+        font-weight: normal;
+        font-size: 24px;
+        line-height: 27px;
+        letter-spacing: -0.05em;
+        margin-top: 20px;
+      }
+
+      p {
+        margin-top: 40px;
+      }
+    }
+  }
+}
+
+.what-sobre {
+  
+  @media(min-width: 980px) {
+    top: -55px;
+  }
+}
+
+.contato-sobre {
+  @media(min-width: 980px) {
+    top: -60px;
+  }
+}
+
+.separator-sobre {
+  top: -60px;
+}
+
+// SERVICOS
+.bg-servicos {
+  background:
+    linear-gradient(
+      129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%
+    ),
+    url('../../assets/images/bg-servicos.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+  
+  .wrapper {
+    padding-top: 30%;
+
+    @media(min-width: 980px) {
+      padding-top: 16%;
+    }
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  @media(min-width: 780px) {
+    flex-direction: row;
+  }
+
+  .card {
+    height: 366px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media(min-width: 780px) {
+      height: 366px;
+      width: 33.3333%;
+    }
+
+    h3 {
+      font-family: 'Share';
+      font-style: italic;
+      font-weight: normal;
+      font-size: 36px;
+      line-height: 41px;
+      text-align: center;
+      color: #FFFFFF;
+      margin-top: 34px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      width: 145px;
+      height: 36.42px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 3px solid #FFFFFF;
+      box-sizing: border-box;
+
+      font-family: 'Share';
+      font-weight: bold;
+      font-size: 12px;
+      color: #FFFFFF;
+    }
+  }
+
+  .card1 {
+    background-color: #FB0352;
+  }
+
+  .card2 {
+    background:
+    linear-gradient(
+      129.65deg, rgba(76, 66, 60, 0.3) 22.88%, rgba(76, 66, 60, 0.3) 78.62%
+    ),
+    #FB0352
+  }
+
+  .card3 {
+    background:
+      linear-gradient(
+      129.65deg, rgba(76, 66, 60, 0.6) 22.88%, rgba(76, 66, 60, 0.6) 78.62%
+      ),
+    #FB0352
+  }
+
+  .active {
+    border: 10px solid #FFFFFF;
+  }
+}
+
+// CONTATO
+.header-contato {
+  background-color: #42413E;
+}
+
+.bg-contato {
+  background:
+    linear-gradient(
+      129.65deg, rgba(15, 13, 7, 0.7) 22.88%, rgba(15, 13, 7, 0.7) 78.62%
+    ),
+    url('../../assets/images/bg-contato.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+  
+  .wrapper {
+    padding-top: 20%;
+
+    @media(min-width:980px) {
+      padding-top: 14%;
+    }
+
+    p {
+      font-family: 'Scada';
+      font-style: italic;
+      text-align: center;
+      color: #FFFFFF;
+    }
+  }
+}
+
+.contato-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  @media(min-width: 780px) {
+    flex-direction: row;
+  }
+
+  .left {
+    background-color: #F6F6F6;
+    height: 366px;
+    width: 100%;
+    padding-top: 60px;
+    padding-left: 60px;
+
+    @media(min-width: 780px) {
+      width: 50%;
+    }
+
+    h3 {
+      font-family: 'Share', sans-serif;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 48px;
+      letter-spacing: -0.05em;
+      text-align: left;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 66px;
+        height: 7px;
+        background: #FB0352;
+        margin-top: 15px;
+      }
+     }
+
+     p {
+      font-family: 'Scada';
+      font-style: italic;
+      font-size: 18px;
+      line-height: 144.6%;
+      margin-top: 30px; 
+      text-align: left;
+     }
+  }
+
+  .right {
+    height: 366px;
+    width: 100%;
+    background:
+    linear-gradient(
+      129.65deg, #fb0352 0%, #f95b00 100%
+    ),
+    url('../../assets/images/rose-bg.png') no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 60px;
+
+    @media(min-width: 780px) {
+      width: 50%;
+    }
+
+    h3 {
+      font-family: 'Share';
+      font-style: italic;
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 41px;
+      display: flex;
+      color: #FFFFFF;
+      padding-left: 60px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+.contato-contato {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+
+  @media(min-width: 980px) {
+    top: -150px;
+    margin-bottom: -85px;
+  }
+
+  .contato__right {
+
+    @media(min-width: 980px) {
+      // height: 600px;
+      // padding-left: 100px;
+      // padding-top: 146px;
+      // padding-bottom: 100px;
+    }
+
+    .text {
+      padding-right: 10px;
+      padding-left: 10px;
+      text-align: center;
+
+      @media(min-width:980px) {
+        padding-right: 80px;
+        padding-left: 60px;
+      }
+  }
+}
+
+  .contato__right1 {
+    background-color: #fff;
+    color: #000;
+    order: 2;
+    flex: 1;
+    padding-top: 20px;
+    padding-bottom: 40px;
+
+    @media(min-width: 980px) {
+      padding-left: 70px;
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .text {
+      padding-right: 10px;
+      padding-left: 10px;
+      text-align: center;
+
+      @media(min-width:980px) {
+        padding-right: 80px;
+        padding-left: 60px;
+      }
+ 
+      h3 {
+       font-family: 'Share', sans-serif;
+       font-style: normal;
+       font-weight: bold;
+       font-size: 48px;
+       letter-spacing: -0.05em;
+       text-align: left;
+ 
+       &::after {
+         content: '';
+         display: block;
+         width: 66px;
+         height: 7px;
+         background: #FB0352;
+         margin-top: 15px;
+       }
+      }
+ 
+      p {
+       font-family: 'Scada';
+       font-size: 18px;
+       line-height: 22px;  
+       margin-top: 60px; 
+       text-align: left;
+      }
+
+      button {
+        width: 211px;
+        height: 53px;
+        margin-top: 36px;
+        background: #FB0352;
+
+        color: #FFFFFF;
+        font-family: 'Share';
+        font-weight: bold;
+        font-size: 13px;
+        transition: all 0.4s;
+
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .contato-black {
+    background-color: #000;
+    color: #fff;
+    order: 1;
+  }
+}
+
+.form {
+  background: #FFFFFF;
+  // height: 600px;
+
+  .form-wrapper {
+    height: 720px;
+    width: 100%;
+    margin: 0 auto;
+    background:
+    linear-gradient(
+      129.65deg, rgba(18, 23, 29, 0.78) 22.88%, rgba(18, 23, 29, 0.78) 78.62%
+    ),
+    url('../../assets/images/contato-form.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    position: relative;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    @media(min-width: 950px) {
+      width: 70%;
+    }
+
+    @media(min-width: 980px) {
+      top: -50px;
+    }
+
+    h3 {
+      font-family: 'Share';
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 27px;
+      text-align: center;
+      letter-spacing: -0.05em;
+      color: #FFFFFF;
+      max-width: 574px;
+      margin: 0 auto;
+
+      &::after {
+        content: '';
+        display: block;
+        width: 66px;
+        height: 7px;
+        background: #FB0352;
+        margin: 15px auto;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-top: 10px;
+
+      @media (min-width: 950px) {
+        margin-top: 40px;
+      }
+
+      .form-group {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+        @media (min-width:950px) {
+          flex-direction: row;
+          justify-content: space-around;
+          margin-bottom: 30px;
+        }
+      }
+
+      input {
+        background-color: transparent;
+        border: none;
+        border-bottom: 1.5px solid #fff;
+        width: 85%;
+        padding: 10px;
+        outline: none;
+        color: #fff;
+        font-size: 18px;
+
+        @media(min-width: 950px) {
+          width: 317.87px;
+        }
+
+        &::placeholder {
+          color: #fff;
+          font-family: 'Share';
+          font-style: normal;
+          font-weight: normal;
+          font-size: 18px;
+          letter-spacing: -0.05em;
+        }
+      }
+
+      textarea {
+        width: 90%;
+        height: 165px;
+        background: #FFFFFF;
+        border: 2px solid #343027;
+        box-sizing: border-box;
+        margin-top: 30px;
+      }
+
+      button {
+        width: 211px;
+        height: 53px;
+        background: #FB0352;
+        margin-top: 40px;
+
+        font-family: 'Share';
+        font-style: normal;
+        font-weight: bold;
+        font-size: 18px;
+        text-align: center;
+        color: #FFFFFF;
+      }
+    }
+  }
+
+}
