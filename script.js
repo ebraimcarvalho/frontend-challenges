@@ -95,15 +95,17 @@
     cardProject.classList.add('card-project');
 
     cardProject.innerHTML = `
-      <a href="./${name}/index.html" target="_blank">
-        <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
-        <h4>${i + 10}. ${formatName(name)}</h4>
-        <p><small>${date ? `Date of Project: ${date}` : ''}</small></p>
-      </a>
-      <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
-        <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
-        Or access the 
-        <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/${name}" target="_blank">Code page - Github</a></p>
+      <div>
+        <a href="./${name}/index.html" target="_blank">
+          <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
+          <h4>${i + 10}. ${formatName(name)}</h4>
+          <p><small>${date ? `Date of Project: ${date}` : ''}</small></p>
+        </a>
+        <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
+          <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
+          Or access the 
+          <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/${name}" target="_blank">Code page - Github</a></p>
+      </div>
       <small class="card-project__small">${tags}</small>
     `;
 
