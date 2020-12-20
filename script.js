@@ -6,7 +6,8 @@
       name: 'dermat-at',
       linkChallenge: 'http://www.aldotoschi.com.br',
       description: 'A responsive webpage with blog and post using WordPress for a doctor clinic, calculate reading time of posts, call section blog on a static page',
-      tags: 'WordPress | PHP | JS | SASS | Bootstrap'
+      tags: 'WordPress | PHP | JS | SASS | Bootstrap',
+      date: '30/06/2020'
     },
     {
       name: 'gbtel',
@@ -78,7 +79,7 @@
 
   const container = doc.querySelector('[data-js="container"]');
 
-  projects.forEach(({ name, linkChallenge, description, tags }, i) => {
+  projects.forEach(({ name, linkChallenge, description, tags, date }, i) => {
     const cardProject = doc.createElement('div');
     cardProject.classList.add('card-project');
 
@@ -86,6 +87,7 @@
       <a href="./${name}/index.html" target="_blank">
         <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
         <h4>${i + 10}. ${formatName(name)}</h4>
+        <p><small>${date}</small></p>
       </a>
       <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
         <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
