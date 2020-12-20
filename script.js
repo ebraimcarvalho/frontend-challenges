@@ -53,6 +53,15 @@
       date: '23/06/2020'
     },
     {
+      type: 'react',
+      name: 'travels-reservation',
+      linkChallenge: 'https://travel-reservation.netlify.app/',
+      img: './travel-reservation/design/desktop-design.jpg',
+      description: 'An application that makes travel package reservations using React, Routes, Redux and Immer, was developed to improve my front-end skills! Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/travel-reservation" target="_blank">Code page - Github</a>',
+      tags: 'React | Redux | Hooks | Immer | Responsive',
+      date: '15/06/2020'
+    },
+    {
       type: 'vanilla',
       name: 'gbtel',
       linkChallenge: 'https://www.gbtel.com.br',
