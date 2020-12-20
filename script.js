@@ -99,7 +99,7 @@
       type: 'react',
       name: 'react-hunt-js',
       linkChallenge: 'https://react-hunt.netlify.app/',
-      img: '/get-repos-github/design/desktop-design.png',
+      img: './jshunt-react/design/desktop-design.jpg',
       description: 'A client-side application that queries an API and renders the information in a list of products, which when clicking opens the product page, was developed to improve my front-end skills! Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/jshunt-react" target="_blank">Code page - Github</a>',
       tags: 'React | API | Routes | CSS | Responsive',
       date: '15/05/2020'
@@ -108,8 +108,8 @@
       type: 'react',
       name: 'b2w-frontend',
       linkChallenge: 'https://desafio-frontend-b2w.netlify.app/',
-      img: '/get-repos-github/design/desktop-design.png',
-      description: 'A client-side application that queries an API and shows a user\'s profile data using React, this was developed for improve my frontend skills! Details and more informations, you can access on page: <a href="https://github.com/2w-marketplace/code-challenge" target="_blank">Page of Challenge;</a> Or access the <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/desafio-b2w-frontend" target="_blank">Code page - Github</a>',
+      img: './desafio-b2w-frontend/design/desktop-design.jpg',
+      description: 'A client-side application that queries an API and shows a user\'s profile data using React, this was developed for improve my frontend skills! Details and more informations, you can access on page: <a href="https://github.com/b2w-marketplace/code-challenge" target="_blank">Page of Challenge;</a> Or access the <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/desafio-b2w-frontend" target="_blank">Code page - Github</a>',
       tags: 'React | API | CSS | HTML | Responsive',
       date: '06/05/2020'
     },
