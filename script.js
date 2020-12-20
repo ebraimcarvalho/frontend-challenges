@@ -87,6 +87,15 @@
       date: '31/05/2020'
     },
     {
+      type: 'react',
+      name: 'github-api',
+      linkChallenge: 'https://github-api-repo.netlify.app/',
+      img: '/get-repos-github/design/desktop-design.png',
+      description: 'A client-side application that queries the Github API and returns user information and also renders the repositories and favorites when clicking on the buttons, was developed to improve my front-end skills! Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/get-repos-github" target="_blank">Code page - Github</a>',
+      tags: 'React | API | Hooks | CSS | Responsive',
+      date: '18/05/2020'
+    },
+    {
       type: 'vanilla',
       name: 'ciclic-frontend',
       linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/blob/master/ciclic-frontend/README.md',
