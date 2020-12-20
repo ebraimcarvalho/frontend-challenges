@@ -156,17 +156,15 @@
       `;
     } else {
       cardProject.innerHTML = `
-        <div class="card-project">
-          <div>
-            <a href=${linkChallenge} target="_blank">
-              <img class="card-project__img" src=${img} alt=${name} width="100" />
-              <h4>${i + 10}. ${formatName(name)}</h4>
-              <p><small>${date ? `Date of Project: ${date}` : ''}</small></p>
-            </a>
-            <p>${description}</p>
-          </div>
-          <small class="card-project__small">${tags}</small>
+        <div>
+          <a href=${linkChallenge} target="_blank">
+            <img class="card-project__img" src=${img} alt=${name} width="100" />
+            <h4>${i + 10}. ${formatName(name)}</h4>
+            <p><small>${date ? `Date of Project: ${date}` : ''}</small></p>
+          </a>
+          <p>${description}</p>
         </div>
+        <small class="card-project__small">${tags}</small>
       `;
     }
 
