@@ -4,12 +4,12 @@
   const projects = [
     {
       type: 'react',
-      name: 'sorocabacom-test',
-      linkChallenge: 'https://sorocabacom-ebraim.netlify.app/',
-      img: './assets/design/sorocaba-design.jpg',
-      description: 'An test application propose by an brazilian company using React, Styled Components and Carousel, was developed to job test!',
-      tags: 'React | Styled Components | Hooks | Responsive',
-      date: '01/08/2020'
+      name: 'udacity-postgres-etl',
+      linkChallenge: 'https://github.com/ebraimcarvalho/udacity-nanodegree-data-engineer/blob/main/1_dend_data_modeling/P1_Postgres_Data_Modeling_and_ETL/sparkify-project.ipynb',
+      img: './assets/design/udacity-postgres.jpg',
+      description: 'Data modeling with PosgreSQL and ETL Pipeline - Project proposed by udacity!',
+      tags: 'Python | PostgreSQL | ETL | Data Engineer',
+      date: '31/10/2020'
     },
     {
       type: 'vanilla',
@@ -18,6 +18,15 @@
       description: 'A responsive website for a company, pure style using SASS and responsive for all screen size',
       tags: 'JS | CSS | SASS | Responsive | Animation',
       date: '07/08/2020'
+    },
+    {
+      type: 'react',
+      name: 'sorocabacom-test',
+      linkChallenge: 'https://sorocabacom-ebraim.netlify.app/',
+      img: './assets/design/sorocaba-design.jpg',
+      description: 'An test application propose by an brazilian company using React, Styled Components and Carousel, was developed to job test!',
+      tags: 'React | Styled Components | Hooks | Responsive',
+      date: '01/08/2020'
     },
     {
       type: 'vanilla',
