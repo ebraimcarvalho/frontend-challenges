@@ -7,7 +7,7 @@
       name: 'udacity-postgres-etl',
       linkChallenge: 'https://github.com/ebraimcarvalho/udacity-nanodegree-data-engineer/blob/main/1_dend_data_modeling/P1_Postgres_Data_Modeling_and_ETL/sparkify-project.ipynb',
       img: './assets/design/udacity-postgres.jpg',
-      description: 'Data modeling with PosgreSQL and ETL Pipeline - Project proposed by udacity!',
+      description: 'Data modeling with PosgreSQL and ETL Pipeline - Project proposed by udacity! Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/udacity-nanodegree-data-engineer/blob/main/1_dend_data_modeling/P1_Postgres_Data_Modeling_and_ETL/sparkify-project.ipynb" target="_blank">Notebook code - Github</a>',
       tags: 'Python | PostgreSQL | ETL | Data Engineer',
       date: '31/10/2020'
     },
@@ -76,6 +76,15 @@
       description: 'A test to do a responsive webpage using Bootstrap and Sass containing a Carousel and a Modal with a video',
       tags: 'JS | SASS | Bootstrap | Wordpress | Responsive',
       date: '06/06/2020'
+    },
+    {
+      type: 'react',
+      name: 'blog-firebase-+-react',
+      linkChallenge: 'https://blog-firebase-react.netlify.app/',
+      img: './blog-firebase-react/design/desktop-design.jpg',
+      description: 'A Blog created with React JS and using Firebase to create a new account, log in, create a new post that will be saved in the database and read this database to render on screen, was developed to improve my front-end skills! Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/frontend-challenges/tree/master/blog-firebase-react" target="_blank">Code page - Github</a>',
+      tags: 'React | Firebase | Hooks | Auth | Responsive',
+      date: '31/05/2020'
     },
     {
       type: 'vanilla',
