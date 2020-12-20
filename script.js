@@ -87,7 +87,7 @@
       <a href="./${name}/index.html" target="_blank">
         <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
         <h4>${i + 10}. ${formatName(name)}</h4>
-        <p><small>${date}</small></p>
+        <p><small>${date ? date : ''}</small></p>
       </a>
       <p>${description}, this was developed for improve my frontend skills! Details and more informations, you can access on page: 
         <a href="${linkChallenge}" target="_blank">Page of Challenge;</a> 
