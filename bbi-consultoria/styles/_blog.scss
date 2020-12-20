@@ -1,0 +1,56 @@
+.normal-size {
+  height: 600px !important;
+}
+
+.conteudo-description {
+  margin-top: 70px;
+  margin-bottom: 90px;
+  text-align: center;
+}
+
+.call-to-contact {
+  margin-top: 70px;
+  margin-bottom: 70px;
+
+  .bg {
+    background: linear-gradient(
+        269.95deg,
+        rgba(23, 37, 64, 0.71) 0.03%,
+        rgba(23, 37, 64, 0.5) 100.01%
+      ),
+      url("../../src/assets/images/notebook.png") no-repeat;
+    background-size: cover;
+    background-position: center center;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 390px;
+    width: 100%;
+
+    .text {
+      padding: 20px;
+
+      h3 {
+        color: #ffffff;
+        font-family: $fontPrompt;
+        font-weight: bold;
+        font-size: 48px;
+        line-height: 100%;
+        margin-bottom: 80px;
+        max-width: 540px;
+
+        @media (max-width: 980px) {
+          text-align: left;
+          font-size: 36px;
+        }
+      }
+
+      .buttonRegular {
+        font-size: 18px;
+        line-height: 21px;
+        padding: 20px 30px;
+      }
+    }
+  }
+}

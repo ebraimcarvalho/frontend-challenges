@@ -3,6 +3,13 @@
 
   const projects = [
     {
+      name: 'bbi-consultoria',
+      linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/tree/master/bbi-consultoria',
+      description: 'A responsive website for a company, pure style using SASS and responsive for all screen size',
+      tags: 'JS | CSS | SASS | Responsive | Animation',
+      date: '09/07/2020'
+    },
+    {
       name: 'website-trindade',
       linkChallenge: 'https://github.com/ebraimcarvalho/frontend-challenges/tree/master/website-trindade',
       description: 'A responsive website for a web agency, pure style using SASS and responsive for all screen size',

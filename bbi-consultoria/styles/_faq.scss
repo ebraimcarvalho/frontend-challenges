@@ -1,0 +1,41 @@
+.cards-faq {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  justify-content: center;
+  align-items: center;
+  max-width: 1280px;
+  animation-delay: 0.15s;
+
+  @media (max-width: 980px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    position: relative;
+    justify-self: center;
+    max-width: 400px;
+
+    img {
+      position: relative;
+      max-width: 100%;
+    }
+
+    p {
+      position: absolute;
+      display: block;
+      padding: 15px;
+      bottom: 5px;
+      left: 0px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: #fff;
+    }
+  }
+}
