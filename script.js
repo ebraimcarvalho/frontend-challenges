@@ -206,7 +206,7 @@
       cardProject.innerHTML = `
         <div>
           <a href="./${name}/index.html" target="_blank">
-            <img class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
+            <img height="200" class="card-project__img" src="./${name}/design/desktop-design.jpg" alt=${name}>      
             <h4>${i + 2}. ${formatName(name)}</h4>
             <p><small>${date ? `Date of Project: ${date}` : ''}</small></p>
           </a>
