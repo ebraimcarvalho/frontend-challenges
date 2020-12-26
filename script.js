@@ -4,12 +4,21 @@
   const projects = [
     {
       type: 'react',
+      name: 'vue-js-github-issues',
+      linkChallenge: 'https://vuejs-github-issues.netlify.app/',
+      img: './assets/design/vuejs-design.png',
+      description: 'A simple project in Vue JS for list Issues from a Repo in a Github, using ajax to get json data and render in a component!',
+      tags: 'Vue JS | Bootstrap | Axios | Vue Router',
+      date: '26/12/2020',
+    },
+    {
+      type: 'react',
       name: 'udacity-postgres-etl',
       linkChallenge: 'https://github.com/ebraimcarvalho/udacity-nanodegree-data-engineer/blob/main/1_dend_data_modeling/P1_Postgres_Data_Modeling_and_ETL/sparkify-project.ipynb',
       img: './assets/design/udacity-postgres.jpg',
       description: 'Data modeling with PosgreSQL and ETL Pipeline - Project proposed by udacity! Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/udacity-nanodegree-data-engineer/blob/main/1_dend_data_modeling/P1_Postgres_Data_Modeling_and_ETL/sparkify-project.ipynb" target="_blank">Notebook code - Github</a>',
       tags: 'Python | PostgreSQL | ETL | Data Engineer',
-      date: '31/10/2020'
+      date: '31/10/2020',
     },
     {
       type: 'vanilla',
