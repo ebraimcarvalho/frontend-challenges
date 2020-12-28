@@ -4,6 +4,15 @@
   const projects = [
     {
       type: 'react',
+      name: 'game-monster-vue-js',
+      linkChallenge: 'https://game-monster-vuejs.netlify.app/',
+      img: './assets/design/game-monster.jpg',
+      description: 'A simple game project in Vue JS with state control, conditional render and for loops to list log\'s array!',
+      tags: 'Vue JS | CSS Flex | Javascript',
+      date: '28/12/2020',
+    },
+    {
+      type: 'react',
       name: 'vue-js-github-issues',
       linkChallenge: 'https://vuejs-github-issues.netlify.app/',
       img: './assets/design/vuejs-design.png',
