@@ -3008,3 +3008,27 @@ def check_for_factor(base, factor):
 # other solution
 check_for_factor = lambda base, factor: base % factor == 0
 ```
+
+### 85 - SQL Basics: Simple MIN / MAX
+<a href="https://www.codewars.com/kata/581113dce10b531b1d0000bd/train/sql" target="_blank">Link of problem</a>
+
+For this challenge you need to create a simple MIN / MAX statement that will return the Minimum and Maximum ages out of all the people.
+
+people table schema
+id
+name
+age
+select table schema
+age_min (minimum of ages)
+age_max (maximum of ages)
+
+```sql
+-- my solution
+SELECT MIN(age) AS age_min, MAX(age) AS age_max FROM people
+
+SELECT 
+  MIN(age) AS age_min,
+  MAX(age) AS age_max
+FROM
+  people
+```
