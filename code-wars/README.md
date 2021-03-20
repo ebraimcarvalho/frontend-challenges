@@ -2999,3 +2999,12 @@ end as res from kata
 
 SELECT id, MOD(base, factor) = 0 AS res FROM kata;
 ```
+
+```python
+# my solution
+def check_for_factor(base, factor):
+    return base % factor == 0
+
+# other solution
+check_for_factor = lambda base, factor: base % factor == 0
+```
