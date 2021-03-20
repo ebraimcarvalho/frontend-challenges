@@ -2967,3 +2967,35 @@ def two_highest(ls):
     result = sorted(list(set(ls)), reverse=True)[:2]
     return result if isinstance(ls, (list)) else False
 ```
+
+### 84 - Grasshopper - Check for factor
+<a href="https://www.codewars.com/kata/55cbc3586671f6aa070000fb/train/sql" target="_blank">Link of problem</a>
+
+This function should test if the factor is a factor of base.
+
+Return true if it is a factor or false if it is not.
+
+About factors
+Factors are numbers you can multiply together to get another number.
+
+2 and 3 are factors of 6 because: 2 * 3 = 6
+
+You can find a factor by dividing numbers. If the remainder is 0 then the number is a factor.
+You can use the mod operator (%) in most languages to check for a remainder
+For example 2 is not a factor of 7 because: 7 % 2 = 1
+
+```sql
+-- my solution
+SELECT id, CAST((base % factor = 0) as bool) as res FROM kata
+
+-- other solutions
+select id, base % factor = 0 as res from kata
+
+select id,
+case
+  when base % factor = 0 then 'true'::boolean
+  else 'false'::boolean
+end as res from kata
+
+SELECT id, MOD(base, factor) = 0 AS res FROM kata;
+```
