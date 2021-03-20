@@ -2900,3 +2900,70 @@ FROM decimals;
 SELECT number1^0.5 as root,  LOG(number2) as log
 FROM decimals;
 ```
+
+### 82 - Enumerable Magic #30 - Split that Array!
+<a href="https://www.codewars.com/kata/545b342082e55dc9da000051/train/python" target="_blank">Link of problem</a>
+
+Create a method partition that accepts a list and a method/block. It should return two arrays: the first, with all the elements for which the given block returned true, and the second for the remaining elements.
+
+Here's a simple example:
+
+``` python
+animals = ['cat', 'dog', 'duck', 'cow', 'donkey']
+partition(animals, lambda x: len(x) == 3)
+    # (['cat', 'dog', 'cow'], ['duck', 'donkey'])
+```
+
+``` python
+# My solution
+def partition(arr, classifier_method):
+    a = [i for i in arr if classifier_method(i)]
+    b = [i for i in arr if not classifier_method(i)]
+    return (a, b)
+
+# other solutions
+def partition(list, classifier_method):
+    listTrue = []
+    listFalse = []
+    for l in list:
+        if classifier_method(l):
+            listTrue.append(l)
+        else:
+            listFalse.append(l)
+    return listTrue, listFalse
+
+```
+
+### 83 - Return Two Highest Values in List
+<a href="https://www.codewars.com/kata/57ab3c09bb994429df000a4a/train/python" target="_blank">Link of problem</a>
+
+In this kata, your job is to return the two distinct highest values in a list. If there're less than 2 unique values, return as many of them, as possible.
+
+The result should also be ordered from highest to lowest.
+
+Examples:
+
+[4, 10, 10, 9]  =>  [10, 9]
+[1, 1, 1]  =>  [1]
+[]  =>  []
+
+```python
+#My solution
+def two_highest(arg1):
+    arg1 = list(set(arg1))
+    arg1.sort()
+    return [arg1[-1], arg1[-2]] if len(arg1) > 1 else arg1[-1:] if len(arg1) == 1 else []
+
+#other solutions
+def two_highest(arg1):
+    if type(arg1) is list:
+        new_list = sorted(list(set(arg1)))
+        new_list.reverse()
+        return new_list[0: 2]
+    else:
+        return False
+
+def two_highest(ls):
+    result = sorted(list(set(ls)), reverse=True)[:2]
+    return result if isinstance(ls, (list)) else False
+```
