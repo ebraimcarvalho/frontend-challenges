@@ -3051,3 +3051,31 @@ SELECT
   SUM(age) AS age_sum
 FROM people
 ```
+
+### 87 - Register for the Party (SQL for Beginners #3)
+<a href="https://www.codewars.com/kata/590cc86f7557c0494000007e/train/sql" target="_blank">Link of problem</a>
+
+You received an invitation to an amazing party. Now you need to write an insert statement to add yourself to the table of participants.
+
+participants table schema
+
+name (string)
+age (integer)
+attending (boolean)
+NOTES:
+
+Since alcohol will be served, you can only attend if you are 21 or older
+You can't attend if the attending column returns anything but true
+
+```sql
+-- my solution
+INSERT INTO participants (name, age, attending)
+VALUES ('ebraim', 29, true);
+
+SELECT * FROM participants;
+
+-- other solutions
+INSERT INTO participants VALUES ('mozart', '26', true);
+
+SELECT * FROM participants;
+```
