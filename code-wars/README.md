@@ -3103,3 +3103,29 @@ WHERE NOT tuition_received
 -- other solution
 SELECT * from students where tuition_received = FALSE
 ```
+
+### 89 - Ensure question
+<a href="https://www.codewars.com/kata/5866fc43395d9138a7000006/solutions/python" target="_blank">Link of problem</a>
+
+Given a string, write a function that returns the string with a question mark ("?") appends to the end, unless the original string ends with a question mark, in which case, returns the original string.
+
+ensure_question("Yes") == "Yes?" 
+ensure_question("No?") == "No?"
+
+```python
+# my solution
+def ensure_question(s):
+  return s if s[-1:] == '?' else s + '?'
+
+# other solution
+def ensure_question(s):
+  return s.rstrip('?') + '?'
+
+def ensure_question(s):
+  return f'{s}?'.replace('??', '?')
+
+def ensure_question(s):
+  if not s.endswith("?"):
+    return s + "?"
+  return s
+```
