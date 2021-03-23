@@ -3159,3 +3159,45 @@ def pythagorean_triple(integers):
   a, b, c = sorted(integers)
   return a**2 + b**2 == c**2
 ```
+
+### 91 - Define a card suit
+<a href="https://www.codewars.com/kata/5a360620f28b82a711000047/train/python" target="_blank">Link of problem</a>
+
+You get any card as an argument. Your task is to return a suit of this card.
+
+('3C') -> return 'clubs'
+('3D') -> return 'diamonds'
+('3H') -> return 'hearts'
+('3S') -> return 'spades'
+
+```python
+# my solution
+def define_suit(card):
+  dic = {'C': 'clubs', 'S': 'spades', 'D': 'diamonds', 'H': 'hearts'}
+  return dic[card[-1:]]
+
+# other solution
+def define_suit(card):
+  a = { 'C':'clubs', 'D':'diamonds', 'H':'hearts', 'S':'spades'}
+  return a.get(card[-1])
+```
+
+### 92 - Well of Ideas - Easy Version
+<a href="https://www.codewars.com/kata/57f222ce69e09c3630000212/train/python" target="_blank">Link of problem</a>
+
+For every good kata idea there seem to be quite a few bad ones!
+
+In this kata you need to check the provided array (x) for good ideas 'good' and bad ideas 'bad'. If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'. If there are no good ideas, as is often the case, return 'Fail!'.
+
+```python
+# my solution
+def well(x):
+  times = x.count('good')
+  match = {0: 'Fail!', 1: 'Publish!', 2: 'Publish!', 3: 'I smell a series!'}
+  return 'Fail!' if times == 0 else 'Publish!' if times <= 2 else 'I smell a series!'
+
+# other solution
+def well(x):
+  c = x.count('good')
+  return 'I smell a series!' if c > 2 else 'Publish!' if c else 'Fail!'
+```
