@@ -3201,3 +3201,37 @@ def well(x):
   c = x.count('good')
   return 'I smell a series!' if c > 2 else 'Publish!' if c else 'Fail!'
 ```
+
+### 93 - No zeros for heros
+<a href="https://www.codewars.com/kata/570a6a46455d08ff8d001002/train/python" target="_blank">Link of problem</a>
+
+Numbers ending with zeros are boring.
+
+They might be fun in your world, but not here.
+
+Get rid of them. Only the ending ones.
+
+1450 -> 145
+960000 -> 96
+1050 -> 105
+-1050 -> -105
+Zero alone is fine, don't worry about it. Poor guy anyway
+
+```python
+# my solution
+def no_boring_zeros(n):
+    if n == 0: return 0;
+    n = str(n)
+    result = n.rstrip("0")
+    return int(result)
+
+# other solution
+def no_boring_zeros(n):
+    return int(str(n).strip("0")) if n else n
+
+def no_boring_zeros(n):
+    try:
+        return int(str(n).rstrip('0'))
+    except ValueError:
+        return 0
+```
