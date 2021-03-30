@@ -3396,3 +3396,27 @@ select n, fact
 from f
 limit 17
 ```
+
+### 98 - SQL Basics: Raise to the Power
+<a href="https://www.codewars.com/kata/594a8f653b5b4e8f3d000035/train/sql" target="_blank">Link of problem</a>
+
+Given the following table 'decimals':
+
+** decimals table schema **
+
+id
+number1
+number2
+Return a table with one column (result) which is the output of number1 raised to the power of number2.
+
+```sql
+-- my solution
+SELECT POW(number1, number2) as result
+FROM decimals
+
+-- other
+SELECT (number1 ^ number2) AS result 
+FROM decimals;
+
+SELECT POWER(number1, number2) AS result FROM decimals
+```
