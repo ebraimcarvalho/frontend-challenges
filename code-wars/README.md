@@ -3357,3 +3357,42 @@ FROM products
 GROUP BY producer
 ORDER BY unique_products DESC, producer ASC;
 ```
+
+### 97 - Recursion #1 - Factorial
+<a href="https://www.codewars.com/kata/5694cb0ec554589633000036/train/sql" target="_blank">Link of problem</a>
+
+Do you know recursion?
+This is a kata series that you can only solve using recursion.
+##1 - Factorial
+
+In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n. For example,
+
+5! = 5 * 4 * 3 * 2 * 1 = 120.
+
+The value of 0! is 1.
+
+#Your task
+
+You have to create the function factorial that receives n and returns n!. You have to use recursion.
+
+```sql
+-- solution
+WITH RECURSIVE factorials (n, fact) AS (
+  SELECT 0, 1::bigint
+  UNION ALL
+    SELECT n+1, fact*(n+1) AS factorial FROM factorials WHERE n < 16
+)
+
+SELECT * FROM factorials;
+
+-- other
+with recursive f(n, fact) as (
+  select 0, 1::bigint
+  union all
+  select n + 1, fact * (n + 1)
+  from f
+)
+select n, fact
+from f
+limit 17
+```
