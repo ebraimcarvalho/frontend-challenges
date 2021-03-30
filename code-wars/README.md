@@ -3235,3 +3235,44 @@ def no_boring_zeros(n):
     except ValueError:
         return 0
 ```
+
+### 93 - Easy SQL: Moving Values
+<a href="https://www.codewars.com/kata/594a389387a7c6a77a000005/train/sql" target="_blank">Link of problem</a>
+
+You have access to a table of monsters as follows:
+
+** monsters table schema **
+
+id
+name
+legs
+arms
+characteristics
+Your task is to make a new table where each column should contain the length of the string in the column to its right (last column should contain length of string in the first column). Remember some column values are not currently strings.
+
+```sql
+-- my solution
+SELECT 
+  length(name::text) as id,
+  length(legs::text) as name,
+  length(arms::text) as legs,
+  length(characteristics::text) as arms,
+  length(id::text) as characteristics
+FROM monsters
+
+-- other solutions
+SELECT
+  CHAR_LENGTH(name) AS id,
+  CHAR_LENGTH(CAST(legs as varchar(10))) AS name, 
+  CHAR_LENGTH(CAST(arms as varchar(10))) AS legs, 
+  CHAR_LENGTH(characteristics) AS arms, 
+  CHAR_LENGTH(CAST(id as varchar(10))) AS characteristics
+FROM monsters
+
+select length(name) as id, 
+  length(legs::varchar) as name, 
+  length(arms::varchar) as legs, 
+  length(characteristics) as arms, 
+  length(id::varchar) as characteristics 
+from monsters;
+```
