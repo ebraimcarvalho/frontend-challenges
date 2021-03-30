@@ -3248,7 +3248,8 @@ name
 legs
 arms
 characteristics
-Your task is to make a new table where each column should contain the length of the string in the column to its right (last column should contain length of string in the first column). Remember some column values are not currently strings.
+
+#### Your task is to make a new table where each column should contain the length of the string in the column to its right (last column should contain length of string in the first column). Remember some column values are not currently strings.
 
 ```sql
 -- my solution
