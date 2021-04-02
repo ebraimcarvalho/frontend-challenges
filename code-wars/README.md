@@ -3453,3 +3453,30 @@ CREATE OR REPLACE FUNCTION increment(i integer) RETURNS integer
 AS $$ BEGIN RETURN i + 1; END; $$
 LANGUAGE plpgsql;
 ```
+
+### 100 - Get the mean of an array
+<a href="https://www.codewars.com/kata/563e320cee5dddcf77000158/train/python" target="_blank">Link of problem</a>
+
+It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
+
+Return the average of the given array rounded down to its nearest integer.
+
+The array will never be empty.
+
+```python
+# my solution
+from functools import reduce
+import math
+
+def get_average(marks):
+  return math.floor(reduce(lambda x,y: x + y, marks, 0)/len(marks))
+
+# other solutions
+def get_average(marks):
+  return sum(marks) // len(marks)
+
+
+import numpy
+def get_average(marks):
+  return int(numpy.mean(marks))
+```
