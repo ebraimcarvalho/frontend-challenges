@@ -3475,7 +3475,6 @@ def get_average(marks):
 def get_average(marks):
   return sum(marks) // len(marks)
 
-
 import numpy
 def get_average(marks):
   return int(numpy.mean(marks))
