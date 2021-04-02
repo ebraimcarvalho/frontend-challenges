@@ -3418,6 +3418,7 @@ FROM decimals
 SELECT (number1 ^ number2) AS result 
 FROM decimals;
 
+-- or
 SELECT POWER(number1, number2) AS result FROM decimals
 ```
 
@@ -3449,6 +3450,7 @@ CREATE FUNCTION increment(i integer) RETURNS integer
 AS 'select $1 + 1;'
 LANGUAGE sql;
 
+-- or
 CREATE OR REPLACE FUNCTION increment(i integer) RETURNS integer
 AS $$ BEGIN RETURN i + 1; END; $$
 LANGUAGE plpgsql;
@@ -3475,7 +3477,41 @@ def get_average(marks):
 def get_average(marks):
   return sum(marks) // len(marks)
 
+# or
 import numpy
 def get_average(marks):
   return int(numpy.mean(marks))
+```
+
+### 101 - Beginner - Reduce but Grow
+<a href="https://www.codewars.com/kata/57f780909f7e8e3183000078/train/python" target="_blank">Link of problem</a>
+
+Given a non-empty array of integers, return the result of multiplying the values together in order. Example:
+
+[1, 2, 3, 4] => 1 * 2 * 3 * 4 = 24
+
+```python
+# my solution
+from functools import reduce
+def grow(arr):
+  return reduce(lambda x,y: x * y, arr, 1)
+
+# other solutions
+import math
+def grow(arr):
+  return math.prod(arr)
+
+# other
+def grow(arr):
+  product = 1
+  for i in arr:
+    product *= i
+  return product
+
+# or
+from functools import reduce
+from operator import mul
+
+def grow(arr):
+  return reduce(mul, arr, 1)
 ```
