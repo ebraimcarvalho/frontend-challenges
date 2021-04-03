@@ -3515,3 +3515,32 @@ from operator import mul
 def grow(arr):
   return reduce(mul, arr, 1)
 ```
+
+### 102 - Reversed Words
+<a href="https://www.codewars.com/kata/51c8991dee245d7ddf00000e/train/python" target="_blank">Link of problem</a>
+
+Complete the solution so that it reverses all of the words within the string passed in.
+
+Example:
+
+"The greatest victory is that which requires no battle" --> "battle no requires which that is victory greatest The"
+
+```python
+# my solution
+def reverse_words(s):
+    words = s.split(' ')
+    return ' '.join(words[::-1])
+
+# other solution
+def reverseWords(str):
+    k = str.split(' ')
+    k.reverse()
+    str = ' '.join(k)
+    return str
+
+# or
+def reverseWords(str):
+    str = str.split()
+    str = reversed(str)
+    return " ".join(str)
+```
