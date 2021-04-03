@@ -3589,3 +3589,28 @@ count_positives_sum_negatives = lambda arr: [len([e for e in arr if e>0]), sum(e
 def count_positives_sum_negatives(arr):
     return [sum(n > 0 for n in arr), sum(n for n in arr if n < 0)] if arr else []
 ```
+
+### 104 - If you can't sleep, just count sheep!!
+<a href="https://www.codewars.com/kata/5b077ebdaf15be5c7f000077/train/python" target="_blank">Link of problem</a>
+
+If you can't sleep, just count sheep!!
+
+Task:
+Given a non-negative integer, 3 for example, return a string with a murmur: "1 sheep...2 sheep...3 sheep...". Input will always be valid, i.e. no negative integers.
+
+```python
+# my first solution
+def count_sheep(n):
+    out = ''
+    for x in range(n):
+        out += f'{x+1} sheep...'
+    return out
+
+# other
+def count_sheep(n):
+    return ''.join(f"{i} sheep..." for i in range(1,n+1))
+
+# or
+def count_sheep(n):
+    return "".join("%d sheep..." % (i + 1) for i in range(n))
+```
