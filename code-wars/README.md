@@ -3544,3 +3544,48 @@ def reverseWords(str):
     str = reversed(str)
     return " ".join(str)
 ```
+
+### 103 - Count of positives / sum of negatives
+<a href="https://www.codewars.com/kata/576bb71bbbcf0951d5000044/train/python" target="_blank">Link of problem</a>
+
+Given an array of integers.
+
+Return an array, where the first element is the count of positives numbers and the second element is sum of negative numbers.
+
+If the input array is empty or null, return an empty array.
+
+Example
+For input [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15], you should return [10, -65].
+
+```python
+# my first solution
+def count_positives_sum_negatives(arr):
+    positive = len(list(filter(lambda x: x > 0, arr)))
+    negative = sum(list(filter(lambda x: x < 0, arr)))
+    return [] if len(arr) == 0 else [positive, negative]
+
+# or
+def count_positives_sum_negatives(arr):
+    pos = sum(1 for x in arr if x > 0)
+    neg = sum(x for x in arr if x < 0)
+    return [pos, neg] if len(arr) else []
+
+# other
+def count_positives_sum_negatives(arr):
+    if not arr: return []
+    pos = 0
+    neg = 0
+    for x in arr:
+      if x > 0:
+          pos += 1
+      if x < 0:
+          neg += x
+    return [pos, neg]
+
+# or
+count_positives_sum_negatives = lambda arr: [len([e for e in arr if e>0]), sum(e for e in arr if e<0)] if arr else []
+
+# and
+def count_positives_sum_negatives(arr):
+    return [sum(n > 0 for n in arr), sum(n for n in arr if n < 0)] if arr else []
+```
