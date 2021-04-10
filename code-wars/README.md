@@ -3614,3 +3614,29 @@ def count_sheep(n):
 def count_sheep(n):
     return "".join("%d sheep..." % (i + 1) for i in range(n))
 ```
+
+### 105 - Enumerable Magic #20 - Cascading Subsets
+<a href="https://www.codewars.com/kata/545af3d185166a3dec001190/train/python" target="_blank">Link of problem</a>
+
+Create a method each_cons that accepts a list and a number n, and returns cascading subsets of the list of size n, like so:
+
+each_cons([1,2,3,4], 2)
+  #=> [[1,2], [2,3], [3,4]]
+
+each_cons([1,2,3,4], 3)
+  #=> [[1,2,3],[2,3,4]]
+  
+As you can see, the lists are cascading; ie, they overlap, but never out of order.
+
+```py
+# first solution
+def each_cons(lst, n):
+    return [lst[x:x+n] for x in range(len(lst) - n + 1)]
+
+# other soluton
+def each_cons(lst, n):
+    mas = []
+    for i in range(len(lst)-n+1):
+        mas.append(lst[i:i+n])
+    return mas
+```
