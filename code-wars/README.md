@@ -3670,3 +3670,23 @@ def invert(lst):
 def invert(lst):
     return list(map(lambda x: -x, lst));
 ```
+
+### 107 - Reversed sequence
+<a href="https://www.codewars.com/kata/5a00e05cc374cb34d100000d/train/python" target="_blank">Link of problem</a>
+
+Build a function that returns an array of integers from n to 1 where n>0.
+
+Example : n=5 --> [5,4,3,2,1]
+
+```py
+# my solution
+def reverse_seq(n):
+    return [x for x in range(n, 0, -1)]
+
+# other solution
+def reverseseq(n):
+    return list(range(n, 0, -1))
+
+def reverseseq(n):
+    return range(n, 0, -1)
+```
