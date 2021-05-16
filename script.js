@@ -4,6 +4,15 @@
   const projects = [
     {
       type: 'react',
+      name: 'santander-challenge-etl',
+      linkChallenge: 'https://github.com/ebraimcarvalho/data-engineer-challenges/blob/main/de_satander_challenge/etl.ipynb',
+      img: './assets/design/santander.jpg',
+      description: 'Extract data from a TSV file, tranform and load into a clean CSV - Challenge viwed in a github repo. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/data-engineer-challenges/blob/main/de_satander_challenge/etl.ipynb" target="_blank">Notebook code - Github</a>',
+      tags: 'Python | Pandas | ETL | Data Engineer',
+      date: '15/05/2021',
+    },
+    {
+      type: 'react',
       name: 'game-monster-vue-js',
       linkChallenge: 'https://game-monster-vuejs.netlify.app/',
       img: './assets/design/game-monster.jpg',
