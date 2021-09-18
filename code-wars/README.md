@@ -3714,3 +3714,49 @@ WHERE first_name LIKE '______%';
 
 select first_name, last_name from names where first_name ~ '.{6,}'
 ```
+
+### 109 - GROCERY STORE: Real Price!
+<a href="https://www.codewars.com/kata/5a8f00745084d718940000c5/train/sql" target="_blank">Link of problem</a>
+
+You are the owner of the Grocery Store. All your products are in the database, that you have created after CodeWars SQL exercises! :)
+
+Customer often need to now how much really they pay for the products. Manufacturers make different sizes of same product so it is hard to compare prices, sometimes they make packages look big, but the weight of the product is small.
+
+Make a SELECT query which will tell the price per kg of the product.
+
+Weight is in grams! Round the price_per_kg to 2 decimal places.
+
+Order results by price_per_kg ascending, then by name ascending.
+
+```sql
+SELECT name, weight, price, ROUND(CAST(price * 1000 / weight AS numeric),2)::float as price_per_kg
+FROM Products
+ORDER BY price_per_kg, name;
+
+SELECT
+  name,
+  weight,
+  price,
+  CAST(
+    ROUND(
+      CAST(price/(weight/1000.0) AS numeric) 
+      , 2)
+    AS real)
+  AS price_per_kg
+FROM products
+ORDER BY price_per_kg, name ASC
+```
+
+### 110 - SQL with Sailor Moon: Thinking about JOINs...
+<a href="https://www.codewars.com/kata/5ab7a736edbcfc8e62000007/train/sql" target="_blank">Link of problem</a>
+
+Return a results table - sailor_senshi, real_name, cat and school - of all characters, containing each character's high school, their civilian name and the cat who introduced them to their magical crime-fighting destiny.
+
+Keep in mind some senshi were not initiated by a cat guardian and one is not in high school. The field can be left blank if this is the case.
+
+```sql
+SELECT senchi.senshi_name as sailor_senshi, senchi.real_name_jpn as real_name, c.name as cat, s.school
+FROM sailorsenshi as senchi
+LEFT JOIN cats as c ON senchi.cat_id = c.id
+LEFT JOIN schools as s ON senchi.school_id = s.id;
+```
