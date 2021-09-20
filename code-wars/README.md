@@ -3760,3 +3760,11 @@ FROM sailorsenshi as senchi
 LEFT JOIN cats as c ON senchi.cat_id = c.id
 LEFT JOIN schools as s ON senchi.school_id = s.id;
 ```
+
+### 111 - 
+<a href="" target="_blank">Link of problem</a>
+
+
+
+### 112 - 
+<a href="" target="_blank">Link of problem</a>
