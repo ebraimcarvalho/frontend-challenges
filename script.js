@@ -40,6 +40,15 @@
     },
     {
       type: 'react',
+      name: 'a3data-challenge-data-engineer',
+      linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/a3_data/teste_engenharia_de_dados_a3data_ebraim_c.ipynb',
+      img: './assets/design/pyspark.jpeg',
+      description: 'Solve some questions using python, pyspark and sql, making some aggregations, joins and groups. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/a3_data" target="_blank">Github Repo</a>',
+      tags: 'Python | PySpark | SQL | Data Engineer',
+      date: '04/02/2022',
+    },
+    {
+      type: 'react',
       name: 'santander-challenge-etl',
       linkChallenge: 'https://github.com/ebraimcarvalho/data-engineer-challenges/blob/main/de_satander_challenge/etl.ipynb',
       img: './assets/design/santander.jpg',
