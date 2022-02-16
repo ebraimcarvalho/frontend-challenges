@@ -31,6 +31,15 @@
     },
     {
       type: 'react',
+      name: 'blu-challenge-data-engineer',
+      linkChallenge: 'https://github.com/ebraimcarvalho/my-way/tree/main/blu-desafio',
+      img: './assets/design/docker-flask.png',
+      description: 'Create an api using Flask that serve endpoints to consume a StarWars API and save data in database sql, dockerize the application. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/blu-desafio" target="_blank">Github Repo</a>',
+      tags: 'Python | Flask | API | Docker | SQL',
+      date: '08/02/2022',
+    },
+    {
+      type: 'react',
       name: 'santander-challenge-etl',
       linkChallenge: 'https://github.com/ebraimcarvalho/data-engineer-challenges/blob/main/de_satander_challenge/etl.ipynb',
       img: './assets/design/santander.jpg',
