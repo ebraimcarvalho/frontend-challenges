@@ -49,6 +49,15 @@
     },
     {
       type: 'react',
+      name: 'dadosfera-challenge-data-engineer',
+      linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/dadoesfera/NYC_trips_challenge.ipynb',
+      img: './assets/design/nyc-taxis.jpeg',
+      description: 'Read data from different CSV and JSON files with NYC taxi trips, run transformations and cleansing, join datasets to easy query and some data exploration. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/dadoesfera" target="_blank">Github Repo</a>',
+      tags: 'Python | Pandas | ETL | Data Engineer',
+      date: '31/01/2022',
+    },
+    {
+      type: 'react',
       name: 'santander-challenge-etl',
       linkChallenge: 'https://github.com/ebraimcarvalho/data-engineer-challenges/blob/main/de_satander_challenge/etl.ipynb',
       img: './assets/design/santander.jpg',
