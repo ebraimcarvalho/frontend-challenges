@@ -4,6 +4,15 @@
   const projects = [
     {
       type: 'react',
+      name: 'hash-challenge-data-engineer',
+      linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/hash/desafio_hash_ebraim_carvalho.ipynb',
+      img: './assets/design/python-pandas.jpg',
+      description: 'Read data from different CSV files, run transformations and cleansing, join datasets to easy query and some data exploration Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/hash" target="_blank">Github Repo</a>',
+      tags: 'Python | Pandas | ETL | Data Engineer',
+      date: '15/05/2021',
+    },    
+    {
+      type: 'react',
       name: 'santander-challenge-etl',
       linkChallenge: 'https://github.com/ebraimcarvalho/data-engineer-challenges/blob/main/de_satander_challenge/etl.ipynb',
       img: './assets/design/santander.jpg',
