@@ -58,6 +58,15 @@
     },
     {
       type: 'react',
+      name: 'gama-challenge-data-engineer',
+      linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/gama_accenture/DESAFIO/gama_mario_kart.ipynb',
+      img: './assets/design/gama-academy.png',
+      description: 'Ingest Data from datasets of Formula 1 Championships since 1950 until 2021, create relational database and dimensional database in MySQL, connect in python using SQLAlchemy and Pandas to do transformations, joins and answer some questions, project to course conclusion. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/gama_accenture/DESAFIO" target="_blank">Github Repo</a>',
+      tags: 'Python | Pandas | ETL | Data Warehouse | MySQL | Data Engineer',
+      date: '21/06/2021',
+    },
+    {
+      type: 'react',
       name: 'santander-challenge-etl',
       linkChallenge: 'https://github.com/ebraimcarvalho/data-engineer-challenges/blob/main/de_satander_challenge/etl.ipynb',
       img: './assets/design/santander.jpg',
