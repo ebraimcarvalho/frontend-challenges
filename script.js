@@ -4,7 +4,7 @@
   const projects = [
     {
       type: 'react',
-      name: 'hash-challenge-data-engineer',
+      name: 'python-etl-challenge-data-engineer',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/hash/desafio_hash_ebraim_carvalho.ipynb',
       img: './assets/design/python-pandas.jpg',
       description: 'Read data from different CSV files, run transformations and cleansing, join datasets to easy query and some data exploration. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/hash" target="_blank">Github Repo</a>',
@@ -13,7 +13,7 @@
     },
     {
       type: 'react',
-      name: 'scalac-challenge-backend',
+      name: 'python-fastapi-challenge-backend',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/tree/main/scalac',
       img: './assets/design/python-fastapi.jpg',
       description: 'Create an API using FastAPI - Python that given a organization name into endpoint, consume a Github API to read all repositories and return a list of objects sorted by number of contributions. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/scalac" target="_blank">Github Repo</a>',
@@ -22,7 +22,7 @@
     },
     {
       type: 'react',
-      name: 'deloitte-challenge-backend',
+      name: 'python-challenge-backend',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/tree/main/deloitte',
       img: './assets/design/python-django.png',
       description: 'Create an api using Django that serve endpoints to get all posts, staffs and services, and authenticate into admin area to create, edit, delete or read posts, staff or services by a company. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/deloitte" target="_blank">Github Repo</a>',
@@ -31,7 +31,7 @@
     },
     {
       type: 'react',
-      name: 'blu-challenge-data-engineer',
+      name: 'python-api-challenge-data-engineer',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/tree/main/blu-desafio',
       img: './assets/design/docker-flask.png',
       description: 'Create an api using Flask that serve endpoints to consume a StarWars API and save data in database sql, dockerize the application. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/blu-desafio" target="_blank">Github Repo</a>',
@@ -40,7 +40,7 @@
     },
     {
       type: 'react',
-      name: 'a3data-challenge-data-engineer',
+      name: 'spark-challenge-data-engineer',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/a3_data/teste_engenharia_de_dados_a3data_ebraim_c.ipynb',
       img: './assets/design/pyspark.jpeg',
       description: 'Solve some questions using python, pyspark and sql, making some aggregations, joins and groups. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/a3_data" target="_blank">Github Repo</a>',
@@ -49,7 +49,7 @@
     },
     {
       type: 'react',
-      name: 'dadosfera-challenge-data-engineer',
+      name: 'etl-challenge-data-engineer',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/dadoesfera/NYC_trips_challenge.ipynb',
       img: './assets/design/nyc-taxis.jpeg',
       description: 'Read data from different CSV and JSON files with NYC taxi trips, run transformations and cleansing, join datasets to easy query and some data exploration. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/my-way/tree/main/dadoesfera" target="_blank">Github Repo</a>',
