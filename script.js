@@ -4,6 +4,15 @@
   const projects = [
     {
       type: 'react',
+      name: 'challenge-data-engineer-spark-sql',
+      linkChallenge: 'https://github.com/ebraimcarvalho/teste_data_engineer/blob/main/desafio_data_engineer.ipynb',
+      img: './assets/design/arquitetura_data_engineer.jpg',
+      description: 'Challenge to query data using SQL with aggregation to answer business questions and read data using spark and transoform it foloow business needs. Details and more informations, you can access on <a href="https://github.com/ebraimcarvalho/teste_data_engineer" target="_blank">Github Repo</a>',
+      tags: 'Spark | SQL | ETL | Data Engineer',
+      date: '15/12/2022',
+    },
+    {
+      type: 'react',
       name: 'python-etl-challenge-data-engineer',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/hash/desafio_hash_ebraim_carvalho.ipynb',
       img: './assets/design/python-pandas.jpg',
