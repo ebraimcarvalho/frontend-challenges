@@ -13,6 +13,15 @@
     },
     {
       type: 'react',
+      name: 'snowflake-impressions-and-summary',
+      linkChallenge: 'https://www.linkedin.com/pulse/snowflake-impress%C3%B5es-e-resumo-ebraim-carvalho/',
+      img: './assets/design/snowflake.png',
+      description: 'Summary and self impressions about Snowflake, a modern data warehouse that is growing fast in the data engineer market. Details and more informations, you can access on <a href="https://www.linkedin.com/pulse/snowflake-impress%C3%B5es-e-resumo-ebraim-carvalho/" target="_blank">Link of publication</a>',
+      tags: 'Data Engineer | Snowflake',
+      date: '13/01/2023',
+    },
+    {
+      type: 'react',
       name: 'challenge-data-engineer-spark-sql',
       linkChallenge: 'https://github.com/ebraimcarvalho/teste_data_engineer/blob/main/desafio_data_engineer.ipynb',
       img: './assets/design/arquitetura_data_engineer.jpg',
