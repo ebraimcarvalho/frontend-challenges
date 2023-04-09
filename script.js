@@ -4,6 +4,15 @@
   const projects = [
     {
       type: 'react',
+      name: 'book-summary-|-designing-data-intensive-applications',
+      linkChallenge: 'https://www.linkedin.com/pulse/designing-data-intensive-applications-resumo-do-livro-carvalho',
+      img: './assets/design/designing-data-intensive-applications.jpg',
+      description: 'Tech book most recommended by professional in software and data engineer field, talks about building applications resiliente, reliable, scalable, maintanable, with a understand about the different types of technologies in the market. Details and more informations, you can access on <a href="https://www.linkedin.com/pulse/designing-data-intensive-applications-resumo-do-livro-carvalho" target="_blank">Link of publication</a>',
+      tags: 'Data Engineer | Tech Book | Reliable | Scalable | Maintainable',
+      date: '17/03/2023',
+    },
+    {
+      type: 'react',
       name: 'challenge-data-engineer-spark-sql',
       linkChallenge: 'https://github.com/ebraimcarvalho/teste_data_engineer/blob/main/desafio_data_engineer.ipynb',
       img: './assets/design/arquitetura_data_engineer.jpg',
