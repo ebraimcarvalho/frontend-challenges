@@ -32,7 +32,7 @@ nav {
 }
 
 nav h1 img {
-  width: 50px;
+  width: 30px;
   border-radius: 10px;
 }
 
@@ -47,6 +47,17 @@ ul {
 li {
   display: inline-block;
   margin: 0 5px;
+}
+
+.whats_logo {
+  display: flex;
+  justify-content: space-between;
+  width: 110%;
+}
+
+.whats_logo img {
+  width: 25px;
+  height: 25px;
 }
 
 header nav ul li a {
