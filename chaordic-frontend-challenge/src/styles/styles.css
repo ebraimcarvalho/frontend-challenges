@@ -69,6 +69,10 @@ body {
   border-radius: 4px;
 }
 
+.header__nav-item li {
+  color: #000000;
+}
+
 .header__nav-item:not(:last-child) {
   margin-right: 40px;
 }
