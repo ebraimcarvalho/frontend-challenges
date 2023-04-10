@@ -16,6 +16,9 @@ function App() {
 
   function handleChange(e) {
     setName(e.target.value)
+    if(e.key === 'Enter'){
+      getSearch()
+    }
   }
 
   const getSearch = (e) => {
