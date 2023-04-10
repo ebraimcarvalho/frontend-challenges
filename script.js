@@ -112,6 +112,15 @@
     },
     {
       type: 'react',
+      name: 'apache-airflow-fundamentals-certification-summary',
+      linkChallenge: 'https://www.linkedin.com/pulse/resumo-do-apache-airflow-para-certifica%C3%A7%C3%A3o-ebraim-carvalho/',
+      img: './assets/design/airflow.png',
+      description: 'Summary of concepts studied for Apache Airflow Fundamentals Certification Exam. Details and more informations, you can access on <a href="https://www.linkedin.com/pulse/resumo-do-apache-airflow-para-certifica%C3%A7%C3%A3o-ebraim-carvalho/" target="_blank">Link of publication</a>',
+      tags: 'Airflow | Certification | ETL | Data Engineer',
+      date: '26/01/2022',
+    },
+    {
+      type: 'react',
       name: 'gama-challenge-data-engineer',
       linkChallenge: 'https://github.com/ebraimcarvalho/my-way/blob/main/gama_accenture/DESAFIO/gama_mario_kart.ipynb',
       img: './assets/design/gama-academy.png',
