@@ -17,8 +17,8 @@ function App() {
   function handleChange(e) {
     setName(e.target.value)
     console.log('alteração texto')
-    if(e.key === 'Enter'){
-      console.log('CLicou no enter')
+    if(e.keyCode === 13){
+      console.log('Clicou no enter')
       getSearch()
     }
   }
